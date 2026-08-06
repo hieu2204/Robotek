@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,400..700;1,400..700&family=Orbitron:wght@400..900&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --breakpoint-3xl: 120rem;
+
+  /* Font Families */
+  --font-sans: "Inter Tight", sans-serif;
+  --font-inter-tight: "Inter Tight", sans-serif;
+  --font-orbitron: "Orbitron", sans-serif;
+
+  /* Colors */
+  --color-primary: #ce181e;
+  --color-primary-90: #f0f5f4;
+  --color-navy-blue: #1a47b8;
+  --color-gray-900: #0f172a;
+  --color-gray-500: #64748b;
+  --color-gray-300: #cbd5e1;
+  --color-gray-200: #e2e8f0;
+  --color-gray-50: #f8fafc;
+  --color-red: #f93939;
+  --color-red-200: #ffc3c3;
+  --color-red-400: #ff8484;
+  --color-footer-bg: #820000;
+}
+
+/* Base Body Styles */
+body {
+  font-family: var(--font-sans);
+  color: var(--color-gray-900);
+  background-color: #ffffff;
+  overflow-x: hidden;
+}
+
+/* Custom Utilities */
+@utility container {
+  margin-inline: auto;
+  padding-inline: 1rem;
+
+  @media (width >= theme(--breakpoint-sm)) {
+    padding-inline: 1.5rem;
+  }
+
+  @media (width >= theme(--breakpoint-lg)) {
+    padding-inline: 2rem;
+  }
+
+  @media (width >= theme(--breakpoint-xl)) {
+    max-width: 1280px;
+    padding-inline: 40px;
+  }
+
+  @media (width >= theme(--breakpoint-2xl)) {
+    max-width: 1536px;
+    padding-inline: 64px;
+  }
+
+  @media (width >= theme(--breakpoint-3xl)) {
+    max-width: 1920px;
+    padding-inline: 96px;
+  }
+}
+
+/* Custom Scrollbar & Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Reusable Component Classes & Variants */
+@layer components {
+  /* Header Component Variants */
+  .header--overlay {
+    @apply fixed inset-x-0 top-0 z-50 w-full h-[100px] transition-all duration-300;
+    background: linear-gradient(
+      180deg,
+      #ce181e 0%,
+      rgba(104, 12, 15, 0) 77.16%
+    );
+  }
+
+  .header--overlay.is-scrolled {
+    @apply bg-slate-900/95 backdrop-blur-md shadow-xl;
+    background-image: none;
+  }
+
+  .header--solid {
+    @apply relative w-full h-[100px] bg-primary;
+  }
+
+  /* Typography Headings */
+  .heading-h1 {
+    @apply text-4xl sm:text-5xl lg:text-5xl font-semibold leading-tight lg:leading-[58px] tracking-[-0.48px];
+  }
+
+  .heading-h2 {
+    @apply text-3xl sm:text-4xl lg:text-[40px] font-semibold leading-tight lg:leading-[48px];
+  }
+
+  .heading-h3 {
+    @apply text-2xl sm:text-3xl lg:text-[32px] font-semibold leading-relaxed lg:leading-[40px];
+  }
+
+  /* Reusable Buttons & Badges */
+  .btn-dark {
+    @apply inline-flex items-center gap-2 bg-neutral-900 hover:bg-primary transition-colors text-white px-5 py-3 rounded-xs font-orbitron font-normal text-base tracking-wider shadow-lg;
+  }
+
+  .btn-explore {
+    @apply inline-flex items-center gap-3 bg-gray-900 hover:bg-primary transition-colors text-white px-5 py-3 rounded-xs font-orbitron font-normal text-base tracking-wider shadow-md;
+  }
+
+  .btn-light {
+    @apply inline-flex items-center gap-2 bg-white hover:bg-gray-200 transition-colors text-gray-900 px-4 py-2 rounded-xs font-orbitron font-normal text-base tracking-wider;
+  }
+
+  .badge-tag {
+    @apply inline-block bg-gray-200 px-6 py-2 rounded-xs font-orbitron font-semibold text-base text-gray-900 tracking-wider;
+  }
+
+  /* Product Card Reusable Styles */
+  .product-card {
+    @apply flex flex-col bg-gray-900/60 border border-white/10 rounded-xs overflow-hidden transition-all duration-300 hover:border-primary;
+  }
+
+  .product-card-img {
+    @apply relative h-80 overflow-hidden bg-black/40;
+  }
+}
