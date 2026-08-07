@@ -1,0 +1,1042 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us - Zobotek | Professional Power Solutions & USV Innovations</title>
+    <meta
+      name="description"
+      content="Learn about Zobotek's history, mission, vision, and team of former Foxconn engineers pioneering industrial power supplies and USVs."
+    />
+    <link rel="stylesheet" href="assets/css/vendor/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script defer src="assets/js/vendor/swiper-bundle.min.js"></script>
+    <script defer src="assets/js/vendor/countUp.umd.js"></script>
+    <script defer src="assets/js/main.js"></script>
+  </head>
+  <body
+    class="font-sans text-gray-900 bg-white antialiased selection:bg-primary selection:text-white"
+  >
+    <!-- Header Navigation (Solid Header Variant for Subpages) -->
+    <header class="header--solid bg-primary">
+      <div class="container flex items-center justify-between h-full">
+        <!-- Left Section (Mobile Logo) -->
+        <div class="flex-1 min-w-0 flex items-center justify-start">
+          <a
+            href="index.html"
+            class="lg:hidden flex items-center"
+            aria-label="Zobotek Homepage"
+          >
+            <img src="assets/images/logo-header.png" alt="Zobotek Logo" />
+          </a>
+        </div>
+
+        <!-- Desktop Navigation Links -->
+        <nav
+          class="hidden lg:flex items-center justify-center gap-6 xl:gap-10 2xl:gap-18 shrink-0"
+        >
+          <!-- Active Link: About Us -->
+          <a href="about.html" class="nav-link is-active">About Us</a>
+
+          <!-- Products Dropdown -->
+          <div class="relative group">
+            <a
+              href="index.html#products"
+              class="nav-link flex items-center gap-1"
+            >
+              <span>Products</span>
+              <svg
+                class="w-4 h-4 transition-transform group-hover:rotate-180"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </a>
+            <div
+              class="absolute left-0 top-full pt-2 hidden group-hover:block w-52 z-50"
+            >
+              <div class="dropdown-menu">
+                <a href="index.html#products" class="dropdown-item"
+                  >Power Supplies</a
+                >
+                <a href="index.html#products-usv" class="dropdown-item"
+                  >USV Innovations</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <a href="index.html#manufacturing" class="nav-link">Manufacturing</a>
+
+          <!-- CENTER LOGO -->
+          <a
+            href="index.html"
+            class="flex items-center px-2 xl:px-4 group focus:outline-none shrink-0"
+            aria-label="Zobotek Homepage"
+          >
+            <div class="relative h-10 xl:h-12 2xl:h-14 w-auto flex items-center">
+              <img
+                src="assets/images/logo-header.png"
+                alt="Zobotek Logo"
+                class="h-full w-auto"
+              />
+            </div>
+          </a>
+
+          <!-- Right Links -->
+          <a href="index.html#certifications" class="nav-link">Certifications</a>
+          <a href="index.html#why-us" class="nav-link">Applications</a>
+          <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+
+        <!-- Right Section (Utility Actions & Mobile Hamburger) -->
+        <div
+          class="flex-1 min-w-0 flex items-center justify-end gap-2 sm:gap-3"
+        >
+          <div class="flex items-center gap-2 sm:gap-3 text-white relative">
+            <!-- Search Button -->
+            <div class="relative hidden sm:block">
+              <button
+                type="button"
+                id="search-btn"
+                class="p-1.5 header-action-btn"
+                aria-label="Search"
+              >
+                <svg
+                  class="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                  />
+                </svg>
+              </button>
+
+              <div
+                id="search-popup"
+                class="absolute right-0 top-full mt-2 hidden w-72 dropdown-menu p-3 z-50"
+              >
+                <form
+                  action="index.html#products"
+                  method="GET"
+                  class="flex items-center gap-2"
+                >
+                  <input
+                    type="text"
+                    placeholder="Search products..."
+                    class="w-full bg-gray-800 border border-gray-700 rounded px-3 py-1.5 text-sm text-white focus:outline-none focus:border-primary"
+                  />
+                  <button
+                    type="submit"
+                    class="bg-primary text-white px-3 py-1.5 rounded text-sm hover:bg-red-700 transition-colors"
+                  >
+                    Search
+                  </button>
+                </form>
+              </div>
+            </div>
+
+            <span class="hidden sm:block h-3.5 w-px bg-white/30"></span>
+
+            <!-- Language Selector -->
+            <div class="relative">
+              <button
+                type="button"
+                id="lang-btn"
+                class="flex items-center gap-1.5 text-base font-medium p-1 header-action-btn"
+              >
+                <span
+                  class="flag-icon"
+                  style="
+                    background-image: url(&quot;https://flagcdn.com/w40/gb.png&quot;);
+                  "
+                ></span>
+                <span id="current-lang">EN</span>
+                <svg
+                  class="w-4 h-4 transition-transform duration-200"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </button>
+
+              <div
+                id="lang-dropdown"
+                class="absolute right-0 top-full mt-2 hidden w-36 dropdown-menu py-1 z-50"
+              >
+                <a
+                  href="#"
+                  data-lang="EN"
+                  class="lang-option flex items-center gap-2 px-3 py-2 text-white hover:bg-primary transition-colors"
+                >
+                  <span
+                    class="flag-icon"
+                    style="
+                      background-image: url(&quot;https://flagcdn.com/w40/gb.png&quot;);
+                    "
+                  ></span>
+                  <span>English</span>
+                </a>
+                <a
+                  href="#"
+                  data-lang="VI"
+                  class="lang-option flex items-center gap-2 px-3 py-2 text-gray-300 hover:bg-primary hover:text-white transition-colors"
+                >
+                  <span
+                    class="flag-icon"
+                    style="
+                      background-image: url(&quot;https://flagcdn.com/w40/vn.png&quot;);
+                    "
+                  ></span>
+                  <span>Tiếng Việt</span>
+                </a>
+                <a
+                  href="#"
+                  data-lang="ZH"
+                  class="lang-option flex items-center gap-2 px-3 py-2 text-gray-300 hover:bg-primary hover:text-white transition-colors"
+                >
+                  <span
+                    class="flag-icon"
+                    style="
+                      background-image: url(&quot;https://flagcdn.com/w40/cn.png&quot;);
+                    "
+                  ></span>
+                  <span>中文</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mobile Hamburger Button -->
+          <button
+            type="button"
+            id="mobile-menu-toggle"
+            class="lg:hidden p-2 header-action-btn"
+            aria-label="Open mobile menu"
+          >
+            <svg
+              class="w-7 h-7"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Drawer Menu -->
+    <div
+      id="mobile-menu"
+      class="fixed inset-0 z-50 bg-black/60 backdrop-blur-xs hidden justify-end text-white"
+    >
+      <div
+        class="w-[85%] max-w-sm h-full bg-gray-900 border-l border-gray-800 shadow-2xl p-6 flex flex-col justify-between overflow-y-auto"
+      >
+        <div>
+          <div class="flex items-center justify-between">
+            <a href="index.html" class="flex items-center" aria-label="Zobotek Homepage">
+              <img
+                src="assets/images/logo-header.png"
+                alt="Zobotek Logo"
+                class="h-9 w-auto"
+              />
+            </a>
+            <button
+              type="button"
+              id="mobile-menu-close"
+              class="p-2 text-gray-400 hover:text-white"
+              aria-label="Close menu"
+            >
+              <svg
+                class="w-7 h-7"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </div>
+
+          <form
+            action="index.html#products"
+            method="GET"
+            class="mt-5 flex items-center gap-2"
+          >
+            <div class="relative w-full">
+              <input
+                type="text"
+                placeholder="Search products..."
+                class="w-full bg-gray-800 border border-gray-700 rounded-md pl-9 pr-3 py-2 text-sm text-white focus:outline-none focus:border-primary placeholder-gray-400"
+              />
+              <svg
+                class="w-4 h-4 text-gray-400 absolute left-3 top-1/2 -translate-y-1/2"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                />
+              </svg>
+            </div>
+            <button
+              type="submit"
+              class="bg-primary text-white px-3 py-2 rounded-md text-sm font-medium hover:bg-red-700 transition-colors shrink-0"
+            >
+              Search
+            </button>
+          </form>
+        </div>
+
+        <nav class="flex flex-col gap-4 text-xl font-semibold my-auto py-6">
+          <a href="about.html" class="mobile-nav-link text-primary py-1"
+            >About Us</a
+          >
+          <div class="mobile-dropdown-parent">
+            <button
+              type="button"
+              id="mobile-products-toggle"
+              class="w-full flex items-center justify-between hover:text-primary py-1 focus:outline-none cursor-pointer"
+            >
+              <span>Products</span>
+              <svg
+                id="mobile-products-arrow"
+                class="w-5 h-5 transition-transform duration-200"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </button>
+            <div
+              id="mobile-products-sub"
+              class="hidden flex-col gap-3 pl-4 pt-2 text-base text-gray-300 border-l-2 border-primary/50 my-1"
+            >
+              <a href="index.html#products" class="mobile-nav-link hover:text-white py-1"
+                >Power Supplies</a
+              >
+              <a
+                href="index.html#products-usv"
+                class="mobile-nav-link hover:text-white py-1"
+                >USV Innovations</a
+              >
+            </div>
+          </div>
+
+          <a
+            href="index.html#manufacturing"
+            class="mobile-nav-link hover:text-primary py-1"
+            >Manufacturing</a
+          >
+          <a
+            href="index.html#certifications"
+            class="mobile-nav-link hover:text-primary py-1"
+            >Certifications</a
+          >
+          <a href="index.html#why-us" class="mobile-nav-link hover:text-primary py-1"
+            >Applications</a
+          >
+          <a href="#contact" class="mobile-nav-link hover:text-primary py-1"
+            >Contact</a
+          >
+        </nav>
+
+        <div
+          class="text-sm text-gray-400 border-t border-gray-800 pt-4 flex justify-between items-center"
+        >
+          <span>Language: <strong>EN</strong></span>
+          <span>© 2026 Zobotek</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- BREADCRUMB / HERO BANNER -->
+    <section
+      class="relative pt-[160px] pb-16 lg:pt-[196px] lg:pb-24 bg-gray-950 text-white overflow-hidden"
+    >
+      <div class="absolute inset-0 z-0">
+        <img
+          src="assets/images/about-bg.png"
+          alt="About Us Background"
+          class="w-full h-full object-cover object-center opacity-60"
+        />
+        <div
+          class="absolute inset-0 bg-gradient-to-r from-gray-950 via-gray-950/80 to-primary/40"
+        ></div>
+      </div>
+      <div class="container relative z-10 text-center space-y-4">
+        <h1 class="heading-h1 text-white">About Us</h1>
+        <nav class="flex items-center justify-center gap-2 text-sm text-gray-300">
+          <a href="index.html" class="hover:text-white transition-colors">Home</a>
+          <span>/</span>
+          <span class="text-white font-semibold">About Us</span>
+        </nav>
+      </div>
+    </section>
+
+    <main>
+      <!-- SECTION 1: ABOUT US OVERVIEW & KEY METRICS -->
+      <section id="about-intro" class="py-16 lg:py-24 bg-white text-gray-900">
+        <div class="container space-y-16 lg:space-y-20">
+          <!-- Intro Text Block -->
+          <div class="flex flex-col items-center text-center space-y-6 max-w-5xl mx-auto">
+            <div class="badge-tag">ABOUT US</div>
+            <h2 class="heading-h2 text-gray-900">
+              Zobotek is a technology company founded in 2026, specializing in the
+              manufacturing of electronic components and the research and
+              development of Unmanned Surface Vehicles (USVs).
+            </h2>
+            <p class="text-lg md:text-xl font-medium text-[#494949] max-w-4xl leading-relaxed">
+              Guided by our core philosophy,
+              <strong class="text-gray-900 font-bold">"Quality is Life"</strong>
+              we continuously innovate to serve a global clientele across
+              automation, medical, telecom, and renewable energy sectors,
+              welcoming distribution partners worldwide to build long-term
+              success together.
+            </p>
+          </div>
+
+          <!-- Key Metrics Row (10+, 12W-4000W, 30+) -->
+          <div
+            class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 divide-y md:divide-y-0 md:divide-x divide-gray-200 pt-8"
+          >
+            <!-- Metric 1 -->
+            <div class="metric-item pt-6 md:pt-0">
+              <span class="metric-value count-up" data-countup="10" data-suffix="+">10+</span>
+              <p class="metric-label">
+                Years of Foxconn experience<br class="hidden lg:block" />
+                from founding engineers.
+              </p>
+            </div>
+
+            <!-- Metric 2 -->
+            <div class="metric-item pt-6 md:pt-0 md:pl-8">
+              <span class="metric-value"
+                ><span class="count-up" data-countup="12" data-suffix="W">12W</span> – <span class="count-up" data-countup="4000" data-suffix="W">4000W</span></span
+              >
+              <p class="metric-label">
+                Industrial power capacity range<br class="hidden lg:block" />
+                for any system scale.
+              </p>
+            </div>
+
+            <!-- Metric 3 -->
+            <div class="metric-item pt-6 md:pt-0 md:pl-8">
+              <span class="metric-value count-up" data-countup="30" data-suffix="+">30+</span>
+              <p class="metric-label">
+                Countries &amp; territories<br class="hidden lg:block" />
+                with Zobotek presence.
+              </p>
+            </div>
+          </div>
+
+          <!-- Product Lines Overview Row -->
+          <div
+            class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center pt-8"
+          >
+            <!-- Image Column -->
+            <div class="lg:col-span-6">
+              <div
+                class="relative rounded-xs overflow-hidden shadow-2xl border border-gray-200"
+              >
+                <img
+                  src="assets/images/about-img.png"
+                  alt="Zobotek Manufacturing Facility & Equipment"
+                  class="w-full h-auto object-cover"
+                />
+              </div>
+            </div>
+
+            <!-- Info Column -->
+            <div class="lg:col-span-6 space-y-8">
+              <!-- Block 1 -->
+              <div class="space-y-3">
+                <h3 class="heading-h3 text-gray-900">
+                  Industrial Power Supplies
+                </h3>
+                <p class="text-base sm:text-lg font-medium text-slate-700 leading-relaxed">
+                  Offering a comprehensive range: from ultra-thin, PFC, and
+                  standard units to specialized LED drivers, serving automation,
+                  control systems, 3D printing, and various industrial
+                  applications.
+                </p>
+              </div>
+
+              <hr class="border-gray-200" />
+
+              <!-- Block 2 -->
+              <div class="space-y-3">
+                <h3 class="heading-h3 text-gray-900">
+                  Unmanned Surface Vehicles (USVs):
+                </h3>
+                <p class="text-base sm:text-lg font-medium text-slate-700 leading-relaxed">
+                  Pioneering smart water rescue devices integrated with robotics,
+                  GPS, and remote control technologies to ensure safer and faster
+                  maritime operations.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 2: OUR JOURNEY & KEY MILESTONES -->
+      <section
+        id="journey"
+        class="relative py-16 lg:py-24 bg-gray-50 text-gray-900 overflow-hidden"
+      >
+        <!-- Background Watermark Text "2026" -->
+        <span
+          class="absolute top-1/2 left-0 -translate-y-1/2 text-[180px] sm:text-[300px] lg:text-[400px] font-semibold text-gray-900/5 select-none pointer-events-none tracking-tight uppercase"
+        >
+          2026
+        </span>
+
+        <div class="container relative z-10 space-y-12 lg:space-y-16">
+          <!-- Section Header -->
+          <div class="text-center space-y-5 max-w-xl mx-auto">
+            <div class="badge-tag">OUR JOURNEY</div>
+            <h2 class="heading-h2 text-gray-900">
+              Our Journey &amp; Key Milestones
+            </h2>
+          </div>
+
+          <!-- Active Milestone Showcase -->
+          <div
+            class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center"
+          >
+            <!-- Content Left -->
+            <div class="lg:col-span-6 space-y-6">
+              <div class="space-y-4">
+                <h3
+                  id="milestone-title"
+                  class="text-2xl sm:text-3xl font-semibold text-[#c31b19] leading-snug"
+                >
+                  Founded by former Foxconn Vietnam engineers.
+                </h3>
+                <p
+                  id="milestone-desc"
+                  class="text-base sm:text-lg font-medium text-gray-700 leading-relaxed"
+                >
+                  Zobotek was established by a veteran engineering team with over a
+                  decade of hands-on experience at Foxconn Vietnam, laying a strong
+                  foundation in world-class electronic manufacturing, global supply
+                  chain mastery, and rigorous quality control.
+                </p>
+              </div>
+
+              <!-- Milestone Controls -->
+              <div class="flex items-center gap-4 pt-2">
+                <button
+                  type="button"
+                  id="milestone-prev"
+                  class="w-12 h-12 rounded-full border border-red-200 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors cursor-pointer"
+                  aria-label="Previous milestone"
+                >
+                  <svg
+                    class="w-6 h-6 rotate-180"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M9 5l7 7-7 7"
+                    />
+                  </svg>
+                </button>
+                <button
+                  type="button"
+                  id="milestone-next"
+                  class="w-12 h-12 rounded-full border border-red-200 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors cursor-pointer"
+                  aria-label="Next milestone"
+                >
+                  <svg
+                    class="w-6 h-6"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M9 5l7 7-7 7"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <!-- Image Right -->
+            <div class="lg:col-span-6">
+              <div class="rounded-xs overflow-hidden shadow-xl border border-gray-200">
+                <img
+                  id="milestone-img"
+                  src="assets/images/about-img.png"
+                  alt="Zobotek Milestone"
+                  class="w-full h-auto object-cover"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline Tabs Navigation -->
+          <div
+            class="grid grid-cols-1 md:grid-cols-3 gap-6 border-t border-gray-300 pt-8"
+          >
+            <!-- Tab 1 -->
+            <button
+              type="button"
+              class="milestone-tab active text-center p-4 rounded-md transition-colors cursor-pointer bg-white shadow-sm border border-primary/20"
+              data-index="0"
+              data-title="Founded by former Foxconn Vietnam engineers."
+              data-desc="Zobotek was established by a veteran engineering team with over a decade of hands-on experience at Foxconn Vietnam, laying a strong foundation in world-class electronic manufacturing, global supply chain mastery, and rigorous quality control."
+            >
+              <span class="block font-semibold text-xl text-primary mb-1"
+                >01/2026</span
+              >
+              <span class="block text-sm text-gray-600 font-medium"
+                >Founded by former Foxconn Vietnam engineers.</span
+              >
+            </button>
+
+            <!-- Tab 2 -->
+            <button
+              type="button"
+              class="milestone-tab text-center p-4 rounded-md transition-colors cursor-pointer hover:bg-white/80"
+              data-index="1"
+              data-title="Launched core power supply product lines."
+              data-desc="Launched our core power supply product lines (Slim, PFC, Standard, and LED series) catering to demanding industrial applications across global markets."
+            >
+              <span class="block font-semibold text-xl text-gray-500 mb-1"
+                >01/2026</span
+              >
+              <span class="block text-sm text-gray-600 font-medium"
+                >Launched core power supply product lines (Slim, PFC, Standard, LED).</span
+              >
+            </button>
+
+            <!-- Tab 3 -->
+            <button
+              type="button"
+              class="milestone-tab text-center p-4 rounded-md transition-colors cursor-pointer hover:bg-white/80"
+              data-index="2"
+              data-title="Initiated R&D program for Unmanned Surface Vehicles."
+              data-desc="Initiated the R&D program for Unmanned Surface Vehicles (USVs), pioneering smart water rescue devices integrated with robotics and GPS positioning."
+            >
+              <span class="block font-semibold text-xl text-gray-500 mb-1"
+                >01/2026</span
+              >
+              <span class="block text-sm text-gray-600 font-medium"
+                >Initiated R&D program for Unmanned Surface Vehicles (USVs).</span
+              >
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 3: VISION & MISSION -->
+      <section
+        id="vision-mission"
+        class="relative py-20 lg:py-28 bg-gray-950 text-white overflow-hidden"
+      >
+        <!-- Background Media Grid -->
+        <div class="absolute inset-0 z-0">
+          <img
+            src="assets/images/product-usv.png"
+            alt="USV Maritime Rescue Vision"
+            class="w-full h-full object-cover object-center"
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-r from-[#450000] via-[#450000]/85 to-transparent z-10"
+          ></div>
+        </div>
+
+        <div class="container relative z-10">
+          <div class="max-w-2xl space-y-10">
+            <!-- Vision Block -->
+            <div class="space-y-4 pb-8 border-b border-white/20">
+              <h2 class="text-3xl lg:text-4xl font-semibold tracking-tight text-white">
+                Vision
+              </h2>
+              <p class="text-xl lg:text-2xl font-medium text-white/90 leading-relaxed">
+                To become a leading global provider of innovative power solutions
+                and maritime safety equipment.
+              </p>
+            </div>
+
+            <!-- Mission Block -->
+            <div class="space-y-4">
+              <h2 class="text-3xl lg:text-4xl font-semibold tracking-tight text-white">
+                Mission
+              </h2>
+              <p class="text-xl lg:text-2xl font-medium text-white/90 leading-relaxed">
+                To deliver stable, efficient power solutions and advanced rescue
+                technologies that enhance industrial productivity and save lives.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 4: WHY PARTNER WITH US? -->
+      <section
+        id="why-choose-us"
+        class="py-16 lg:py-24 bg-white text-gray-900"
+      >
+        <div class="container space-y-12 lg:space-y-16">
+          <div class="text-center space-y-5 max-w-xl mx-auto">
+            <div class="badge-tag">WHY CHOOSE US?</div>
+            <h2 class="heading-h3 text-gray-900">Why Partner With Us?</h2>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+            <!-- Card 1 -->
+            <div class="feature-card">
+              <div class="feature-card-icon">
+                <img
+                  src="assets/images/choose-us1.png"
+                  alt="Quality Lifeline"
+                  class="w-14 h-14 object-contain"
+                />
+              </div>
+              <div class="feature-card-body">
+                <h3 class="feature-card-title">Quality is Our Lifeline</h3>
+                <p class="feature-card-desc">
+                  Every single product undergoes rigorous inspection and testing
+                  to guarantee flawless performance and uncompromised
+                  reliability.
+                </p>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="feature-card">
+              <div class="feature-card-icon">
+                <img
+                  src="assets/images/choose-us2.png"
+                  alt="Innovation"
+                  class="w-14 h-14 object-contain"
+                />
+              </div>
+              <div class="feature-card-body">
+                <h3 class="feature-card-title">Innovation Drives Our Growth</h3>
+                <p class="feature-card-desc">
+                  We continuously invest in R&amp;D to push technological
+                  boundaries and stay ahead of industry trends.
+                </p>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="feature-card">
+              <div class="feature-card-icon">
+                <img
+                  src="assets/images/choose-us3.png"
+                  alt="Customer Success"
+                  class="w-14 h-14 object-contain"
+                />
+              </div>
+              <div class="feature-card-body">
+                <h3 class="feature-card-title">
+                  Customer Success is Our Success
+                </h3>
+                <p class="feature-card-desc">
+                  We are dedicated to delivering exceptional value and tailored
+                  solutions that consistently exceed customer expectations.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 5: OUR PEOPLE & CORE EXPERTISE -->
+      <section
+        id="our-people"
+        class="relative py-0 bg-gray-900 text-white overflow-hidden"
+      >
+        <div class="grid grid-cols-1 lg:grid-cols-2">
+          <!-- Left Media Panel -->
+          <div class="relative min-h-[450px] lg:min-h-[572px] overflow-hidden">
+            <img
+              src="assets/images/people-equipment.png"
+              alt="Zobotek Manufacturing Facilities & Equipment"
+              class="w-full h-full object-cover"
+            />
+            <div class="hero-overlay"></div>
+            <!-- Floating Feature Callout Box -->
+            <div class="absolute left-6 lg:left-12 top-10 z-10">
+              <div class="feature-callout-box">
+                <p class="text-sm sm:text-base font-medium leading-relaxed text-white">
+                  This extensive industry experience enables us to deliver
+                  products that stringently comply with the demanding standards of
+                  Korean, Japanese, and Western OEMs
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Content Panel -->
+          <div
+            class="bg-[#161616] p-8 sm:p-12 lg:p-16 flex flex-col justify-center space-y-8 min-h-[572px]"
+          >
+            <div class="badge-tag--white">OUR PEOPLE</div>
+
+            <div class="space-y-3">
+              <h2 class="heading-h2 text-white">Our team</h2>
+              <p class="text-xl sm:text-2xl font-semibold text-white/90">
+                With the Core Expertise:
+              </p>
+            </div>
+
+            <ul class="divide-y divide-gray-700/60 text-base sm:text-lg font-medium text-white/90 max-w-lg">
+              <li class="py-3.5">
+                Power Electronics Design &amp; Manufacturing
+              </li>
+              <li class="py-3.5">
+                Surface Mount Technology (SMT) Assembly
+              </li>
+              <li class="py-3.5">
+                Quality Control &amp; Testing Systems
+              </li>
+              <li class="py-3.5">
+                Supply Chain Management
+              </li>
+              <li class="py-3.5">
+                Embedded Systems &amp; Robotics
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer
+      id="contact"
+      class="relative py-8 lg:py-14 text-white overflow-hidden"
+    >
+      <div class="absolute inset-0 z-0 pointer-events-none">
+        <img
+          src="assets/images/footer-bg.png"
+          alt="Footer Background Pattern"
+          class="w-full h-full object-cover object-center"
+        />
+      </div>
+
+      <div class="container relative z-10 space-y-12 lg:space-y-16">
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-10 items-start"
+        >
+          <!-- Logo Column -->
+          <div class="lg:col-span-5 space-y-4">
+            <img
+              src="assets/images/logo-footer.png"
+              alt="Zobotek Logo"
+              class="h-16 w-auto object-contain"
+            />
+          </div>
+
+          <!-- Quick Links Column -->
+          <div class="lg:col-span-3 font-semibold text-base text-white">
+            <div class="flex flex-col gap-4">
+              <a href="index.html#hero" class="footer-link">Home</a>
+              <a href="about.html" class="footer-link">About Us</a>
+              <a href="index.html#products" class="footer-link">Products</a>
+              <a href="index.html#manufacturing" class="footer-link">Manufacturing</a>
+              <a href="index.html#certifications" class="footer-link">Certification</a>
+              <a href="index.html#why-us" class="footer-link">Applications</a>
+              <a href="#contact" class="footer-link">Contact us</a>
+            </div>
+          </div>
+
+          <!-- Contact Info Column -->
+          <div class="lg:col-span-4 space-y-6 text-base font-medium text-white">
+            <div class="flex items-center gap-3">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M6.99902 18C5.1701 18.4117 3.99902 19.0443 3.99902 19.7537C3.99902 20.9943 7.58075 22 11.999 22C16.4173 22 19.999 20.9943 19.999 19.7537C19.999 19.0443 18.8279 18.4117 16.999 18"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M14.499 9C14.499 10.3807 13.3797 11.5 11.999 11.5C10.6183 11.5 9.49902 10.3807 9.49902 9C9.49902 7.61929 10.6183 6.5 11.999 6.5C13.3797 6.5 14.499 7.61929 14.499 9Z"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                />
+                <path
+                  d="M13.2564 17.4936C12.9191 17.8184 12.4683 18 11.9992 18C11.53 18 11.0792 17.8184 10.7419 17.4936C7.65332 14.5008 3.51421 11.1575 5.53273 6.30373C6.62413 3.67932 9.24397 2 11.9992 2C14.7544 2 17.3742 3.67933 18.4656 6.30373C20.4816 11.1514 16.3526 14.5111 13.2564 17.4936Z"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                />
+              </svg>
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="footer-link"
+                >[Address]</a
+              >
+            </div>
+
+            <div class="flex items-center gap-3">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M7 8.5L9.94202 10.2394C11.6572 11.2535 12.3428 11.2535 14.058 10.2394L17 8.5"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M2.01577 13.4756C2.08114 16.5412 2.11383 18.0739 3.24496 19.2094C4.37608 20.3448 5.95033 20.3843 9.09883 20.4634C11.0393 20.5122 12.9607 20.5122 14.9012 20.4634C18.0497 20.3843 19.6239 20.3448 20.7551 19.2094C21.8862 18.0739 21.9189 16.5412 21.9842 13.4756C22.0053 12.4899 22.0053 11.5101 21.9842 10.5244C21.9189 7.45886 21.8862 5.92609 20.7551 4.79066C19.6239 3.65523 18.0497 3.61568 14.9012 3.53657C12.9607 3.48781 11.0393 3.48781 9.09882 3.53656C5.95033 3.61566 4.37608 3.65521 3.24495 4.79065C2.11382 5.92608 2.08114 7.45885 2.01576 10.5244C1.99474 11.5101 1.99475 12.4899 2.01577 13.4756Z"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <a
+                href="mailto:example@zobotek.com"
+                class="footer-link"
+                >example@zobotek.com</a
+              >
+            </div>
+
+            <div class="flex flex-wrap items-center gap-8 pt-1">
+              <div class="flex items-center gap-3">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <path
+                    d="M3.77762 11.9424C2.8296 10.2893 2.37185 8.93948 2.09584 7.57121C1.68762 5.54758 2.62181 3.57081 4.16938 2.30947C4.82345 1.77638 5.57323 1.95852 5.96 2.6524L6.83318 4.21891C7.52529 5.46057 7.87134 6.08139 7.8027 6.73959C7.73407 7.39779 7.26737 7.93386 6.33397 9.00601L3.77762 11.9424ZM3.77762 11.9424C5.69651 15.2883 8.70784 18.3013 12.0576 20.2224M12.0576 20.2224C13.7107 21.1704 15.0605 21.6282 16.4288 21.9042C18.4524 22.3124 20.4292 21.3782 21.6905 19.8306C22.2236 19.1766 22.0415 18.4268 21.3476 18.04L19.7811 17.1668C18.5394 16.4747 17.9186 16.1287 17.2604 16.1973C16.6022 16.2659 16.0661 16.7326 14.994 17.666L12.0576 20.2224Z"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <a href="tel:+0012345678" class="footer-link"
+                  >+00 1234 5678</a
+                >
+              </div>
+              <div class="flex items-center gap-3">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <path
+                    d="M7.35396 18C5.23084 18 4.16928 18 3.41349 17.5468C2.91953 17.2506 2.52158 16.8271 2.26475 16.3242C1.87179 15.5547 1.97742 14.5373 2.18868 12.5025C2.36503 10.8039 2.45321 9.95455 2.88684 9.33081C3.17153 8.92129 3.55659 8.58564 4.00797 8.35353C4.69548 8 5.58164 8 7.35396 8H16.646C18.4184 8 19.3045 8 19.992 8.35353C20.4434 8.58564 20.8285 8.92129 21.1132 9.33081C21.5468 9.95455 21.635 10.8039 21.8113 12.5025C22.0226 14.5373 22.1282 15.5547 21.7352 16.3242C21.4784 16.8271 21.0805 17.2506 20.5865 17.5468C19.8307 18 18.7692 18 16.646 18"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                  />
+                  <path
+                    d="M17 8V6C17 4.11438 17 3.17157 16.4142 2.58579C15.8284 2 14.8856 2 13 2H11C9.11438 2 8.17157 2 7.58579 2.58579C7 3.17157 7 4.11438 7 6V8"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M13.9887 16L10.0113 16C9.32602 16 8.98337 16 8.69183 16.1089C8.30311 16.254 7.97026 16.536 7.7462 16.9099C7.57815 17.1904 7.49505 17.5511 7.32884 18.2724C7.06913 19.3995 6.93928 19.963 7.02759 20.4149C7.14535 21.0174 7.51237 21.5274 8.02252 21.7974C8.40513 22 8.94052 22 10.0113 22L13.9887 22C15.0595 22 15.5949 22 15.9775 21.7974C16.4876 21.5274 16.8547 21.0174 16.9724 20.4149C17.0607 19.963 16.9309 19.3995 16.6712 18.2724C16.505 17.5511 16.4218 17.1904 16.2538 16.9099C16.0297 16.536 15.6969 16.254 15.3082 16.1089C15.0166 16 14.674 16 13.9887 16Z"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M18 12H18.009"
+                    stroke="white"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <a href="tel:+0012345678" class="footer-link"
+                  >+00 1234 5678</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="border-t border-primary-90/30 pt-3 flex flex-col sm:flex-row items-center justify-between gap-4 text-base text-primary-90 font-medium"
+        >
+          <p>Copyright &copy; 2026 Zobotek. All rights reserved.</p>
+          <div class="flex items-center gap-2">
+            <a href="#" class="hover:text-white transition-colors"
+              >Terms and Conditions</a
+            >
+            <span class="text-white">|</span>
+            <a href="#" class="hover:text-white transition-colors"
+              >Privacy Policy</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

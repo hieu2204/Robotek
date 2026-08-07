@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="assets/css/vendor/swiper-bundle.min.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
     <script defer src="assets/js/vendor/swiper-bundle.min.js"></script>
+    <script defer src="assets/js/vendor/countUp.umd.js"></script>
     <script defer src="assets/js/main.js"></script>
   </head>
   <body
@@ -32,21 +33,14 @@
 
         <!-- Desktop Navigation Links (Centered in the exact middle of header) -->
         <nav
-          class="hidden lg:flex items-center justify-center gap-6 xl:gap-10 2xl:gap-18 text-white font-semibold text-sm xl:text-base leading-6 shrink-0"
+          class="hidden lg:flex items-center justify-center gap-6 xl:gap-10 2xl:gap-18 shrink-0"
         >
           <!-- Left Links -->
-          <a
-            href="#about"
-            class="hover:text-primary transition-colors py-2 whitespace-nowrap"
-            >About Us</a
-          >
+          <a href="#about" class="nav-link">About Us</a>
 
           <!-- Products Level 2 Dropdown -->
           <div class="relative group">
-            <a
-              href="#products"
-              class="flex items-center gap-1 hover:text-primary transition-colors py-2 whitespace-nowrap"
-            >
+            <a href="#products" class="nav-link flex items-center gap-1">
               <span>Products</span>
               <svg
                 class="w-4 h-4 transition-transform group-hover:rotate-180"
@@ -65,28 +59,16 @@
             <div
               class="absolute left-0 top-full pt-2 hidden group-hover:block w-52 z-50"
             >
-              <div
-                class="bg-gray-900 border border-gray-700 rounded-md shadow-2xl py-2 text-sm text-gray-200"
-              >
-                <a
-                  href="#products"
-                  class="block px-4 py-2.5 hover:bg-primary hover:text-white transition-colors"
-                  >Power Supplies</a
-                >
-                <a
-                  href="#products-usv"
-                  class="block px-4 py-2.5 hover:bg-primary hover:text-white transition-colors"
+              <div class="dropdown-menu">
+                <a href="#products" class="dropdown-item">Power Supplies</a>
+                <a href="#products-usv" class="dropdown-item"
                   >USV Innovations</a
                 >
               </div>
             </div>
           </div>
 
-          <a
-            href="#manufacturing"
-            class="hover:text-primary transition-colors py-2 whitespace-nowrap"
-            >Manufacturing</a
-          >
+          <a href="#manufacturing" class="nav-link">Manufacturing</a>
 
           <!-- CENTER LOGO -->
           <a
@@ -106,21 +88,9 @@
           </a>
 
           <!-- Right Links -->
-          <a
-            href="#certifications"
-            class="hover:text-primary transition-colors py-2 whitespace-nowrap"
-            >Certifications</a
-          >
-          <a
-            href="#why-us"
-            class="hover:text-primary transition-colors py-2 whitespace-nowrap"
-            >Applications</a
-          >
-          <a
-            href="#contact"
-            class="hover:text-primary transition-colors py-2 whitespace-nowrap"
-            >Contact</a
-          >
+          <a href="#certifications" class="nav-link">Certifications</a>
+          <a href="#why-us" class="nav-link">Applications</a>
+          <a href="#contact" class="nav-link">Contact</a>
         </nav>
 
         <!-- Right Section (Utility Actions & Mobile Hamburger) -->
@@ -134,7 +104,7 @@
               <button
                 type="button"
                 id="search-btn"
-                class="p-1.5 hover:text-primary transition-colors focus:outline-none cursor-pointer"
+                class="p-1.5 header-action-btn"
                 aria-label="Search"
               >
                 <svg
@@ -184,10 +154,10 @@
               <button
                 type="button"
                 id="lang-btn"
-                class="flex items-center gap-1.5 text-base font-medium p-1 hover:text-primary transition-colors focus:outline-none cursor-pointer"
+                class="flex items-center gap-1.5 text-base font-medium p-1 header-action-btn"
               >
                 <span
-                  class="w-6 h-[17px] inline-block bg-cover bg-center rounded-xs overflow-hidden border border-white/20"
+                  class="flag-icon"
                   style="
                     background-image: url(&quot;https://flagcdn.com/w40/gb.png&quot;);
                   "
@@ -219,7 +189,7 @@
                   class="lang-option flex items-center gap-2 px-3 py-2 text-white hover:bg-primary transition-colors"
                 >
                   <span
-                    class="w-5 h-3.5 inline-block bg-cover bg-center border border-white/20"
+                    class="flag-icon"
                     style="
                       background-image: url(&quot;https://flagcdn.com/w40/gb.png&quot;);
                     "
@@ -232,7 +202,7 @@
                   class="lang-option flex items-center gap-2 px-3 py-2 text-gray-300 hover:bg-primary hover:text-white transition-colors"
                 >
                   <span
-                    class="w-5 h-3.5 inline-block bg-cover bg-center border border-white/20"
+                    class="flag-icon"
                     style="
                       background-image: url(&quot;https://flagcdn.com/w40/vn.png&quot;);
                     "
@@ -245,7 +215,7 @@
                   class="lang-option flex items-center gap-2 px-3 py-2 text-gray-300 hover:bg-primary hover:text-white transition-colors"
                 >
                   <span
-                    class="w-5 h-3.5 inline-block bg-cover bg-center border border-white/20"
+                    class="flag-icon"
                     style="
                       background-image: url(&quot;https://flagcdn.com/w40/cn.png&quot;);
                     "
@@ -260,7 +230,7 @@
           <button
             type="button"
             id="mobile-menu-toggle"
-            class="lg:hidden p-2 text-white hover:text-primary focus:outline-none"
+            class="lg:hidden p-2 header-action-btn"
             aria-label="Open mobile menu"
           >
             <svg
@@ -982,9 +952,7 @@
           <!-- Header -->
           <div class="text-center space-y-5 max-w-xl mx-auto">
             <div class="badge-tag">WHY CHOOSE US?</div>
-            <h2 class="heading-h3 text-gray-900">
-              Why Partner With Us?
-            </h2>
+            <h2 class="heading-h3 text-gray-900">Why Partner With Us?</h2>
           </div>
 
           <!-- 5 Feature Columns -->
@@ -1073,9 +1041,7 @@
                 />
               </div>
               <div class="feature-card-body">
-                <h3 class="feature-card-title">
-                  Global Export Expertise
-                </h3>
+                <h3 class="feature-card-title">Global Export Expertise</h3>
                 <p class="feature-card-desc">
                   Exported to 30+ countries, serving industrial automation,
                   medical, telecommunications, and renewable energy sectors.

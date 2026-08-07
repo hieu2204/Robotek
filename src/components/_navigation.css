@@ -1,7 +1,12 @@
 @layer components {
-  /* Header Component Variants */
-  .header--overlay {
+  /* Unified Header Base & Variants (Fixed Header Strategy) */
+  header,
+  .header {
     @apply fixed inset-x-0 top-0 z-50 w-full h-[100px] transition-all duration-300;
+  }
+
+  .header--overlay {
+    @apply bg-transparent;
     background: linear-gradient(
       180deg,
       #ce181e 0%,
@@ -10,12 +15,30 @@
   }
 
   .header--overlay.is-scrolled {
-    @apply bg-slate-900/95 backdrop-blur-md shadow-xl;
+    @apply bg-primary shadow-xl;
     background-image: none;
   }
 
   .header--solid {
-    @apply relative w-full h-[100px] bg-primary;
+    @apply bg-primary;
+  }
+
+  .header--solid.is-scrolled {
+    @apply shadow-xl;
+  }
+
+  /* Navigation Link Component & Active States */
+  .nav-link {
+    @apply relative py-2 text-white font-semibold text-sm xl:text-base leading-6 whitespace-nowrap border-b-2 border-transparent hover:border-white/70 transition-all duration-200 cursor-pointer;
+  }
+
+  .nav-link.is-active {
+    @apply border-white hover:border-white;
+  }
+
+  /* Header Utility Action Buttons (Search, Lang, Mobile Menu Toggle) */
+  .header-action-btn {
+    @apply text-white hover:opacity-80 transition-opacity duration-200 focus:outline-none cursor-pointer;
   }
 
   /* Navigation Dropdowns & Elements */

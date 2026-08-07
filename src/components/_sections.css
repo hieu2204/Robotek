@@ -4,8 +4,21 @@
     @apply max-w-[399px] p-4 border-t border-l border-white rounded-tl-xl bg-transparent;
   }
 
-  /* Dual Manufacturing Section Content Panel */
+  /* Dual Manufacturing & Banner Content Panel */
   .banner-panel {
     @apply flex flex-col py-8 sm:py-14 lg:py-16 min-h-[500px] lg:min-h-[710px];
+  }
+
+  /* Key Metrics Component (About Us Page) */
+  .metric-item {
+    @apply flex flex-col items-center text-center gap-4;
+  }
+
+  .metric-value {
+    @apply font-semibold text-4xl sm:text-5xl lg:text-6xl text-primary tracking-tight;
+  }
+
+  .metric-label {
+    @apply text-lg sm:text-xl lg:text-2xl font-semibold text-gray-900 leading-snug;
   }
 }
