@@ -154,72 +154,56 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // 8. Milestone Tabs Switcher (About Us Page)
-  const milestoneTabs = document.querySelectorAll(".milestone-tab");
-  const milestoneTitle = document.getElementById("milestone-title");
-  const milestoneDesc = document.getElementById("milestone-desc");
-  const milestonePrevBtn = document.getElementById("milestone-prev");
-  const milestoneNextBtn = document.getElementById("milestone-next");
-
-  if (milestoneTabs.length > 0) {
-    let currentIndex = 0;
-
-    const updateMilestone = (index) => {
-      currentIndex = index;
-      milestoneTabs.forEach((tab, i) => {
-        const yearSpan = tab.querySelector("span:first-child");
-        if (i === index) {
-          tab.classList.add(
-            "bg-white",
-            "shadow-sm",
-            "border",
-            "border-primary/20",
-          );
-          tab.classList.remove("hover:bg-white/80");
-          if (yearSpan) {
-            yearSpan.classList.add("text-primary");
-            yearSpan.classList.remove("text-gray-500");
-          }
-        } else {
-          tab.classList.remove(
-            "bg-white",
-            "shadow-sm",
-            "border",
-            "border-primary/20",
-          );
-          tab.classList.add("hover:bg-white/80");
-          if (yearSpan) {
-            yearSpan.classList.remove("text-primary");
-            yearSpan.classList.add("text-gray-500");
-          }
-        }
-      });
-
-      const activeTab = milestoneTabs[index];
-      if (activeTab && milestoneTitle && milestoneDesc) {
-        milestoneTitle.textContent = activeTab.getAttribute("data-title");
-        milestoneDesc.textContent = activeTab.getAttribute("data-desc");
-      }
-    };
-
-    milestoneTabs.forEach((tab, index) => {
-      tab.addEventListener("click", () => updateMilestone(index));
+  // 8. Journey Swiper Carousel (About Us Page)
+  if (
+    typeof Swiper !== "undefined" &&
+    document.querySelector(".journey-swiper")
+  ) {
+    const journeySwiper = new Swiper(".journey-swiper", {
+      slidesPerView: 1,
+      spaceBetween: 32,
+      loop: true,
+      speed: 400,
+      autoplay: {
+        delay: 6000,
+        disableOnInteraction: false,
+      },
     });
 
-    if (milestonePrevBtn) {
-      milestonePrevBtn.addEventListener("click", () => {
-        const newIndex =
-          (currentIndex - 1 + milestoneTabs.length) % milestoneTabs.length;
-        updateMilestone(newIndex);
-      });
-    }
+    const journeyNavItems = document.querySelectorAll(".journey-nav-item");
+    const prevBtns = document.querySelectorAll(".journey-prev-btn");
+    const nextBtns = document.querySelectorAll(".journey-next-btn");
 
-    if (milestoneNextBtn) {
-      milestoneNextBtn.addEventListener("click", () => {
-        const newIndex = (currentIndex + 1) % milestoneTabs.length;
-        updateMilestone(newIndex);
+    const updateActiveJourneyNav = (realIndex) => {
+      journeyNavItems.forEach((item, index) => {
+        item.classList.toggle("active", index === realIndex);
       });
-    }
+    };
+
+    journeySwiper.on("slideChange", () => {
+      updateActiveJourneyNav(journeySwiper.realIndex);
+    });
+
+    journeyNavItems.forEach((navItem) => {
+      navItem.addEventListener("click", () => {
+        const index = parseInt(navItem.getAttribute("data-index"), 10);
+        if (!isNaN(index)) {
+          journeySwiper.slideToLoop(index);
+        }
+      });
+    });
+
+    prevBtns.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        journeySwiper.slidePrev();
+      });
+    });
+
+    nextBtns.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        journeySwiper.slideNext();
+      });
+    });
   }
 
   // 9. Dynamic CountUp Animation for Key Metrics (.count-up & [data-countup])
