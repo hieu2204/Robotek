@@ -1,0 +1,11 @@
+@layer components {
+  /* Hero & Dual Manufacturing Feature Callout Corner Accent Box */
+  .feature-callout-box {
+    @apply max-w-[399px] p-4 border-t border-l border-white rounded-tl-xl bg-transparent;
+  }
+
+  /* Dual Manufacturing Section Content Panel */
+  .banner-panel {
+    @apply flex flex-col py-8 sm:py-14 lg:py-16 min-h-[500px] lg:min-h-[710px];
+  }
+}

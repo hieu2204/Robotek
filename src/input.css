@@ -1,6 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,400..700;1,400..700&family=Orbitron:wght@400..900&display=swap");
 @import "tailwindcss";
 
+@import "./components/_buttons.css";
+@import "./components/_cards.css";
+@import "./components/_sections.css";
+@import "./components/_navigation.css";
+
 @theme {
   --breakpoint-3xl: 120rem;
 
@@ -51,12 +56,11 @@ body {
   }
 
   @media (width >= theme(--breakpoint-2xl)) {
-    max-width: 1536px;
+    max-width: 1920px;
     padding-inline: 64px;
   }
 
   @media (width >= theme(--breakpoint-3xl)) {
-    max-width: 1920px;
     padding-inline: 96px;
   }
 }
@@ -68,23 +72,20 @@ html {
 
 /* Reusable Component Classes & Variants */
 @layer components {
-  /* Header Component Variants */
-  .header--overlay {
-    @apply fixed inset-x-0 top-0 z-50 w-full h-[100px] transition-all duration-300;
-    background: linear-gradient(
-      180deg,
-      #ce181e 0%,
-      rgba(104, 12, 15, 0) 77.16%
-    );
-  }
-
-  .header--overlay.is-scrolled {
-    @apply bg-slate-900/95 backdrop-blur-md shadow-xl;
-    background-image: none;
-  }
-
-  .header--solid {
-    @apply relative w-full h-[100px] bg-primary;
+  /* Hero Overlay Variant */
+  .hero-overlay {
+    @apply absolute inset-0 pointer-events-none;
+    background:
+      linear-gradient(
+        180deg,
+        rgba(102, 102, 102, 0) 76.29%,
+        rgba(0, 0, 0, 0.2) 88.46%
+      ),
+      linear-gradient(
+        176deg,
+        rgba(0, 0, 0, 0.2) 22.93%,
+        rgba(102, 102, 102, 0) 60.53%
+      );
   }
 
   /* Typography Headings */
@@ -100,29 +101,14 @@ html {
     @apply text-2xl sm:text-3xl lg:text-[32px] font-semibold leading-relaxed lg:leading-[40px];
   }
 
-  /* Reusable Buttons & Badges */
-  .btn-dark {
-    @apply inline-flex items-center gap-2 bg-neutral-900 hover:bg-primary transition-colors text-white px-5 py-3 rounded-xs font-orbitron font-normal text-base tracking-wider shadow-lg;
+  /* Certifications Swiper Controls Active & Disabled States */
+  #cert-prev,
+  #cert-next {
+    @apply text-primary transition-all duration-200 cursor-pointer w-10 h-10 flex items-center justify-center;
   }
 
-  .btn-explore {
-    @apply inline-flex items-center gap-3 bg-gray-900 hover:bg-primary transition-colors text-white px-5 py-3 rounded-xs font-orbitron font-normal text-base tracking-wider shadow-md;
-  }
-
-  .btn-light {
-    @apply inline-flex items-center gap-2 bg-white hover:bg-gray-200 transition-colors text-gray-900 px-4 py-2 rounded-xs font-orbitron font-normal text-base tracking-wider;
-  }
-
-  .badge-tag {
-    @apply inline-block bg-gray-200 px-6 py-2 rounded-xs font-orbitron font-semibold text-base text-gray-900 tracking-wider;
-  }
-
-  /* Product Card Reusable Styles */
-  .product-card {
-    @apply flex flex-col bg-gray-900/60 border border-white/10 rounded-xs overflow-hidden transition-all duration-300 hover:border-primary;
-  }
-
-  .product-card-img {
-    @apply relative h-80 overflow-hidden bg-black/40;
+  #cert-prev.swiper-button-disabled,
+  #cert-next.swiper-button-disabled {
+    @apply text-gray-300 opacity-40 cursor-not-allowed pointer-events-none;
   }
 }

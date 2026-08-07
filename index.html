@@ -8,7 +8,9 @@
       name="description"
       content="Zobotek specializes in high-quality industrial power supplies, EMS manufacturing, and next-generation Unmanned Surface Vehicles (USVs)."
     />
+    <link rel="stylesheet" href="assets/css/vendor/swiper-bundle.min.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
+    <script defer src="assets/js/vendor/swiper-bundle.min.js"></script>
     <script defer src="assets/js/main.js"></script>
   </head>
   <body
@@ -30,7 +32,7 @@
 
         <!-- Desktop Navigation Links (Centered in the exact middle of header) -->
         <nav
-          class="hidden lg:flex items-center justify-center gap-6 xl:gap-10 2xl:gap-[72px] text-white font-semibold text-sm xl:text-base leading-6 shrink-0"
+          class="hidden lg:flex items-center justify-center gap-6 xl:gap-10 2xl:gap-18 text-white font-semibold text-sm xl:text-base leading-6 shrink-0"
         >
           <!-- Left Links -->
           <a
@@ -428,46 +430,39 @@
       <!-- HERO SECTION -->
       <section
         id="hero"
-        class="relative min-h-[930px] lg:h-[930px] flex flex-col justify-between pb-10 text-white overflow-hidden"
+        class="relative min-h-0 lg:min-h-[930px] lg:h-[930px] flex flex-col justify-between pb-8 sm:pb-10 lg:pb-10 text-white overflow-hidden bg-gray-950"
       >
         <!-- Hero Background Image & Overlays -->
         <div class="absolute inset-0 z-0">
           <img
             src="assets/images/hero-bg.png"
             alt="Zobotek Manufacturing Facility"
-            class="w-full h-full object-cover"
+            class="w-full h-full object-cover object-center"
           />
           <!-- Figma gradient overlay -->
-          <div
-            class="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-black/70"
-          ></div>
-          <div
-            class="absolute top-[147px] left-[-10px] w-[569px] h-[223px] bg-red-600/10 blur-3xl pointer-events-none rounded-full"
-          ></div>
+          <div class="hero-overlay"></div>
         </div>
 
         <!-- Main Content (Heading & CTA) -->
-        <div class="container relative z-10 pt-24 lg:pt-[205px]">
-          <div class="max-w-[658px] space-y-10">
-            <h1 class="heading-h1 text-white">
+        <div class="container relative z-10 pt-28 lg:pt-[205px]">
+          <div class="max-w-[658px] space-y-5 sm:space-y-6 lg:space-y-10">
+            <h1
+              class="heading-h1 text-white text-3xl sm:text-4xl lg:text-5xl leading-tight lg:leading-[58px]"
+            >
               Professional Power Solutions<br class="hidden sm:block" />
               &amp; USV Innovations
             </h1>
             <div>
               <a href="#contact" class="btn-dark">
                 <span>CONTACT US</span>
-                <svg
-                  class="w-6 h-6"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
+                <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none">
                   <path
+                    d="M10 17L15 12M15 12L10 7"
+                    stroke="currentColor"
+                    stroke-width="2.5"
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M14 5l7 7m0 0l-7 7m7-7H3"
-                  />
+                  ></path>
                 </svg>
               </a>
             </div>
@@ -475,10 +470,8 @@
         </div>
 
         <!-- Bottom Feature Box & Decorative Graphic -->
-        <div class="container relative z-10 pt-12 lg:pt-0 mt-auto">
-          <div
-            class="max-w-[399px] p-4 border-t border-l border-white/20 rounded-tl-xl"
-          >
+        <div class="container relative z-10 mt-8 sm:mt-10 lg:mt-auto pt-0">
+          <div class="feature-callout-box">
             <p
               class="text-sm sm:text-base font-medium leading-relaxed text-gray-200"
             >
@@ -493,11 +486,20 @@
       <!-- ABOUT US SECTION -->
       <section
         id="about"
-        class="py-20 lg:py-28 bg-white relative overflow-hidden"
+        class="relative py-16 sm:py-20 lg:pt-20 lg:pb-30 bg-white text-gray-900 overflow-hidden"
       >
-        <div class="container">
+        <!-- Background Image (Inline HTML) -->
+        <div class="absolute inset-0 z-0 pointer-events-none">
+          <img
+            src="assets/images/about-bg.png"
+            alt="About Background Pattern"
+            class="w-full h-full object-cover object-right-top"
+          />
+        </div>
+
+        <div class="container relative z-10">
           <!-- Category Tag -->
-          <div class="mb-12 max-w-xs">
+          <div class="mb-3 sm:mb-4.5 max-w-xs">
             <div class="h-px bg-gray-900/20 mb-2"></div>
             <p
               class="font-orbitron text-sm font-regular tracking-wider text-gray-900 uppercase"
@@ -507,7 +509,7 @@
           </div>
 
           <div
-            class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center"
+            class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center"
           >
             <!-- Left Image Card -->
             <div class="lg:col-span-6">
@@ -537,153 +539,189 @@
       </section>
 
       <!-- OUR PEOPLE & FOXCONN HERITAGE SECTION -->
-      <section id="people" class="py-20 lg:py-28 bg-gray-50 relative">
-        <div class="container">
+      <section
+        id="people"
+        class="relative py-16 sm:py-20 lg:py-24 bg-gray-50 text-gray-900 overflow-hidden"
+      >
+        <!-- Background Image (Inline HTML) -->
+        <div class="absolute inset-0 z-0 pointer-events-none">
+          <img
+            src="assets/images/people-bg.png"
+            alt="People Background Pattern"
+            class="w-full h-full object-cover object-right-center"
+          />
+        </div>
+
+        <div class="container relative z-10">
           <div
-            class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center"
+            class="grid grid-cols-1 xl:grid-cols-12 gap-12 lg:gap-16 items-center"
           >
-            <!-- Left Text & CTA -->
-            <div class="lg:col-span-7 space-y-8">
-              <div
-                class="inline-block bg-white border border-gray-200 px-6 py-2 rounded-xs"
-              >
-                <span
-                  class="font-orbitron font-semibold text-base text-gray-900 tracking-wider"
-                  >OUR PEOPLE</span
-                >
+            <!-- Left Text, CTA & Sub Feature Intro -->
+            <div
+              class="xl:col-span-7 flex flex-col gap-10 sm:gap-14 lg:gap-16 2xl:gap-48"
+            >
+              <!-- Header & CTA -->
+              <div class="flex flex-col items-start gap-5">
+                <div class="badge-tag--white">OUR PEOPLE</div>
+                <h3 class="heading-h3 text-gray-900 mb-5">
+                  Our engineering team brings over 10 years of experience from
+                  Foxconn Vietnam, delivering high-quality products at optimized
+                  costs thanks to our deep supply chain expertise
+                </h3>
+                <div>
+                  <a href="#products" class="btn-explore">
+                    <span>EXPLORE NOW</span>
+                    <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none">
+                      <path
+                        d="M10 17L15 12M15 12L10 7"
+                        stroke="currentColor"
+                        stroke-width="2.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                    </svg>
+                  </a>
+                </div>
               </div>
-              <h3 class="heading-h3 text-gray-900">
-                Our engineering team brings over 10 years of experience from
-                Foxconn Vietnam, delivering high-quality products at optimized
-                costs thanks to our deep supply chain expertise
-              </h3>
-              <div>
-                <a href="#products" class="btn-explore">
-                  <span>EXPLORE NOW</span>
-                  <svg
-                    class="w-6 h-6"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
+
+              <!-- Sub Feature Intro (Inside Left Column) -->
+              <div
+                class="pt-8 sm:pt-10 border-t border-gray-900/20 space-y-4 sm:space-y-6"
+              >
+                <div>
+                  <p
+                    class="font-orbitron text-base font-regular text-gray-900 tracking-wider uppercase"
                   >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M14 5l7 7m0 0l-7 7m7-7H3"
-                    />
-                  </svg>
-                </a>
+                    24/7 uninterrupted operation
+                  </p>
+                </div>
+                <div
+                  class="grid grid-cols-1 sm:grid-cols-12 gap-6 sm:gap-8 2xl:gap-24 items-start"
+                >
+                  <div class="sm:col-span-6">
+                    <h4
+                      class="text-xl sm:text-2xl font-semibold leading-snug text-gray-900"
+                    >
+                      Precision electronic manufacturing meets advanced marine
+                      technology
+                    </h4>
+                  </div>
+                  <div
+                    class="sm:col-span-6 text-gray-600 font-medium text-sm leading-relaxed"
+                  >
+                    Leveraging Foxconn-standard production lines, Zobotek
+                    specializes in high-quality EMS and next-generation Unmanned
+                    Surface Vehicles (USVs)—delivering maximum durability at
+                    optimized cost.
+                  </div>
+                </div>
               </div>
             </div>
 
             <!-- Right Image Container -->
-            <div class="lg:col-span-5">
-              <div
-                class="relative rounded-xs overflow-hidden shadow-xl border border-gray-200 bg-white"
-              >
-                <img
-                  src="assets/images/people-equipment.png"
-                  alt="Zobotek Precision Power Equipment"
-                  class="w-full h-auto object-cover"
-                />
-              </div>
-            </div>
-          </div>
-
-          <!-- Sub Feature Intro -->
-          <div
-            class="mt-20 pt-10 border-t border-gray-300 grid grid-cols-1 md:grid-cols-12 gap-8 items-start"
-          >
-            <div class="md:col-span-4">
-              <p
-                class="font-orbitron text-sm font-regular text-gray-900 tracking-wider uppercase mb-1"
-              >
-                24/7 uninterrupted operation
-              </p>
-              <h4
-                class="text-xl sm:text-2xl font-semibold leading-snug text-gray-900"
-              >
-                Precision electronic manufacturing meets advanced marine
-                technology
-              </h4>
-            </div>
             <div
-              class="md:col-span-8 text-gray-600 font-medium text-sm sm:text-base leading-relaxed"
+              class="xl:col-span-5 flex items-center justify-center xl:justify-end"
             >
-              Leveraging Foxconn-standard production lines, Zobotek specializes
-              in high-quality EMS and next-generation Unmanned Surface Vehicles
-              (USVs)—delivering maximum durability at optimized cost.
+              <img
+                src="assets/images/people-equipment.png"
+                alt="Zobotek Precision Power Equipment"
+                class="w-full max-w-[480px] xl:max-w-none h-auto object-contain"
+              />
             </div>
           </div>
         </div>
       </section>
 
       <!-- DUAL MANUFACTURING BANNER SECTION -->
-      <section id="manufacturing" class="py-0 bg-gray-900 text-white">
-        <div class="grid grid-cols-1 md:grid-cols-2">
-          <!-- Left Banner Card -->
-          <div
-            class="relative min-h-[500px] lg:min-h-[710px] flex flex-col justify-between p-8 sm:p-16 bg-cover bg-center"
-            style="
-              background-image:
-                linear-gradient(
-                  to bottom,
-                  rgba(0, 0, 0, 0.5),
-                  rgba(0, 0, 0, 0.8)
-                ),
-                url(&quot;assets/images/factory-bg.png&quot;);
-            "
-          >
-            <div
-              class="max-w-md bg-black/50 p-4 rounded-xs border border-white/10 backdrop-blur-xs"
+      <section
+        id="manufacturing"
+        class="relative py-0 bg-gray-900 text-white overflow-hidden"
+      >
+        <!-- Background Full-Bleed Media Grid -->
+        <div
+          class="absolute inset-0 grid grid-cols-1 md:grid-cols-2 z-0 pointer-events-none"
+        >
+          <!-- Left Media Panel -->
+          <div class="relative w-full h-full overflow-hidden">
+            <video
+              autoplay
+              loop
+              muted
+              playsinline
+              class="absolute inset-0 w-full h-full object-cover z-0"
             >
-              <p class="text-sm font-medium text-gray-200 leading-relaxed">
+              <source
+                src="assets/video/sunset_cloud_mountain.mp4"
+                type="video/mp4"
+              />
+            </video>
+            <!-- Dark Gradient Overlay -->
+            <div
+              class="absolute inset-0 bg-gradient-to-b from-black/50 via-black/20 to-black/80 z-10"
+            ></div>
+          </div>
+
+          <!-- Right Media Panel -->
+          <div class="relative w-full h-full overflow-hidden">
+            <video
+              autoplay
+              loop
+              muted
+              playsinline
+              class="absolute inset-0 w-full h-full object-cover z-0"
+            >
+              <source
+                src="assets/video/sunset_cloud_mountain.mp4"
+                type="video/mp4"
+              />
+            </video>
+            <!-- Dark Gradient Overlay -->
+            <div
+              class="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/80 z-10"
+            ></div>
+          </div>
+        </div>
+
+        <!-- Global Container Content Alignment Grid -->
+        <div
+          class="container relative z-10 grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16 pointer-events-auto"
+        >
+          <!-- Left Content Panel -->
+          <div class="banner-panel justify-between items-start">
+            <!-- Top Feature Box -->
+            <div class="feature-callout-box">
+              <p
+                class="text-sm sm:text-base font-medium leading-relaxed text-white"
+              >
                 High-stability DIN-rail power supplies and UPS units integrated
                 directly into SMT lines, CNC machinery, and automated assembly,
                 eliminate costly downtime.
               </p>
             </div>
-            <div class="space-y-4">
-              <div
-                class="inline-flex items-center gap-2 bg-white text-gray-900 px-4 py-1.5 rounded-xs font-orbitron font-normal text-sm tracking-wider"
-              >
-                <span>OUR MANUFACTURING</span>
-                <svg
-                  class="w-4 h-4"
-                  fill="none"
+            <a href="" class="btn-light-sm">
+              <span>OUR MANUFACTURING</span>
+              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M10 17L15 12M15 12L10 7"
                   stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M19 9l-7 7-7-7"
-                  />
-                </svg>
-              </div>
-              <h2 class="heading-h2">
-                Powering Precision in Smart Manufacturing
-              </h2>
-            </div>
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </svg>
+            </a>
+            <h2 class="heading-h2 text-white">
+              Powering Precision in Smart Manufacturing
+            </h2>
           </div>
 
-          <!-- Right Banner Card -->
-          <div
-            class="relative min-h-[500px] lg:min-h-[710px] flex flex-col justify-end p-8 sm:p-16 bg-cover bg-center"
-            style="
-              background-image:
-                linear-gradient(
-                  to bottom,
-                  rgba(0, 0, 0, 0.3),
-                  rgba(0, 0, 0, 0.8)
-                ),
-                url(&quot;assets/images/hero-bg.png&quot;);
-            "
-          >
+          <!-- Right Content Panel -->
+          <div class="banner-panel justify-end">
+            <!-- Bottom Content (Heading) -->
             <div class="space-y-4">
-              <h2 class="heading-h2">Automated Production Assembly Line</h2>
+              <h2 class="heading-h2 text-white">
+                Automated Production Assembly Line
+              </h2>
             </div>
           </div>
         </div>
@@ -696,10 +734,10 @@
       >
         <div class="container space-y-24">
           <!-- POWER SUPPLIES CAROUSEL / GRID -->
-          <div class="space-y-12">
+          <div class="space-y-12 2xl:space-y-18">
             <!-- Header Bar -->
             <div
-              class="flex flex-col sm:flex-row items-start sm:items-end justify-between gap-6 border-b border-white/10 pb-6"
+              class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6"
             >
               <div class="space-y-2 max-w-2xl">
                 <h2 class="heading-h2">Power Supplies</h2>
@@ -709,147 +747,155 @@
               </div>
               <a href="#contact" class="btn-light shrink-0">
                 <span>Learn more</span>
-                <svg
-                  class="w-5 h-5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
+                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none">
                   <path
+                    d="M10 17L15 12M15 12L10 7"
+                    stroke="currentColor"
+                    stroke-width="2.5"
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M14 5l7 7m0 0l-7 7m7-7H3"
-                  />
+                  ></path>
                 </svg>
               </a>
             </div>
 
-            <!-- Product Cards Grid -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-              <!-- Card 1: Ultra-Slim -->
-              <div
-                class="group flex flex-col bg-gray-900/60 border border-red-400/80 rounded-xs overflow-hidden transition-all duration-300 hover:border-red-500"
-              >
-                <div class="product-card-img">
-                  <img
-                    src="assets/images/product-ps1.png"
-                    alt="Ultra-Slim Series Power Supply"
-                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <div
-                    class="absolute top-0 left-0 bg-primary px-6 py-2 text-white font-orbitron font-semibold text-sm tracking-wider"
-                  >
-                    USED IN:
-                  </div>
-                  <div
-                    class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center"
-                  >
-                    <span
-                      class="inline-flex items-center gap-2 bg-gray-900 text-white px-4 py-2 rounded-xs font-orbitron text-sm"
-                    >
-                      EXPLORE NOW &rarr;
-                    </span>
-                  </div>
+            <!-- Product Cards Swiper Carousel -->
+            <div class="swiper products-swiper">
+              <div class="swiper-wrapper">
+                <!-- Card 1: Ultra-Slim -->
+                <div class="swiper-slide h-auto">
+                  <a href="#contact" class="product-card group h-full">
+                    <div class="product-card-img">
+                      <img
+                        src="assets/images/product-ps1.png"
+                        alt="Ultra-Slim Series Power Supply"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                      <div class="product-card-badge">USED IN:</div>
+                      <div class="product-card-overlay">
+                        <span class="btn-card-explore">
+                          <span>EXPLORE NOW</span>
+                          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none">
+                            <path
+                              d="M10 17L15 12M15 12L10 7"
+                              stroke="currentColor"
+                              stroke-width="2.5"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            ></path>
+                          </svg>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="product-card-info">
+                      <p class="font-orbitron text-sm text-white">PS - 1</p>
+                      <h3 class="font-medium text-lg text-white">
+                        Ultra-Slim Series: 36W ~ 750W
+                      </h3>
+                    </div>
+                  </a>
                 </div>
-                <div class="p-6 border-t border-white/10 space-y-2 mt-auto">
-                  <p class="font-orbitron text-xs text-gray-400">PS - 1</p>
-                  <h3 class="font-medium text-lg text-white">
-                    Ultra-Slim Series: 36W ~ 750W
-                  </h3>
-                </div>
-              </div>
 
-              <!-- Card 2: PFC Series -->
-              <div class="product-card">
-                <div class="product-card-img">
-                  <img
-                    src="assets/images/product-ps2.png"
-                    alt="PFC Series Power Supply"
-                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <div
-                    class="absolute top-0 left-0 bg-gray-700 px-6 py-2 text-white font-orbitron font-semibold text-sm tracking-wider"
-                  >
-                    PFC
-                  </div>
-                  <div
-                    class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center"
-                  >
-                    <span
-                      class="inline-flex items-center gap-2 bg-gray-900 text-white px-4 py-2 rounded-xs font-orbitron text-sm"
-                    >
-                      EXPLORE NOW &rarr;
-                    </span>
-                  </div>
+                <!-- Card 2: PFC Series -->
+                <div class="swiper-slide h-auto">
+                  <a href="#contact" class="product-card group h-full">
+                    <div class="product-card-img">
+                      <img
+                        src="assets/images/product-ps2.png"
+                        alt="PFC Series Power Supply"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                      <div class="product-card-badge">PFC</div>
+                      <div class="product-card-overlay">
+                        <span class="btn-card-explore">
+                          <span>EXPLORE NOW</span>
+                          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none">
+                            <path
+                              d="M10 17L15 12M15 12L10 7"
+                              stroke="currentColor"
+                              stroke-width="2.5"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            ></path>
+                          </svg>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="product-card-info">
+                      <p class="font-orbitron text-sm text-white">PS - 2</p>
+                      <h3 class="font-medium text-lg text-white">
+                        PFC Series: 150W ~ 4000W
+                      </h3>
+                    </div>
+                  </a>
                 </div>
-                <div class="p-6 border-t border-white/10 space-y-2 mt-auto">
-                  <p class="font-orbitron text-xs text-gray-400">PS - 2</p>
-                  <h3 class="font-medium text-lg text-white">
-                    PFC Series: 150W ~ 4000W
-                  </h3>
-                </div>
-              </div>
 
-              <!-- Card 3: Standard Series -->
-              <div class="product-card">
-                <div class="product-card-img">
-                  <img
-                    src="assets/images/product-ps3.png"
-                    alt="Standard Series Power Supply"
-                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <div
-                    class="absolute top-0 left-0 bg-gray-700 px-6 py-2 text-white font-orbitron font-semibold text-sm tracking-wider"
-                  >
-                    STANDARD
-                  </div>
-                  <div
-                    class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center"
-                  >
-                    <span
-                      class="inline-flex items-center gap-2 bg-gray-900 text-white px-4 py-2 rounded-xs font-orbitron text-sm"
-                    >
-                      EXPLORE NOW &rarr;
-                    </span>
-                  </div>
+                <!-- Card 3: Standard Series -->
+                <div class="swiper-slide h-auto">
+                  <a href="#contact" class="product-card group h-full">
+                    <div class="product-card-img">
+                      <img
+                        src="assets/images/product-ps3.png"
+                        alt="Standard Series Power Supply"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                      <div class="product-card-badge">STANDARD</div>
+                      <div class="product-card-overlay">
+                        <span class="btn-card-explore">
+                          <span>EXPLORE NOW</span>
+                          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none">
+                            <path
+                              d="M10 17L15 12M15 12L10 7"
+                              stroke="currentColor"
+                              stroke-width="2.5"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            ></path>
+                          </svg>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="product-card-info">
+                      <p class="font-orbitron text-sm text-white">PS - 3</p>
+                      <h3 class="font-medium text-lg text-white">
+                        Standard Series: 36W ~ 1000W
+                      </h3>
+                    </div>
+                  </a>
                 </div>
-                <div class="p-6 border-t border-white/10 space-y-2 mt-auto">
-                  <p class="font-orbitron text-xs text-gray-400">PS - 3</p>
-                  <h3 class="font-medium text-lg text-white">
-                    Standard Series: 36W ~ 1000W
-                  </h3>
-                </div>
-              </div>
 
-              <!-- Card 4: LED Driver Series -->
-              <div class="product-card">
-                <div class="product-card-img">
-                  <img
-                    src="assets/images/product-ps4.png"
-                    alt="LED Driver Series Power Supply"
-                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <div
-                    class="absolute top-0 left-0 bg-gray-700 px-6 py-2 text-white font-orbitron font-semibold text-sm tracking-wider"
-                  >
-                    LED
-                  </div>
-                  <div
-                    class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center"
-                  >
-                    <span
-                      class="inline-flex items-center gap-2 bg-gray-900 text-white px-4 py-2 rounded-xs font-orbitron text-sm"
-                    >
-                      EXPLORE NOW &rarr;
-                    </span>
-                  </div>
-                </div>
-                <div class="p-6 border-t border-white/10 space-y-2 mt-auto">
-                  <p class="font-orbitron text-xs text-gray-400">PS - 4</p>
-                  <h3 class="font-medium text-lg text-white">
-                    LED Driver Series: 12W ~ 600W
-                  </h3>
+                <!-- Card 4: LED Driver Series -->
+                <div class="swiper-slide h-auto">
+                  <a href="#contact" class="product-card group h-full">
+                    <div class="product-card-img">
+                      <img
+                        src="assets/images/product-ps4.png"
+                        alt="LED Driver Series Power Supply"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                      <div class="product-card-badge">LED</div>
+                      <div class="product-card-overlay">
+                        <span class="btn-card-explore">
+                          <span>EXPLORE NOW</span>
+                          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none">
+                            <path
+                              d="M10 17L15 12M15 12L10 7"
+                              stroke="currentColor"
+                              stroke-width="2.5"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            ></path>
+                          </svg>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="product-card-info">
+                      <p class="font-orbitron text-sm text-white">PS - 4</p>
+                      <h3 class="font-medium text-lg text-white">
+                        LED Driver Series: 12W ~ 600W
+                      </h3>
+                    </div>
+                  </a>
                 </div>
               </div>
             </div>
@@ -858,74 +904,58 @@
           <!-- USV INNOVATIONS SUBSECTION -->
           <div
             id="products-usv"
-            class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center border-t border-white/10 pt-16"
+            class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center 2xl:items-stretch pt-8 sm:pt-12"
           >
             <!-- Left Product Image -->
             <div class="lg:col-span-6">
               <div
-                class="relative rounded-xs overflow-hidden shadow-2xl border border-white/10"
+                class="relative rounded-xs overflow-hidden shadow-2xl border border-white/10 h-full"
               >
                 <img
                   src="assets/images/product-usv.png"
                   alt="Remote Control Lifebuoy USV"
-                  class="w-full h-auto object-cover"
+                  class="w-full h-full object-cover"
                 />
               </div>
             </div>
 
             <!-- Right Specifications & Detail -->
-            <div class="lg:col-span-6 space-y-8">
-              <div class="space-y-2">
-                <p
-                  class="font-orbitron text-sm text-gray-400 uppercase tracking-widest border-b border-white/10 pb-2"
-                >
-                  USV - 1
-                </p>
-                <h3 class="text-3xl sm:text-4xl font-semibold text-white">
-                  USV
-                </h3>
-                <p class="text-xl sm:text-2xl font-semibold text-gray-300">
-                  Professional Power Solutions for Industrial Applications
-                </p>
+            <div
+              class="lg:col-span-6 flex flex-col justify-between gap-4 2xl:gap-0 items-start space-y-6 lg:space-y-0"
+            >
+              <!-- Top Tag & Header -->
+              <div class="space-y-6 w-full">
+                <div class="border-t border-white pt-2 space-y-1">
+                  <p class="font-orbitron text-sm text-white">USV - 1</p>
+                </div>
+                <div class="space-y-2">
+                  <h2 class="heading-h2 text-white">USV</h2>
+                  <p class="text-xl sm:text-2xl font-semibold text-gray-300">
+                    Professional Power Solutions for Industrial Applications
+                  </p>
+                </div>
               </div>
 
-              <!-- Bullet List with Lines -->
-              <ul class="space-y-4 font-medium text-lg text-gray-200">
-                <li
-                  class="border-t border-b border-white/10 py-3 flex items-center justify-between"
-                >
-                  <span>Remote Control Lifebuoy</span>
-                  <span class="text-primary">&bull;</span>
-                </li>
-                <li
-                  class="border-b border-white/10 py-3 flex items-center justify-between"
-                >
-                  <span>GPS Navigation &amp; Positioning</span>
-                  <span class="text-primary">&bull;</span>
-                </li>
-                <li
-                  class="border-b border-white/10 py-3 flex items-center justify-between"
-                >
-                  <span>High-Speed Water Surface Rescue Operations</span>
-                  <span class="text-primary">&bull;</span>
-                </li>
+              <!-- List with Line Dividers (Figma Frame 2147262609) -->
+              <ul
+                class="border-t border-b border-white/10 divide-y divide-white/10 font-medium text-base sm:text-lg text-white"
+              >
+                <li class="py-3">Remote Control Lifebuoy</li>
+                <li class="py-3">GPS Navigation &amp; Positioning</li>
+                <li class="py-3">High-Speed Water Surface Rescue Operations</li>
               </ul>
 
               <div>
                 <a href="#contact" class="btn-light">
                   <span>Learn more</span>
-                  <svg
-                    class="w-5 h-5"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
+                  <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none">
                     <path
+                      d="M10 17L15 12M15 12L10 7"
+                      stroke="currentColor"
+                      stroke-width="2.5"
                       stroke-linecap="round"
                       stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M14 5l7 7m0 0l-7 7m7-7H3"
-                    />
+                    ></path>
                   </svg>
                 </a>
               </div>
@@ -935,268 +965,268 @@
       </section>
 
       <!-- WHY PARTNER WITH US SECTION -->
-      <section id="why-us" class="py-20 lg:py-28 bg-white text-gray-900">
-        <div class="container space-y-16">
+      <section
+        id="why-us"
+        class="relative py-12 lg:pt-24 lg:pb-18 bg-white text-gray-900 overflow-hidden"
+      >
+        <!-- Background Image (Inline HTML) -->
+        <div class="absolute inset-0 z-0 pointer-events-none">
+          <img
+            src="assets/images/why-us-bg.png"
+            alt="Why Choose Us Background Pattern"
+            class="w-full h-auto object-contain object-center"
+          />
+        </div>
+
+        <div class="container relative z-10 space-y-12 lg:space-y-[72px]">
           <!-- Header -->
-          <div class="text-center space-y-4 max-w-xl mx-auto">
+          <div class="text-center space-y-5 max-w-xl mx-auto">
             <div class="badge-tag">WHY CHOOSE US?</div>
-            <h2 class="text-3xl sm:text-4xl font-semibold leading-tight">
+            <h2 class="heading-h3 text-gray-900">
               Why Partner With Us?
             </h2>
           </div>
 
           <!-- 5 Feature Columns -->
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-5 gap-8 lg:gap-10"
+          >
             <!-- Item 1 -->
-            <div class="space-y-4">
-              <div
-                class="w-14 h-14 rounded-xs bg-red-50 text-primary flex items-center justify-center"
-              >
-                <svg
-                  class="w-8 h-8"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="1.5"
-                    d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5m0 0h4m-4 0V11m0 0V7m0 4h4M9 7h4"
-                  />
-                </svg>
+            <div class="feature-card">
+              <div class="feature-card-icon">
+                <img
+                  src="assets/images/choose-us1.png"
+                  alt="Foxconn Heritage"
+                  class="w-14 h-14 object-contain"
+                />
               </div>
-              <h3 class="text-xl font-semibold leading-snug">
-                Foxconn Heritage
-              </h3>
-              <p class="text-sm font-medium text-gray-500 leading-relaxed">
-                Our founding team brings over 10 years of exps at Foxconn
-                Vietnam, guaranteeing world-class manufacturing standards.
-              </p>
+              <div class="feature-card-body">
+                <h3 class="feature-card-title">Foxconn Heritage</h3>
+                <p class="feature-card-desc">
+                  Our founding team brings over 10 years of exps at Foxconn
+                  Vietnam, guaranteeing world-class manufacturing standards.
+                </p>
+              </div>
             </div>
 
             <!-- Item 2 -->
-            <div class="space-y-4">
-              <div
-                class="w-14 h-14 rounded-xs bg-red-50 text-primary flex items-center justify-center"
-              >
-                <svg
-                  class="w-8 h-8"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="1.5"
-                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                  />
-                </svg>
+            <div class="feature-card">
+              <div class="feature-card-icon">
+                <img
+                  src="assets/images/choose-us2.png"
+                  alt="Certified Quality"
+                  class="w-14 h-14 object-contain"
+                />
               </div>
-              <h3 class="text-xl font-semibold leading-snug">
-                Certified Quality
-              </h3>
-              <p class="text-sm font-medium text-gray-500 leading-relaxed">
-                Products are certified with cULus, CB, CCC, KC, UKCA, RCM, CE,
-                FCC, and RoHS for seamless global market access.
-              </p>
+              <div class="feature-card-body">
+                <h3 class="feature-card-title">Certified Quality</h3>
+                <p class="feature-card-desc">
+                  Products are certified with cULus, CB, CCC, KC, UKCA, RCM, CE,
+                  FCC, and RoHS for seamless global market access.
+                </p>
+              </div>
             </div>
 
             <!-- Item 3 -->
-            <div class="space-y-4">
-              <div
-                class="w-14 h-14 rounded-xs bg-red-50 text-primary flex items-center justify-center"
-              >
-                <svg
-                  class="w-8 h-8"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="1.5"
-                    d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"
-                  />
-                </svg>
+            <div class="feature-card">
+              <div class="feature-card-icon">
+                <img
+                  src="assets/images/choose-us3.png"
+                  alt="Wide Product Range"
+                  class="w-14 h-14 object-contain"
+                />
               </div>
-              <h3 class="text-xl font-semibold leading-snug">
-                Wide Product Range
-              </h3>
-              <p class="text-sm font-medium text-gray-500 leading-relaxed">
-                Power supplies ranging from 12W to 4000W to meet diverse
-                industrial applications.
-              </p>
+              <div class="feature-card-body">
+                <h3 class="feature-card-title">Wide Product Range</h3>
+                <p class="feature-card-desc">
+                  Power supplies ranging from 12W to 4000W to meet diverse
+                  industrial applications.
+                </p>
+              </div>
             </div>
 
             <!-- Item 4 -->
-            <div class="space-y-4">
-              <div
-                class="w-14 h-14 rounded-xs bg-red-50 text-primary flex items-center justify-center"
-              >
-                <svg
-                  class="w-8 h-8"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="1.5"
-                    d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                  />
-                </svg>
+            <div class="feature-card">
+              <div class="feature-card-icon">
+                <img
+                  src="assets/images/choose-us5.png"
+                  alt="Competitive Pricing"
+                  class="w-14 h-14 object-contain"
+                />
               </div>
-              <h3 class="text-xl font-semibold leading-snug">
-                Competitive Pricing
-              </h3>
-              <p class="text-sm font-medium text-gray-500 leading-relaxed">
-                Direct manufacturer leverage with an optimized supply chain,
-                delivering the best cost-to-performance ratio.
-              </p>
+              <div class="feature-card-body">
+                <h3 class="feature-card-title">Competitive Pricing</h3>
+                <p class="feature-card-desc">
+                  Direct manufacturer leverage with an optimized supply chain,
+                  delivering the best cost-to-performance ratio.
+                </p>
+              </div>
             </div>
 
             <!-- Item 5 -->
-            <div class="space-y-4">
-              <div
-                class="w-14 h-14 rounded-xs bg-red-50 text-primary flex items-center justify-center"
-              >
-                <svg
-                  class="w-8 h-8"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="1.5"
-                    d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 002 2h1.5a2.5 2.5 0 002.5-2.5V11a2 2 0 012-2h1.055M15 20.488V18a2 2 0 012-2h3.064"
-                  />
-                </svg>
+            <div class="feature-card">
+              <div class="feature-card-icon">
+                <img
+                  src="assets/images/choose-us6.png"
+                  alt="Global Export Expertise"
+                  class="w-14 h-14 object-contain"
+                />
               </div>
-              <h3 class="text-xl font-semibold leading-snug">
-                Global Export Expertise
-              </h3>
-              <p class="text-sm font-medium text-gray-500 leading-relaxed">
-                Exported to 30+ countries, serving industrial automation,
-                medical, telecommunications, and renewable energy sectors.
-              </p>
+              <div class="feature-card-body">
+                <h3 class="feature-card-title">
+                  Global Export Expertise
+                </h3>
+                <p class="feature-card-desc">
+                  Exported to 30+ countries, serving industrial automation,
+                  medical, telecommunications, and renewable energy sectors.
+                </p>
+              </div>
             </div>
           </div>
+          <hr class="border-gray-200" />
         </div>
       </section>
 
       <!-- CERTIFICATIONS & FACTORY SECTION -->
       <section
         id="certifications"
-        class="relative py-20 lg:py-28 bg-gray-900 text-white overflow-hidden"
+        class="pt-12 2xl:pt-18 bg-white text-gray-900 overflow-hidden"
       >
-        <!-- Background Factory Image -->
-        <div class="absolute inset-0 z-0">
-          <img
-            src="assets/images/factory-bg.png"
-            alt="Zobotek Factory Facility"
-            class="w-full h-full object-cover"
-          />
-          <div
-            class="absolute inset-0 bg-gradient-to-r from-gray-950/90 via-gray-900/70 to-gray-950/90"
-          ></div>
-        </div>
-
-        <div
-          class="container relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center"
-        >
-          <!-- Left Statement -->
-          <div class="lg:col-span-6 space-y-6">
-            <div class="badge-tag">OUR CERTIFICATIONS</div>
-            <h2 class="heading-h3 font-semibold leading-relaxed text-white">
-              Factory and processes
-              <span
-                class="text-white underline decoration-primary underline-offset-8"
-                >meet the international standards</span
-              >. We use imported equipment with high automation capabilities,
-              optimizing processes and minimizing risks during production.
-            </h2>
-          </div>
-
-          <!-- Right Certifications Carousel -->
-          <div class="lg:col-span-6 space-y-6">
-            <!-- Slider Controls -->
-            <div class="flex items-center justify-end gap-3">
+        <div class="container space-y-6 lg:space-y-8">
+          <!-- Top Row: Prev & Next Controls (Topmost Right Aligned in Container) -->
+          <div class="flex items-center justify-end">
+            <div class="flex items-center gap-[13px]">
               <button
                 type="button"
                 id="cert-prev"
-                class="w-10 h-10 rounded-xs border border-white/30 flex items-center justify-center hover:bg-white hover:text-gray-900 transition-colors"
                 aria-label="Previous certification"
               >
-                &larr;
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 40 40"
+                  fill="none"
+                >
+                  <path
+                    d="M8.33301 20L33.333 19.9996"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M14.9998 11.6665L7.84501 18.8213C7.28946 19.3769 7.01168 19.6547 7.01168 19.9998C7.01168 20.345 7.28946 20.6228 7.84502 21.1783L14.9998 28.3332"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
               </button>
               <button
                 type="button"
                 id="cert-next"
-                class="w-10 h-10 rounded-xs border border-white/30 flex items-center justify-center hover:bg-white hover:text-gray-900 transition-colors"
                 aria-label="Next certification"
               >
-                &rarr;
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 40 40"
+                  fill="none"
+                >
+                  <path
+                    d="M31.667 19.9995L6.66699 19.9995"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M25 11.6665L32.1548 18.8213C32.7104 19.3769 32.9882 19.6547 32.9882 19.9998C32.9882 20.345 32.7104 20.6228 32.1548 21.1783L25 28.3332"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
               </button>
             </div>
+          </div>
 
-            <!-- Cert Badges Container -->
-            <div
-              id="cert-carousel"
-              class="flex items-center gap-6 overflow-x-auto scrollbar-none py-4"
-            >
-              <div
-                class="shrink-0 w-44 h-60 bg-white border border-red-200 rounded-xs p-4 flex items-center justify-center"
-              >
-                <img
-                  src="assets/images/cert-1.png"
-                  alt="cULus Certification"
-                  class="max-h-full max-w-full object-contain"
-                />
-              </div>
-              <div
-                class="shrink-0 w-44 h-60 bg-white border border-red-200 rounded-xs p-4 flex items-center justify-center"
-              >
-                <img
-                  src="assets/images/cert-2.png"
-                  alt="UKCA Certification"
-                  class="max-h-full max-w-full object-contain"
-                />
-              </div>
-              <div
-                class="shrink-0 w-44 h-60 bg-white border border-red-200 rounded-xs p-4 flex items-center justify-center"
-              >
-                <img
-                  src="assets/images/cert-3.png"
-                  alt="CE Certification"
-                  class="max-h-full max-w-full object-contain"
-                />
-              </div>
-              <div
-                class="shrink-0 w-44 h-60 bg-white border border-red-200 rounded-xs p-4 flex items-center justify-center"
-              >
-                <img
-                  src="assets/images/cert-4.png"
-                  alt="CCC Certification"
-                  class="max-h-full max-w-full object-contain"
-                />
-              </div>
-              <div
-                class="shrink-0 w-44 h-60 bg-white border border-red-200 rounded-xs p-4 flex items-center justify-center"
-              >
-                <img
-                  src="assets/images/cert-5.png"
-                  alt="RoHS Certification"
-                  class="max-h-full max-w-full object-contain"
-                />
+          <!-- Main Content Row: Left Statement (Col 1-6) & Right Breakout Swiper Carousel (Col 7-12) -->
+          <div
+            class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start mr-[calc((100%-100vw)/2)]"
+          >
+            <!-- Left Statement (Col 1-6) -->
+            <div class="lg:col-span-6 space-y-5">
+              <div class="badge-tag">OUR CERTIFICATIONS</div>
+              <h2 class="heading-h3 text-gray-900">
+                Factory and processes meet the international standards. We use
+                imported equipment with high automation capabilities, optimizing
+                processes and minimizing risks during production.
+              </h2>
+            </div>
+
+            <!-- Swiper Carousel (Col 7 Bleeds to Viewport Right Edge) -->
+            <div class="col-span-1 lg:col-span-6 w-full">
+              <div class="swiper cert-swiper overflow-hidden py-1">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide !w-[172px]">
+                    <div class="cert-card">
+                      <img
+                        src="assets/images/cert-1.png"
+                        alt="cULus Certification"
+                        class="cert-card-img"
+                      />
+                    </div>
+                  </div>
+                  <div class="swiper-slide !w-[172px]">
+                    <div class="cert-card">
+                      <img
+                        src="assets/images/cert-2.png"
+                        alt="UKCA Certification"
+                        class="cert-card-img"
+                      />
+                    </div>
+                  </div>
+                  <div class="swiper-slide !w-[172px]">
+                    <div class="cert-card">
+                      <img
+                        src="assets/images/cert-3.png"
+                        alt="CE Certification"
+                        class="cert-card-img"
+                      />
+                    </div>
+                  </div>
+                  <div class="swiper-slide !w-[172px]">
+                    <div class="cert-card">
+                      <img
+                        src="assets/images/cert-4.png"
+                        alt="CCC Certification"
+                        class="cert-card-img"
+                      />
+                    </div>
+                  </div>
+                  <div class="swiper-slide !w-[172px]">
+                    <div class="cert-card">
+                      <img
+                        src="assets/images/cert-5.png"
+                        alt="RoHS Certification"
+                        class="cert-card-img"
+                      />
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
+        </div>
+
+        <!-- Factory Building Image at bottom -->
+        <div class="w-full mt-12 lg:mt-16 overflow-hidden">
+          <img
+            src="assets/images/factory-bg.png"
+            alt="Zobotek Factory Facility"
+            class="w-full h-auto object-cover"
+          />
         </div>
       </section>
     </main>
@@ -1204,168 +1234,167 @@
     <!-- FOOTER -->
     <footer
       id="contact"
-      class="bg-footer-bg text-white relative pt-16 pb-8 overflow-hidden"
+      class="relative py-8 lg:py-14 text-white overflow-hidden"
     >
-      <!-- Subtle Geometric Watermark Background -->
-      <div class="absolute inset-0 opacity-10 pointer-events-none">
-        <svg
-          class="w-full h-full"
-          viewBox="0 0 1920 482"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M-315 -287L505 624M307 -980L1127 -69"
-            stroke="white"
-            stroke-width="4"
-          />
-        </svg>
+      <!-- Background Image -->
+      <div class="absolute inset-0 z-0 pointer-events-none">
+        <img
+          src="assets/images/footer-bg.png"
+          alt="Footer Background Pattern"
+          class="w-full h-full object-cover object-center"
+        />
       </div>
 
-      <div class="container relative z-10 space-y-12">
-        <div class="grid grid-cols-1 md:grid-cols-12 gap-10 items-start">
+      <div class="container relative z-10 space-y-12 lg:space-y-16">
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-10 items-start"
+        >
           <!-- Logo Column -->
-          <div class="md:col-span-4 space-y-4">
-            <div class="w-40">
-              <svg
-                class="h-10 w-auto"
-                viewBox="0 0 159 40"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path d="M14.5 12L0 40H8L22.5 12H14.5Z" fill="#CE181E" />
-                <path d="M32 0L8 40H16.5L40.5 0H32Z" fill="#CE181E" />
-                <path d="M42 0H26L40.5 24H56.5L42 0Z" fill="#FFFFFF" />
-                <text
-                  x="60"
-                  y="28"
-                  fill="#FFFFFF"
-                  font-family="'Orbitron', sans-serif"
-                  font-weight="700"
-                  font-size="22"
-                  letter-spacing="1"
-                >
-                  ZOBOTEK
-                </text>
-              </svg>
-            </div>
-            <p class="text-sm text-gray-300 leading-relaxed max-w-xs">
-              Leading manufacturer of high-stability power supplies and
-              next-generation Unmanned Surface Vehicles.
-            </p>
+          <div class="lg:col-span-5 space-y-4">
+            <img
+              src="assets/images/logo-footer.png"
+              alt="Zobotek Logo"
+              class="h-16 w-auto object-contain"
+            />
           </div>
 
           <!-- Quick Links Column -->
-          <div class="md:col-span-4 space-y-3 font-semibold text-base">
-            <div class="grid grid-cols-2 gap-3 text-gray-200">
-              <a href="#hero" class="hover:text-primary transition-colors"
-                >Home</a
-              >
-              <a href="#about" class="hover:text-primary transition-colors"
-                >About Us</a
-              >
-              <a href="#products" class="hover:text-primary transition-colors"
-                >Products</a
-              >
-              <a
-                href="#manufacturing"
-                class="hover:text-primary transition-colors"
-                >Manufacturing</a
-              >
-              <a
-                href="#certifications"
-                class="hover:text-primary transition-colors"
-                >Certification</a
-              >
-              <a href="#why-us" class="hover:text-primary transition-colors"
-                >Applications</a
-              >
-              <a href="#contact" class="hover:text-primary transition-colors"
-                >Contact us</a
-              >
+          <div class="lg:col-span-3 font-semibold text-base text-white">
+            <div class="flex flex-col gap-4">
+              <a href="#hero" class="footer-link">Home</a>
+              <a href="#about" class="footer-link">About Us</a>
+              <a href="#products" class="footer-link">Products</a>
+              <a href="#manufacturing" class="footer-link">Manufacturing</a>
+              <a href="#certifications" class="footer-link">Certification</a>
+              <a href="#why-us" class="footer-link">Applications</a>
+              <a href="#contact" class="footer-link">Contact us</a>
             </div>
           </div>
 
           <!-- Contact Info Column -->
-          <div
-            class="md:col-span-4 space-y-4 text-sm font-medium text-gray-200"
-          >
-            <div class="flex items-start gap-3">
-              <svg
-                class="w-6 h-6 text-primary shrink-0 mt-0.5"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-                />
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-                />
-              </svg>
-              <span>[Address] Industrial Park, Vietnam</span>
-            </div>
-
+          <div class="lg:col-span-4 space-y-6 text-base font-medium text-white">
+            <!-- Address -->
             <div class="flex items-center gap-3">
               <svg
-                class="w-6 h-6 text-primary shrink-0"
-                fill="none"
-                stroke="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
                 viewBox="0 0 24 24"
+                fill="none"
               >
                 <path
+                  d="M6.99902 18C5.1701 18.4117 3.99902 19.0443 3.99902 19.7537C3.99902 20.9943 7.58075 22 11.999 22C16.4173 22 19.999 20.9943 19.999 19.7537C19.999 19.0443 18.8279 18.4117 16.999 18"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M14.499 9C14.499 10.3807 13.3797 11.5 11.999 11.5C10.6183 11.5 9.49902 10.3807 9.49902 9C9.49902 7.61929 10.6183 6.5 11.999 6.5C13.3797 6.5 14.499 7.61929 14.499 9Z"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                />
+                <path
+                  d="M13.2564 17.4936C12.9191 17.8184 12.4683 18 11.9992 18C11.53 18 11.0792 17.8184 10.7419 17.4936C7.65332 14.5008 3.51421 11.1575 5.53273 6.30373C6.62413 3.67932 9.24397 2 11.9992 2C14.7544 2 17.3742 3.67933 18.4656 6.30373C20.4816 11.1514 16.3526 14.5111 13.2564 17.4936Z"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                />
+              </svg>
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="hover:underline transition-all"
+                >[Address]</a
+              >
+            </div>
+
+            <!-- Mail -->
+            <div class="flex items-center gap-3">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M7 8.5L9.94202 10.2394C11.6572 11.2535 12.3428 11.2535 14.058 10.2394L17 8.5"
+                  stroke="currentColor"
+                  stroke-width="1.5"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                />
+                <path
+                  d="M2.01577 13.4756C2.08114 16.5412 2.11383 18.0739 3.24496 19.2094C4.37608 20.3448 5.95033 20.3843 9.09883 20.4634C11.0393 20.5122 12.9607 20.5122 14.9012 20.4634C18.0497 20.3843 19.6239 20.3448 20.7551 19.2094C21.8862 18.0739 21.9189 16.5412 21.9842 13.4756C22.0053 12.4899 22.0053 11.5101 21.9842 10.5244C21.9189 7.45886 21.8862 5.92609 20.7551 4.79066C19.6239 3.65523 18.0497 3.61568 14.9012 3.53657C12.9607 3.48781 11.0393 3.48781 9.09882 3.53656C5.95033 3.61566 4.37608 3.65521 3.24495 4.79065C2.11382 5.92608 2.08114 7.45885 2.01576 10.5244C1.99474 11.5101 1.99475 12.4899 2.01577 13.4756Z"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linejoin="round"
                 />
               </svg>
               <a
                 href="mailto:example@zobotek.com"
-                class="hover:text-primary transition-colors"
+                class="hover:underline transition-all"
                 >example@zobotek.com</a
               >
             </div>
 
-            <div class="flex flex-wrap items-center gap-6 pt-2">
-              <div class="flex items-center gap-2">
+            <!-- Phone & Fax -->
+            <div class="flex flex-wrap items-center gap-8 pt-1">
+              <div class="flex items-center gap-3">
                 <svg
-                  class="w-5 h-5 text-primary"
-                  fill="none"
-                  stroke="currentColor"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
                   viewBox="0 0 24 24"
+                  fill="none"
                 >
                   <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    d="M3.77762 11.9424C2.8296 10.2893 2.37185 8.93948 2.09584 7.57121C1.68762 5.54758 2.62181 3.57081 4.16938 2.30947C4.82345 1.77638 5.57323 1.95852 5.96 2.6524L6.83318 4.21891C7.52529 5.46057 7.87134 6.08139 7.8027 6.73959C7.73407 7.39779 7.26737 7.93386 6.33397 9.00601L3.77762 11.9424ZM3.77762 11.9424C5.69651 15.2883 8.70784 18.3013 12.0576 20.2224M12.0576 20.2224C13.7107 21.1704 15.0605 21.6282 16.4288 21.9042C18.4524 22.3124 20.4292 21.3782 21.6905 19.8306C22.2236 19.1766 22.0415 18.4268 21.3476 18.04L19.7811 17.1668C18.5394 16.4747 17.9186 16.1287 17.2604 16.1973C16.6022 16.2659 16.0661 16.7326 14.994 17.666L12.0576 20.2224Z"
+                    stroke="currentColor"
                     stroke-width="2"
-                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                    stroke-linejoin="round"
                   />
                 </svg>
-                <span>+00 1234 5678</span>
+                <a href="tel:+0012345678" class="hover:underline transition-all"
+                  >+00 1234 5678</a
+                >
               </div>
-              <div class="flex items-center gap-2">
+              <div class="flex items-center gap-3">
                 <svg
-                  class="w-5 h-5 text-primary"
-                  fill="none"
-                  stroke="currentColor"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
                   viewBox="0 0 24 24"
+                  fill="none"
                 >
                   <path
+                    d="M7.35396 18C5.23084 18 4.16928 18 3.41349 17.5468C2.91953 17.2506 2.52158 16.8271 2.26475 16.3242C1.87179 15.5547 1.97742 14.5373 2.18868 12.5025C2.36503 10.8039 2.45321 9.95455 2.88684 9.33081C3.17153 8.92129 3.55659 8.58564 4.00797 8.35353C4.69548 8 5.58164 8 7.35396 8H16.646C18.4184 8 19.3045 8 19.992 8.35353C20.4434 8.58564 20.8285 8.92129 21.1132 9.33081C21.5468 9.95455 21.635 10.8039 21.8113 12.5025C22.0226 14.5373 22.1282 15.5547 21.7352 16.3242C21.4784 16.8271 21.0805 17.2506 20.5865 17.5468C19.8307 18 18.7692 18 16.646 18"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                  />
+                  <path
+                    d="M17 8V6C17 4.11438 17 3.17157 16.4142 2.58579C15.8284 2 14.8856 2 13 2H11C9.11438 2 8.17157 2 7.58579 2.58579C7 3.17157 7 4.11438 7 6V8"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M13.9887 16L10.0113 16C9.32602 16 8.98337 16 8.69183 16.1089C8.30311 16.254 7.97026 16.536 7.7462 16.9099C7.57815 17.1904 7.49505 17.5511 7.32884 18.2724C7.06913 19.3995 6.93928 19.963 7.02759 20.4149C7.14535 21.0174 7.51237 21.5274 8.02252 21.7974C8.40513 22 8.94052 22 10.0113 22L13.9887 22C15.0595 22 15.5949 22 15.9775 21.7974C16.4876 21.5274 16.8547 21.0174 16.9724 20.4149C17.0607 19.963 16.9309 19.3995 16.6712 18.2724C16.505 17.5511 16.4218 17.1904 16.2538 16.9099C16.0297 16.536 15.6969 16.254 15.3082 16.1089C15.0166 16 14.674 16 13.9887 16Z"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M18 12H18.009"
+                    stroke="white"
+                    stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"
                   />
                 </svg>
-                <span>+00 1234 5678</span>
+                <a href="tel:+0012345678" class="hover:underline transition-all"
+                  >+00 1234 5678</a
+                >
               </div>
             </div>
           </div>
@@ -1373,14 +1402,14 @@
 
         <!-- Bottom Bar -->
         <div
-          class="border-t border-primary-90/20 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-primary-90"
+          class="border-t border-primary-90/30 pt-3 flex flex-col sm:flex-row items-center justify-between gap-4 text-base text-primary-90 font-medium"
         >
           <p>Copyright &copy; 2026 Zobotek. All rights reserved.</p>
-          <div class="flex items-center gap-4">
+          <div class="flex items-center gap-2">
             <a href="#" class="hover:text-white transition-colors"
               >Terms and Conditions</a
             >
-            <span>|</span>
+            <span class="text-white">|</span>
             <a href="#" class="hover:text-white transition-colors"
               >Privacy Policy</a
             >

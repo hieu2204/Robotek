@@ -1,0 +1,37 @@
+@layer components {
+  /* Header Component Variants */
+  .header--overlay {
+    @apply fixed inset-x-0 top-0 z-50 w-full h-[100px] transition-all duration-300;
+    background: linear-gradient(
+      180deg,
+      #ce181e 0%,
+      rgba(104, 12, 15, 0) 77.16%
+    );
+  }
+
+  .header--overlay.is-scrolled {
+    @apply bg-slate-900/95 backdrop-blur-md shadow-xl;
+    background-image: none;
+  }
+
+  .header--solid {
+    @apply relative w-full h-[100px] bg-primary;
+  }
+
+  /* Navigation Dropdowns & Elements */
+  .dropdown-menu {
+    @apply bg-gray-900 border border-gray-700 rounded-md shadow-2xl py-2 text-sm text-gray-200;
+  }
+
+  .dropdown-item {
+    @apply block px-4 py-2.5 hover:bg-primary hover:text-white transition-colors;
+  }
+
+  .flag-icon {
+    @apply w-5 h-3.5 inline-block bg-cover bg-center border border-white/20;
+  }
+
+  .footer-link {
+    @apply hover:underline transition-all;
+  }
+}
