@@ -21,6 +21,7 @@
   }
 
   /* Feature Card (Why Partner With Us Section) */
+  /* Mobile: flex-col stack; Desktop: subgrid rows để căn title & desc ngang hàng nhau */
   .feature-card {
     @apply flex flex-col gap-6 items-start;
   }
@@ -29,8 +30,9 @@
     @apply w-14 h-14 rounded-xs flex items-center justify-center shrink-0;
   }
 
+  /* display:contents ở sm+ để title và desc tham gia trực tiếp vào subgrid rows của cha */
   .feature-card-body {
-    @apply flex flex-col gap-[13px];
+    @apply flex flex-col gap-[13px] sm:contents;
   }
 
   .feature-card-title {
@@ -39,6 +41,26 @@
 
   .feature-card-desc {
     @apply text-base font-medium text-gray-500 leading-6;
+  }
+
+  /* Desktop subgrid: mỗi card chiếm 3 rows (icon | title | desc)
+     Bắt đầu từ sm (640px) để cover cả index.html sm:grid-cols-2 */
+  @media (min-width: 640px) {
+    .feature-card {
+      @apply grid row-span-3 grid-rows-subgrid items-start gap-0;
+    }
+
+    .feature-card-icon {
+      @apply self-start pb-6; /* gap-6 = 24px giữa icon và title */
+    }
+
+    .feature-card-title {
+      @apply self-start pb-[13px]; /* gap-[13px] giữa title và desc */
+    }
+
+    .feature-card-desc {
+      @apply self-start pb-8; /* gap-8 = 32px khoảng cách giữa các nhóm card */
+    }
   }
 
   /* Certification Swiper Card */

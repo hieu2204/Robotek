@@ -10,12 +10,17 @@
   }
 
   /* Key Metrics Component (About Us Page) */
+  /* Mobile: stacked flex-col với divider ngang */
   .metric-grid {
-    @apply grid grid-cols-1 lg:grid-cols-3 lg:grid-rows-[auto_auto] gap-y-3 sm:gap-y-4 divide-y lg:divide-y-0 lg:divide-x divide-gray-200 pt-4;
+    @apply flex flex-col divide-y divide-gray-200 pt-4 w-full;
   }
 
   .metric-item {
-    @apply flex flex-col items-center justify-center text-center gap-3 sm:gap-4 lg:gap-y-0 lg:grid lg:grid-cols-1 lg:justify-items-center lg:row-span-2 lg:grid-rows-[subgrid] py-6 lg:py-0 px-4 sm:px-6 lg:px-8;
+    @apply flex flex-col items-center text-center gap-4 py-6 px-4 sm:px-6;
+  }
+
+  .metric-divider {
+    @apply hidden w-px bg-gray-200;
   }
 
   .metric-value-area {
@@ -23,32 +28,69 @@
   }
 
   .metric-value {
-    @apply font-semibold text-4xl sm:text-5xl lg:text-[64px] lg:leading-[64px] text-primary tracking-tight lg:tracking-[-0.64px];
+    @apply font-semibold text-4xl sm:text-5xl xl:text-[64px] xl:leading-[64px] text-primary tracking-tight xl:tracking-[-0.64px] whitespace-nowrap;
   }
 
   .metric-label {
-    @apply text-base sm:text-lg lg:text-2xl font-semibold text-gray-900 leading-snug mx-auto text-center;
+    @apply text-base sm:text-lg xl:text-2xl font-semibold text-gray-900 leading-snug xl:leading-8 mx-auto text-center;
   }
+
+  /* Desktop: 5-col grid (item | divider | item | divider | item) × 2 rows
+     Row 1 = tất cả giá trị số (value)
+     Row 2 = tất cả nhãn mô tả (label)
+     Dùng subgrid để căn ngang hàng chính xác */
+  @media (min-width: 1024px) {
+    /* grid-cols-[...]: 5-col custom layout – true one-off, không có standard utility */
+    /* grid-rows-[auto_auto]: 2 content-sized rows – auto ≠ repeat(2,1fr) nên dùng arbitrary */
+    .metric-grid {
+      @apply grid grid-cols-[1fr_auto_1fr_auto_1fr] grid-rows-[auto_auto] gap-y-4 items-stretch;
+    }
+
+    /* Reset divide-y borders — desktop dùng .metric-divider riêng */
+    .metric-grid > * {
+      @apply border-t-0 border-b-0;
+    }
+
+    /* grid-rows-subgrid: Tailwind v4 built-in utility */
+    .metric-item {
+      @apply grid row-span-2 grid-rows-subgrid justify-items-center items-start gap-0 pt-0 pb-0 px-8;
+    }
+
+    .metric-value-area {
+      @apply self-end;
+    }
+
+    .metric-label {
+      @apply self-start;
+    }
+
+    .metric-divider {
+      @apply block row-span-2 my-5;
+    }
+  }
+
 
   /* Journey Timeline Navigation Bar Component */
   .journey-nav-date {
-    @apply font-semibold text-xl sm:text-2xl lg:text-[24px] text-[#808080] group-hover:text-gray-900 transition-colors leading-[32px];
+    @apply font-semibold text-xl sm:text-2xl text-gray-500 group-hover:text-gray-900 transition-colors leading-8;
   }
   .journey-nav-item.active .journey-nav-date {
     @apply text-primary group-hover:text-primary;
   }
 
   .journey-nav-dot {
-    @apply w-[5px] h-[5px] rounded-[10px] bg-[#808080] group-hover:bg-gray-900 transition-colors z-10 mt-[5px] mb-[4px];
+    @apply w-[5px] h-[5px] rounded-[10px] bg-gray-400 group-hover:bg-gray-900 transition-colors z-10 mt-[5px] mb-[4px];
   }
   .journey-nav-item.active .journey-nav-dot {
     @apply bg-primary group-hover:bg-primary;
   }
 
   .journey-nav-text {
-    @apply text-sm sm:text-base text-[#808080] group-hover:text-gray-900 font-normal leading-[24px] transition-colors max-w-[297px];
+    @apply text-xs sm:text-sm lg:text-base text-gray-500 group-hover:text-gray-900 font-normal leading-5 sm:leading-6 transition-colors max-w-[297px];
   }
   .journey-nav-item.active .journey-nav-text {
     @apply text-primary font-medium group-hover:text-primary;
   }
+
+
 }

@@ -11,9 +11,11 @@
       content="Learn about Zobotek's history, mission, vision, and team of former Foxconn engineers pioneering industrial power supplies and USVs."
     />
     <link rel="stylesheet" href="assets/css/vendor/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="assets/css/vendor/aos.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
     <script defer src="assets/js/vendor/swiper-bundle.min.js"></script>
     <script defer src="assets/js/vendor/countUp.umd.js"></script>
+    <script defer src="assets/js/vendor/aos.min.js"></script>
     <script defer src="assets/js/main.js"></script>
   </head>
   <body
@@ -408,7 +410,7 @@
 
     <!-- BREADCRUMB / HERO BANNER (Figma Node 27:3855 - 1920x394) -->
     <section
-      class="relative h-[280px] sm:h-[340px] lg:h-[394px] flex items-center justify-center overflow-hidden pt-[100px]"
+      class="relative h-[280px] sm:h-[340px] lg:h-[394px] flex items-center justify-center overflow-hidden pt-25"
     >
       <!-- Background Image -->
       <img
@@ -430,8 +432,8 @@
     <main>
       <!-- SECTION 1: ABOUT US OVERVIEW & KEY METRICS -->
       <section
-        id="about-intro"
-        class="relative py-16 lg:pt-[70px] lg:pb-[80px] bg-white text-gray-900 overflow-hidden"
+        id="intro"
+        class="relative py-16 lg:pt-[70px] lg:pb-20 bg-white text-gray-900 overflow-hidden"
       >
         <!-- Background Image (Inline HTML) -->
         <div class="absolute inset-0 z-0 pointer-events-none">
@@ -443,7 +445,7 @@
         </div>
 
         <div
-          class="container max-w-[1436px] relative z-10 space-y-16 lg:space-y-[80px]"
+          class="container max-w-[1436px] relative z-10 space-y-16 lg:space-y-20"
         >
           <!-- Intro Text Block -->
           <div
@@ -479,10 +481,13 @@
                   >10+</span
                 >
               </div>
-              <p class="metric-label max-w-xs sm:max-w-sm">
+              <p class="metric-label">
                 Years of Foxconn experience from founding engineers.
               </p>
             </div>
+
+            <!-- Divider 1 -->
+            <div class="metric-divider" aria-hidden="true"></div>
 
             <!-- Metric 2 -->
             <div class="metric-item">
@@ -497,10 +502,13 @@
                   ></span
                 >
               </div>
-              <p class="metric-label max-w-xs sm:max-w-sm">
+              <p class="metric-label">
                 Industrial power capacity range for any system scale.
               </p>
             </div>
+
+            <!-- Divider 2 -->
+            <div class="metric-divider" aria-hidden="true"></div>
 
             <!-- Metric 3 -->
             <div class="metric-item">
@@ -512,7 +520,7 @@
                   >30+</span
                 >
               </div>
-              <p class="metric-label max-w-xs sm:max-w-sm">
+              <p class="metric-label">
                 Countries &amp; territories with Zobotek presence.
               </p>
             </div>
@@ -520,7 +528,7 @@
 
           <!-- Product Lines Overview Row -->
           <div
-            class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-x-[72px] items-center"
+            class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-x-18 items-center"
           >
             <!-- Image Column -->
             <div class="lg:col-span-6">
@@ -535,8 +543,8 @@
               </div>
             </div>
 
-            <!-- Info Column -->
-            <div class="lg:col-span-6 space-y-8 lg:space-y-[40px]">
+            <!-- Content Right -->
+            <div class="lg:col-span-6 space-y-8 lg:space-y-10">
               <!-- Block 1 -->
               <div class="space-y-3">
                 <h3 class="heading-h3 text-gray-900 mb-3">
@@ -575,7 +583,7 @@
       <!-- SECTION 2: OUR JOURNEY & KEY MILESTONES -->
       <section
         id="journey"
-        class="relative py-16 lg:py-24 bg-[#f8fafc] text-gray-900 overflow-hidden"
+        class="relative py-16 lg:py-24 bg-gray-50 text-gray-900 overflow-hidden"
       >
         <!-- Background Watermark Text "2026" (Figma Node 27:1796) -->
         <span
@@ -586,35 +594,33 @@
 
         <!-- Section Header -->
         <div
-          class="container max-w-[1436px] mx-auto relative z-10 text-center space-y-5 mb-12 lg:mb-[72px]"
+          class="container max-w-[1436px] mx-auto relative z-10 text-center space-y-5 mb-12 lg:mb-18"
         >
           <div class="badge-tag">OUR JOURNEY</div>
-          <h2 class="heading-h2 text-[#272727]">
+          <h2 class="heading-h2 text-gray-900">
             Our Journey &amp; Key Milestones
           </h2>
         </div>
 
         <!-- Swiper Main Showcase (Figma Node 27:1800 - Full width container) -->
-        <div
-          class="swiper journey-swiper w-full relative z-10 mb-12 lg:mb-[72px]"
-        >
+        <div class="swiper journey-swiper w-full relative z-10 mb-6 lg:mb-18">
           <div class="swiper-wrapper">
             <!-- Slide 1 (01/2026: Founded) -->
             <div class="swiper-slide w-full">
               <div class="container max-w-[1436px] mx-auto">
                 <div
-                  class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-[72px] items-center"
+                  class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-18 items-center"
                 >
                   <!-- Content Left -->
                   <div class="lg:col-span-6 space-y-6 lg:space-y-8">
                     <div class="space-y-4">
                       <h3
-                        class="text-2xl sm:text-3xl lg:text-[32px] font-semibold text-[#c31b19] leading-snug lg:leading-[40px]"
+                        class="text-2xl sm:text-3xl lg:text-[32px] font-semibold text-primary leading-snug lg:leading-[40px]"
                       >
                         Founded by former Foxconn Vietnam engineers.
                       </h3>
                       <p
-                        class="text-base sm:text-lg font-medium text-[#272727] leading-[28px]"
+                        class="text-base sm:text-lg font-medium text-gray-900 leading-7"
                       >
                         Zobotek was established by a veteran engineering team
                         with over a decade of hands-on experience at Foxconn
@@ -628,7 +634,7 @@
                     <div class="flex items-center gap-4 pt-2">
                       <button
                         type="button"
-                        class="journey-prev-btn w-12 h-12 rounded-full border border-[#ffc3c3] flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors cursor-pointer"
+                        class="journey-prev-btn w-12 h-12 rounded-full border border-red-200 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors cursor-pointer"
                         aria-label="Previous milestone"
                       >
                         <svg
@@ -647,7 +653,7 @@
                       </button>
                       <button
                         type="button"
-                        class="journey-next-btn w-12 h-12 rounded-full border border-[#ffc3c3] flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors cursor-pointer"
+                        class="journey-next-btn w-12 h-12 rounded-full border border-red-200 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors cursor-pointer"
                         aria-label="Next milestone"
                       >
                         <svg
@@ -667,10 +673,10 @@
                     </div>
                   </div>
 
-                  <!-- Image Right -->
-                  <div class="lg:col-span-6">
+                  <!-- Image Right (Figma Frame 2147260879: 686x469) -->
+                  <div class="lg:col-span-6 w-full">
                     <div
-                      class="rounded-xs overflow-hidden shadow-xl border border-gray-200 aspect-[686/469]"
+                      class="w-full rounded-xs overflow-hidden shadow-xl border border-gray-200 bg-gray-100 aspect-[686/469]"
                     >
                       <img
                         src="assets/images/about-img.png"
@@ -687,18 +693,18 @@
             <div class="swiper-slide w-full">
               <div class="container max-w-[1436px] mx-auto">
                 <div
-                  class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-[72px] items-center"
+                  class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-18 items-center"
                 >
                   <!-- Content Left -->
                   <div class="lg:col-span-6 space-y-6 lg:space-y-8">
                     <div class="space-y-4">
                       <h3
-                        class="text-2xl sm:text-3xl lg:text-[32px] font-semibold text-[#c31b19] leading-snug lg:leading-[40px]"
+                        class="text-2xl sm:text-3xl lg:text-[32px] font-semibold text-primary leading-snug lg:leading-[40px]"
                       >
                         Launched core power supply product lines.
                       </h3>
                       <p
-                        class="text-base sm:text-lg font-medium text-[#272727] leading-[28px]"
+                        class="text-base sm:text-lg font-medium text-gray-900 leading-7"
                       >
                         Launched our core power supply product lines (Slim, PFC,
                         Standard, and LED series) catering to demanding
@@ -710,7 +716,7 @@
                     <div class="flex items-center gap-4 pt-2">
                       <button
                         type="button"
-                        class="journey-prev-btn w-12 h-12 rounded-full border border-[#ffc3c3] flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors cursor-pointer"
+                        class="journey-prev-btn w-12 h-12 rounded-full border border-red-200 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors cursor-pointer"
                         aria-label="Previous milestone"
                       >
                         <svg
@@ -729,7 +735,7 @@
                       </button>
                       <button
                         type="button"
-                        class="journey-next-btn w-12 h-12 rounded-full border border-[#ffc3c3] flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors cursor-pointer"
+                        class="journey-next-btn w-12 h-12 rounded-full border border-red-200 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors cursor-pointer"
                         aria-label="Next milestone"
                       >
                         <svg
@@ -749,10 +755,10 @@
                     </div>
                   </div>
 
-                  <!-- Image Right -->
-                  <div class="lg:col-span-6">
+                  <!-- Image Right (Figma Frame 2147260879: 686x469) -->
+                  <div class="lg:col-span-6 w-full">
                     <div
-                      class="rounded-xs overflow-hidden shadow-xl border border-gray-200 aspect-[686/469]"
+                      class="w-full rounded-xs overflow-hidden shadow-xl border border-gray-200 bg-gray-100 aspect-[686/469]"
                     >
                       <img
                         src="assets/images/product-ps1.png"
@@ -769,18 +775,18 @@
             <div class="swiper-slide w-full">
               <div class="container max-w-[1436px] mx-auto">
                 <div
-                  class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-[72px] items-center"
+                  class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-18 items-center"
                 >
                   <!-- Content Left -->
                   <div class="lg:col-span-6 space-y-6 lg:space-y-8">
                     <div class="space-y-4">
                       <h3
-                        class="text-2xl sm:text-3xl lg:text-[32px] font-semibold text-[#c31b19] leading-snug lg:leading-[40px]"
+                        class="text-2xl sm:text-3xl lg:text-[32px] font-semibold text-primary leading-snug lg:leading-[40px]"
                       >
                         Initiated R&amp;D program for Unmanned Surface Vehicles.
                       </h3>
                       <p
-                        class="text-base sm:text-lg font-medium text-[#272727] leading-[28px]"
+                        class="text-base sm:text-lg font-medium text-gray-900 leading-7"
                       >
                         Initiated the R&amp;D program for Unmanned Surface
                         Vehicles (USVs), pioneering smart water rescue devices
@@ -792,7 +798,7 @@
                     <div class="flex items-center gap-4 pt-2">
                       <button
                         type="button"
-                        class="journey-prev-btn w-12 h-12 rounded-full border border-[#ffc3c3] flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors cursor-pointer"
+                        class="journey-prev-btn w-12 h-12 rounded-full border border-red-200 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors cursor-pointer"
                         aria-label="Previous milestone"
                       >
                         <svg
@@ -811,7 +817,7 @@
                       </button>
                       <button
                         type="button"
-                        class="journey-next-btn w-12 h-12 rounded-full border border-[#ffc3c3] flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors cursor-pointer"
+                        class="journey-next-btn w-12 h-12 rounded-full border border-red-200 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors cursor-pointer"
                         aria-label="Next milestone"
                       >
                         <svg
@@ -831,10 +837,10 @@
                     </div>
                   </div>
 
-                  <!-- Image Right -->
-                  <div class="lg:col-span-6">
+                  <!-- Image Right (Figma Frame 2147260879: 686x469) -->
+                  <div class="lg:col-span-6 w-full">
                     <div
-                      class="rounded-xs overflow-hidden shadow-xl border border-gray-200 aspect-[686/469]"
+                      class="w-full rounded-xs overflow-hidden shadow-xl border border-gray-200 bg-gray-100 aspect-[686/469]"
                     >
                       <img
                         src="assets/images/product-usv.png"
@@ -855,12 +861,12 @@
           <div class="relative">
             <!-- Timeline Horizontal Line: left-0 anchors to real content edge, w-screen bleeds right to viewport -->
             <div
-              class="absolute top-[39px] left-0 w-screen h-[1px] bg-[#808080]/30 z-0 pointer-events-none"
+              class="absolute top-[39px] left-0 w-screen h-[1px] bg-gray-300 z-0 pointer-events-none"
             ></div>
 
-            <!-- Timeline Nodes Grid (Figma Node 27:1811: 3 columns) -->
+            <!-- Timeline Nodes Grid (Figma Node 27:1811: 3 columns preserved across all screens) -->
             <div
-              class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 lg:gap-[72px] relative z-10 items-start justify-between"
+              class="grid grid-cols-3 gap-3 sm:gap-8 lg:gap-18 relative z-10 items-start justify-between"
             >
               <!-- Node 0 (01/2026: Founded) -->
               <button
@@ -914,12 +920,12 @@
         </div>
       </section>
 
-      <!-- SECTION 3: VISION & MISSION (Figma Node 27:1828) -->
+      <!-- SECTION 3: VISION & MISSION (Figma Node 27:1828 - Frame 2144768923) -->
       <!-- Layout: full-bleed bg image, gradient from #450000 left to transparent right. -->
       <!-- Content: left-aligned block (max-w-[600px]), section h=720px. -->
       <section
         id="vision-mission"
-        class="relative min-h-[420px] lg:min-h-[720px] flex items-center overflow-hidden text-white"
+        class="relative min-h-[420px] lg:min-h-[720px] flex items-center py-16 lg:py-24 bg-gray-900 overflow-hidden text-white"
       >
         <!-- Background: full-bleed image + left-to-right gradient overlay -->
         <div
@@ -933,29 +939,30 @@
           />
           <!-- Figma: bg-gradient-to-r from-[#450000] to-[rgba(69,0,0,0)] -->
           <div
-            class="absolute inset-0 bg-gradient-to-r from-[#450000] to-[rgba(69,0,0,0)]"
+            class="absolute inset-0 bg-gradient-to-r from-[#450000] via-[#450000]/85 to-transparent"
           ></div>
         </div>
 
-        <!-- Content: left-aligned, px-[230px] at desktop → use container with left-pull -->
-        <div
-          class="relative z-10 w-full px-5 sm:px-10 lg:px-[96px] xl:px-[140px] 2xl:px-[230px] py-16 lg:py-[120px]"
-        >
+        <!-- Content: aligned to standard project container max-w-[1436px] -->
+        <div class="container max-w-[1436px] mx-auto relative z-10 w-full">
           <!-- Content block: max-w-[600px] per Figma -->
           <div class="max-w-[600px] flex flex-col gap-8">
             <!-- Vision Block: border-b border-[rgba(255,255,255,0.24)] pb-[48px] -->
-            <div
-              class="flex flex-col gap-4 pb-10 lg:pb-12 border-b border-white/25"
-            >
+            <div class="flex flex-col gap-4 pb-12 border-b border-white/24">
               <div class="flex flex-col gap-4 text-white">
                 <!-- Figma: text-[36px] leading-[48px] tracking-[-0.36px] font-semibold -->
                 <h2
+                  data-aos="fade-up"
+                  data-aos-duration="700"
                   class="text-3xl lg:text-4xl font-semibold leading-tight lg:leading-12 tracking-[-0.36px] text-white"
                 >
                   Vision
                 </h2>
                 <!-- Figma: text-[24px] leading-[32px] font-semibold opacity-80 -->
                 <p
+                  data-aos="fade-up"
+                  data-aos-duration="700"
+                  data-aos-delay="100"
                   class="text-xl lg:text-2xl font-semibold leading-8 text-white/80"
                 >
                   To become a leading global provider of innovative power
@@ -968,12 +975,17 @@
             <div class="flex flex-col gap-4 text-white">
               <!-- Figma: text-[36px] leading-[48px] tracking-[-0.36px] font-semibold -->
               <h2
-                class="text-3xl lg:text-4xl font-semibold leading-tight lg:leading-12 tracking-[-0.36px] text-white"
+                data-aos="fade-up"
+                data-aos-duration="700"
+                class="text-3xl lg:text-[36px] font-semibold leading-tight lg:leading-12 tracking-[-0.36px] text-white"
               >
                 Mission
               </h2>
               <!-- Figma: text-[24px] leading-[32px] font-semibold opacity-80 -->
               <p
+                data-aos="fade-up"
+                data-aos-duration="700"
+                data-aos-delay="100"
                 class="text-xl lg:text-2xl font-semibold leading-8 text-white/80"
               >
                 To deliver stable, efficient power solutions and advanced rescue
@@ -983,13 +995,38 @@
             </div>
           </div>
         </div>
+
+        <!-- Decorative Red Corner Graphic (Figma Node 27:1838) -->
+        <div
+          class="absolute bottom-0 right-0 z-10 pointer-events-none w-44 sm:w-60 lg:w-[320px] aspect-square overflow-hidden"
+          aria-hidden="true"
+        >
+          <svg
+            class="w-full h-full text-primary"
+            viewBox="0 0 320 320"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M320 120L200 320H320V120Z"
+              fill="currentColor"
+              fill-opacity="0.85"
+            />
+            <path
+              d="M320 200L120 320H200L320 200Z"
+              fill="currentColor"
+              fill-opacity="0.95"
+            />
+            <path d="M320 260L260 320H320V260Z" fill="currentColor" />
+          </svg>
+        </div>
       </section>
 
       <!-- SECTION 4: WHY PARTNER WITH US? (Figma Node 27:1844) -->
       <!-- Layout: centered container, gap-[72px] header-to-cards, cards gap-[40px] -->
       <!-- Header: 318px wide centered, badge + H3 heading -->
       <section id="why-choose-us" class="py-16 lg:py-24 bg-white text-gray-900">
-        <div class="container flex flex-col items-center gap-12 lg:gap-[72px]">
+        <div class="container flex flex-col items-center gap-12 lg:gap-18">
           <!-- Section Header: centered, 318px -->
           <div class="text-center flex flex-col items-center gap-5">
             <div class="badge-tag">WHY CHOOSE US?</div>
@@ -998,7 +1035,9 @@
           </div>
 
           <!-- Cards: Figma gap-[40px] between 3 flex-[1_0_0] columns -->
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-10 w-full">
+          <div
+            class="grid grid-cols-1 md:grid-cols-3 sm:grid-rows-[auto_auto_auto] gap-10 sm:gap-y-0 w-full"
+          >
             <!-- Card 1 -->
             <div class="feature-card">
               <div class="feature-card-icon">
@@ -1059,24 +1098,31 @@
         </div>
       </section>
 
-      <!-- SECTION 5: OUR PEOPLE & CORE EXPERTISE (Figma Node 27:1662) -->
-      <!-- Layout: 50/50 grid, left=image panel 572px, right=dark #161616 panel 572px -->
-      <!-- Right panel: p-[40px] left-[72px] → py-10 pl-[72px], justify-between badge top / content bottom -->
+      <!-- SECTION 5: OUR PEOPLE & CORE EXPERTISE (Figma Node 27:1662 + 27:1714) -->
+      <!-- Layout: 50/50 grid. Right panel drives height; left image fills via absolute inset-0 -->
       <section
         id="our-people"
         class="relative py-0 bg-gray-900 text-white overflow-hidden"
       >
-        <div class="grid grid-cols-1 lg:grid-cols-2">
-          <!-- Left Media Panel (Figma: 960×572px) -->
-          <div class="relative min-h-[450px] lg:min-h-[572px] overflow-hidden">
+        <div class="grid grid-cols-1 lg:grid-cols-2 items-stretch">
+          <!-- Left Media Panel: image fills 100% of grid row height (determined by right panel) -->
+          <div
+            class="relative min-h-[300px] sm:min-h-[420px] lg:min-h-0 overflow-hidden"
+          >
             <img
+              id="our-people-image"
               src="assets/images/people-equipment.png"
               alt="Zobotek Manufacturing Facilities & Equipment"
-              class="w-full h-full object-cover"
+              class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500"
             />
             <div class="hero-overlay"></div>
             <!-- Floating Feature Callout Box (Figma: left-[96px] top-[40px] w-[399px] h-[116px]) -->
-            <div class="absolute left-10 lg:left-[96px] top-10 z-10">
+            <div
+              class="absolute left-10 lg:left-24 top-10 z-10"
+              data-aos="fade-up"
+              data-aos-duration="700"
+              data-aos-delay="200"
+            >
               <div class="feature-callout-box">
                 <!-- Figma: font-medium text-[16px] leading-[24px] text-white w-[376px] -->
                 <p
@@ -1090,39 +1136,74 @@
             </div>
           </div>
 
-          <!-- Right Content Panel (Figma: bg-[#161616] 960×572px, content absolute top-[40px] left-[72px] h-[492px] w-[793px]) -->
-          <!-- justify-between: badge pinned to top, content + list in lower area -->
+          <!-- Right Content Panel (Figma Node 27:1714: bg-[#161616], py-10 px-8 sm:px-12 lg:px-18) -->
+          <!-- Figma layout: Badge top, gap-[100px] (desktop) to Content block (Headings + List) -->
           <div
-            class="bg-[#161616] px-8 sm:px-12 lg:px-[72px] py-10 flex flex-col justify-between min-h-[450px] lg:min-h-[572px]"
+            class="bg-[#161616] px-8 sm:px-12 lg:px-18 py-10 flex flex-col justify-start gap-8 lg:gap-25"
           >
-            <!-- Badge: pinned top (Figma: top-[40px]) -->
-            <div class="badge-tag--white">OUR PEOPLE</div>
+            <!-- Badge: Figma 168×40px, self-start -->
+            <div class="self-start">
+              <div class="badge-tag--white">OUR PEOPLE</div>
+            </div>
 
-            <!-- Content block: Figma gap-[40px] between header and list -->
-            <div class="flex flex-col gap-10">
-              <!-- Headings group: gap-[12px] -->
+            <!-- Content block (Figma Node 27:1717): max-w-[634px], gap-[40px] (gap-10) -->
+            <div class="flex flex-col gap-10 max-w-[634px] w-full">
+              <!-- Headings group (Figma Node 27:1718): gap-[12px] (gap-3) -->
               <div class="flex flex-col gap-3">
-                <!-- Figma: text-[40px] leading-[48px] font-semibold → heading-h2 matches -->
+                <!-- Figma Node 27:1719: text-[40px] leading-[48px] font-semibold -->
                 <h2 class="heading-h2 text-white">Our team</h2>
-                <!-- Figma: text-[24px] leading-[32px] font-semibold -->
+                <!-- Figma Node 27:1720: text-[24px] leading-[32px] font-semibold -->
                 <p class="text-2xl font-semibold leading-8 text-white">
                   With the Core Expertise:
                 </p>
               </div>
 
-              <!-- List items: Figma font-medium text-[18px] leading-[28px] divided by lines -->
-              <!-- Figma dividers: full-width horizontal lines between items, gap-[8px] -->
+              <!-- List (Figma Node 27:1721): max-w-[398px], border-y + divide-y, py-2 (8px top/bottom) -->
               <ul
-                class="divide-y divide-gray-700 text-lg font-medium text-white leading-7 max-w-[398px]"
+                id="expertise-list"
+                class="divide-y divide-gray-700 border-y border-gray-700 text-lg font-medium leading-7 max-w-[398px] w-full"
+                role="list"
               >
-                <li class="py-3">
+                <li
+                  class="expertise-item py-2 text-primary cursor-pointer transition-colors duration-300 hover:text-primary"
+                  data-image="assets/images/people-equipment.png"
+                  role="button"
+                  tabindex="0"
+                >
                   Power Electronics Design &amp; Manufacturing
                 </li>
-                <li class="py-3">Surface Mount Technology (SMT) Assembly</li>
-                <li class="py-3">Quality Control &amp; Testing Systems</li>
-                <li class="py-3">Supply Chain Management</li>
-                <li class="py-3">Embedded Systems &amp; Robotics</li>
-                <li class="border-b border-gray-700 pb-px"></li>
+                <li
+                  class="expertise-item py-2 text-white cursor-pointer transition-colors duration-300 hover:text-primary"
+                  data-image="assets/images/about-img.png"
+                  role="button"
+                  tabindex="0"
+                >
+                  Surface Mount Technology (SMT) Assembly
+                </li>
+                <li
+                  class="expertise-item py-2 text-white cursor-pointer transition-colors duration-300 hover:text-primary"
+                  data-image="assets/images/factory-bg.png"
+                  role="button"
+                  tabindex="0"
+                >
+                  Quality Control &amp; Testing Systems
+                </li>
+                <li
+                  class="expertise-item py-2 text-white cursor-pointer transition-colors duration-300 hover:text-primary"
+                  data-image="assets/images/people-bg.png"
+                  role="button"
+                  tabindex="0"
+                >
+                  Supply Chain Management
+                </li>
+                <li
+                  class="expertise-item py-2 text-white cursor-pointer transition-colors duration-300 hover:text-primary"
+                  data-image="assets/images/banner-bg.png"
+                  role="button"
+                  tabindex="0"
+                >
+                  Embedded Systems &amp; Robotics
+                </li>
               </ul>
             </div>
           </div>

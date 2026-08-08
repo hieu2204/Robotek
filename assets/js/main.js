@@ -245,4 +245,72 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
+
+  // 8. Our People – Expertise List: click to highlight + swap panel image
+  const expertiseList = document.getElementById("expertise-list");
+  const peoplePanelImage = document.getElementById("our-people-image");
+
+  if (expertiseList && peoplePanelImage) {
+    const items = expertiseList.querySelectorAll(".expertise-item");
+
+    const activateItem = (item) => {
+      // Reset all items to default white
+      items.forEach((el) => {
+        el.classList.remove("text-primary");
+        el.classList.add("text-white");
+      });
+      // Highlight active item
+      item.classList.remove("text-white");
+      item.classList.add("text-primary");
+
+      // Swap image with fade transition if src changed
+      const newSrc = item.getAttribute("data-image");
+      if (newSrc && !peoplePanelImage.src.includes(newSrc)) {
+        peoplePanelImage.style.opacity = "0";
+        setTimeout(() => {
+          peoplePanelImage.src = newSrc;
+          peoplePanelImage.style.opacity = "1";
+        }, 300);
+      }
+    };
+
+    // Auto-sync initial active item with panel image on load
+    const currentImgSrc = peoplePanelImage.getAttribute("src");
+    const initialActive =
+      Array.from(items).find(
+        (item) => item.getAttribute("data-image") === currentImgSrc
+      ) || items[0];
+
+    if (initialActive) {
+      items.forEach((el) => {
+        el.classList.remove("text-primary");
+        el.classList.add("text-white");
+      });
+      initialActive.classList.remove("text-white");
+      initialActive.classList.add("text-primary");
+    }
+
+    items.forEach((item) => {
+      // Mouse click
+      item.addEventListener("click", () => activateItem(item));
+      // Keyboard: Enter / Space
+      item.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          activateItem(item);
+        }
+      });
+    });
+  }
+
+});
+
+// AOS – Animate On Scroll
+window.addEventListener("load", () => {
+  if (typeof AOS !== "undefined") {
+    AOS.init({
+      once: false,
+      easing: "ease-out-quad",
+    });
+  }
 });
