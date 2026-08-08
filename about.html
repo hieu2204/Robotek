@@ -1099,48 +1099,53 @@
       </section>
 
       <!-- SECTION 5: OUR PEOPLE & CORE EXPERTISE (Figma Node 27:1662 + 27:1714) -->
-      <!-- Layout: 50/50 grid. Right panel drives height; left image fills via absolute inset-0 -->
       <section
         id="our-people"
-        class="relative py-0 bg-gray-900 text-white overflow-hidden"
+        class="relative py-0 bg-gray-900 text-white overflow-hidden min-h-[500px]"
       >
-        <div class="grid grid-cols-1 lg:grid-cols-2 items-stretch">
-          <!-- Left Media Panel: image fills 100% of grid row height (determined by right panel) -->
+        <!-- Full-Bleed Background Media & Color Panels -->
+        <div
+          class="absolute inset-0 grid grid-cols-1 lg:grid-cols-2 z-0 pointer-events-none"
+        >
+          <!-- Left Panel Image -->
           <div
-            class="relative min-h-[300px] sm:min-h-[420px] lg:min-h-0 overflow-hidden"
+            class="relative w-full h-full min-h-[300px] sm:min-h-[420px] lg:min-h-0 overflow-hidden"
           >
             <img
               id="our-people-image"
               src="assets/images/people-equipment.png"
               alt="Zobotek Manufacturing Facilities & Equipment"
-              class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500"
+              class="w-full h-full object-cover transition-opacity duration-500"
             />
             <div class="hero-overlay"></div>
-            <!-- Floating Feature Callout Box (Figma: left-[96px] top-[40px] w-[399px] h-[116px]) -->
-            <div
-              class="absolute left-10 lg:left-24 top-10 z-10"
-              data-aos="fade-up"
-              data-aos-duration="700"
-              data-aos-delay="200"
-            >
-              <div class="feature-callout-box">
-                <!-- Figma: font-medium text-[16px] leading-[24px] text-white w-[376px] -->
-                <p
-                  class="text-sm sm:text-base font-medium leading-6 text-white"
-                >
-                  This extensive industry experience enables us to deliver
-                  products that stringently comply with the demanding standards
-                  of Korean, Japanese, and Western OEMs
-                </p>
-              </div>
+          </div>
+          <!-- Right Panel Dark Background -->
+          <div class="bg-[#161616] w-full h-full"></div>
+        </div>
+
+        <!-- Global Container Content Alignment Grid -->
+        <div
+          class="container relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 pointer-events-auto"
+        >
+          <!-- Left Column Content: Feature Callout Box aligned with container -->
+          <div
+            class="py-10 flex flex-col justify-start items-start"
+            data-aos="fade-up"
+            data-aos-duration="700"
+            data-aos-delay="200"
+          >
+            <div class="feature-callout-box">
+              <!-- Figma: font-medium text-[16px] leading-[24px] text-white w-[376px] -->
+              <p class="text-sm sm:text-base font-medium leading-6 text-white">
+                This extensive industry experience enables us to deliver
+                products that stringently comply with the demanding standards of
+                Korean, Japanese, and Western OEMs
+              </p>
             </div>
           </div>
 
-          <!-- Right Content Panel (Figma Node 27:1714: bg-[#161616], py-10 px-8 sm:px-12 lg:px-18) -->
-          <!-- Figma layout: Badge top, gap-[100px] (desktop) to Content block (Headings + List) -->
-          <div
-            class="bg-[#161616] px-8 sm:px-12 lg:px-18 py-10 flex flex-col justify-start gap-8 lg:gap-25"
-          >
+          <!-- Right Content Panel (Figma Node 27:1714: bg-[#161616] look inside grid) -->
+          <div class="py-10 flex flex-col justify-start gap-8 lg:gap-25">
             <!-- Badge: Figma 168×40px, self-start -->
             <div class="self-start">
               <div class="badge-tag--white">OUR PEOPLE</div>
