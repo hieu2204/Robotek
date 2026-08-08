@@ -132,7 +132,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // 7. Products Swiper Carousel
+  // 7. Products Swiper Carousel (Homepage / Index Page)
   if (
     typeof Swiper !== "undefined" &&
     document.querySelector(".products-swiper")
@@ -141,6 +141,10 @@ document.addEventListener("DOMContentLoaded", () => {
       slidesPerView: 1,
       spaceBetween: 24,
       loop: false,
+      navigation: {
+        nextEl: "#product-next",
+        prevEl: "#product-prev",
+      },
       breakpoints: {
         640: {
           slidesPerView: 2,
@@ -149,6 +153,37 @@ document.addEventListener("DOMContentLoaded", () => {
         1024: {
           slidesPerView: 3.2,
           spaceBetween: 32,
+        },
+      },
+    });
+  }
+
+  // 7b. Power Supplies Page Swiper Carousel (2-row stacked slides)
+  if (
+    typeof Swiper !== "undefined" &&
+    document.querySelector(".ps-page-swiper")
+  ) {
+    new Swiper(".ps-page-swiper", {
+      slidesPerView: 1,
+      spaceBetween: 24,
+      loop: false,
+      speed: 400,
+      navigation: {
+        nextEl: "#ps-next",
+        prevEl: "#ps-prev",
+      },
+      breakpoints: {
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 24,
+        },
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 24,
+        },
+        1024: {
+          slidesPerView: 4,
+          spaceBetween: 24,
         },
       },
     });
