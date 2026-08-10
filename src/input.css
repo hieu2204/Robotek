@@ -24,9 +24,12 @@
   --color-gray-300: #cbd5e1;
   --color-gray-200: #e2e8f0;
   --color-gray-50: #f8fafc;
+  --color-mono-gray-70: #484e5b;
+  --color-neutral-border: #e0e0e0;
   --color-red: #f93939;
   --color-red-200: #ffc3c3;
   --color-red-400: #ff8484;
+  --color-red-500: #ff5a5a;
   --color-footer-bg: #820000;
   --color-green-90: #15322d;
   /* Shared content colors (product pages, contact, applications) */
@@ -64,11 +67,11 @@ body {
 
   @media (width >= theme(--breakpoint-2xl)) {
     padding-inline: 64px;
+    max-width: 1920px;
   }
 
   @media (width >= theme(--breakpoint-3xl)) {
     padding-inline: 96px;
-    max-width: 1920px;
   }
 }
 

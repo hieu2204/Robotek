@@ -471,20 +471,26 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // 11. Applications Swiper Carousel
-  if (typeof Swiper !== "undefined" && document.querySelector(".app-swiper")) {
-    new Swiper(".app-swiper", {
-      slidesPerView: 1,
-      spaceBetween: 24,
-      loop: true,
-      navigation: {
-        nextEl: "#app-next",
-        prevEl: "#app-prev",
-      },
-      breakpoints: {
-        640: { slidesPerView: 2 },
-        1024: { slidesPerView: 3 },
-      },
+  // 11b. Applications Page Swiper Carousels
+  if (
+    typeof Swiper !== "undefined" &&
+    document.querySelector(".applications-swiper")
+  ) {
+    document.querySelectorAll(".applications-swiper").forEach((el) => {
+      const pag = el.parentElement.querySelector(".swiper-pagination");
+      new Swiper(el, {
+        slidesPerView: 1,
+        spaceBetween: 24,
+        loop: true,
+        autoplay: {
+          delay: 3500,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: pag,
+          clickable: true,
+        },
+      });
     });
   }
 
@@ -528,6 +534,61 @@ document.addEventListener("DOMContentLoaded", () => {
           qualitiesImg.src = newImgSrc;
           qualitiesImg.style.opacity = "1";
         }, 150);
+      });
+    });
+  }
+
+  // 13. Applications Page Tab Switcher
+  const appTabs = document.querySelectorAll(".app-tab");
+  const appPanels = document.querySelectorAll('[role="tabpanel"]');
+
+  if (appTabs.length > 0) {
+    appTabs.forEach((tab) => {
+      tab.addEventListener("click", () => {
+        const targetId = tab.getAttribute("aria-controls");
+
+        appTabs.forEach((t) => {
+          t.setAttribute("aria-selected", "false");
+          t.classList.remove("active", "bg-white");
+          const svg = t.querySelector("svg");
+          if (svg) {
+            svg.classList.remove("text-primary");
+            svg.classList.add("text-mono-gray-70");
+          }
+          const span = t.querySelector("span");
+          if (span) {
+            span.classList.remove("text-primary");
+            span.classList.add("text-mono-gray-70");
+          }
+        });
+
+        tab.setAttribute("aria-selected", "true");
+        tab.classList.add("active", "bg-white");
+        const activeSvg = tab.querySelector("svg");
+        if (activeSvg) {
+          activeSvg.classList.add("text-primary");
+          activeSvg.classList.remove("text-mono-gray-70");
+        }
+        const activeSpan = tab.querySelector("span");
+        if (activeSpan) {
+          activeSpan.classList.add("text-primary");
+          activeSpan.classList.remove("text-mono-gray-70");
+        }
+
+        // Toggle matching tab panels
+        appPanels.forEach((panel) => {
+          if (panel.id === targetId) {
+            panel.classList.remove("hidden");
+            panel.classList.add("block");
+            const swiperEl = panel.querySelector(".applications-swiper");
+            if (swiperEl && swiperEl.swiper) {
+              swiperEl.swiper.update();
+            }
+          } else {
+            panel.classList.add("hidden");
+            panel.classList.remove("block");
+          }
+        });
       });
     });
   }
