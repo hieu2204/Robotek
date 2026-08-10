@@ -13,61 +13,184 @@
     <script defer src="assets/js/vendor/aos.min.js"></script>
     <script defer src="assets/js/main.js"></script>
   </head>
-  <body class="font-sans text-gray-900 bg-white antialiased selection:bg-primary selection:text-white">
-
+  <body
+    class="font-sans text-gray-900 bg-white antialiased selection:bg-primary selection:text-white"
+  >
     <!-- Header -->
     <header class="header--solid bg-primary">
       <div class="container flex items-center justify-between h-full">
         <div class="flex-1 min-w-0 flex items-center justify-start">
-          <a href="index.html" class="lg:hidden flex items-center" aria-label="Zobotek Homepage">
-            <img src="assets/images/logo-header.png" alt="Zobotek Logo"/>
+          <a
+            href="index.html"
+            class="lg:hidden flex items-center"
+            aria-label="Zobotek Homepage"
+          >
+            <img src="assets/images/logo-header.png" alt="Zobotek Logo" />
           </a>
         </div>
-        <nav class="hidden lg:flex items-center justify-center gap-6 xl:gap-10 2xl:gap-18 shrink-0">
+        <nav
+          class="hidden lg:flex items-center justify-center gap-6 xl:gap-10 2xl:gap-18 shrink-0"
+        >
           <a href="about.html" class="nav-link">About Us</a>
           <div class="relative group">
-            <a href="power-supplies.html" class="nav-link flex items-center gap-1">
+            <a
+              href="power-supplies.html"
+              class="nav-link flex items-center gap-1"
+            >
               <span>Products</span>
-              <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              <svg
+                class="w-4 h-4 transition-transform group-hover:rotate-180"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
             </a>
-            <div class="absolute left-0 top-full pt-2 hidden group-hover:block w-52 z-50">
+            <div
+              class="absolute left-0 top-full pt-2 hidden group-hover:block w-52 z-50"
+            >
               <div class="dropdown-menu">
-                <a href="power-supplies.html" class="dropdown-item">Power Supplies</a>
+                <a href="power-supplies.html" class="dropdown-item"
+                  >Power Supplies</a
+                >
                 <a href="usv.html" class="dropdown-item">USV Innovations</a>
               </div>
             </div>
           </div>
           <a href="manufacturing.html" class="nav-link">Manufacturing</a>
-          <a href="index.html" class="flex items-center px-2 xl:px-4 group focus:outline-none shrink-0" aria-label="Zobotek Homepage">
-            <div class="relative h-10 xl:h-12 2xl:h-14 w-auto flex items-center">
-              <img src="assets/images/logo-header.png" alt="Zobotek Logo" class="h-full w-auto"/>
+          <a
+            href="index.html"
+            class="flex items-center px-2 xl:px-4 group focus:outline-none shrink-0"
+            aria-label="Zobotek Homepage"
+          >
+            <div
+              class="relative h-10 xl:h-12 2xl:h-14 w-auto flex items-center"
+            >
+              <img
+                src="assets/images/logo-header.png"
+                alt="Zobotek Logo"
+                class="h-full w-auto"
+              />
             </div>
           </a>
-          <a href="certifications.html" class="nav-link is-active">Certifications</a>
+          <a href="certifications.html" class="nav-link is-active"
+            >Certifications</a
+          >
           <a href="applications.html" class="nav-link">Applications</a>
           <a href="contact.html" class="nav-link">Contact</a>
         </nav>
-        <div class="flex-1 min-w-0 flex items-center justify-end gap-2 sm:gap-3">
+        <div
+          class="flex-1 min-w-0 flex items-center justify-end gap-2 sm:gap-3"
+        >
           <div class="flex items-center gap-2 sm:gap-3 text-white relative">
             <div class="relative hidden sm:block">
-              <button type="button" id="search-btn" class="p-1.5 header-action-btn" aria-label="Search">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+              <button
+                type="button"
+                id="search-btn"
+                class="p-1.5 header-action-btn"
+                aria-label="Search"
+              >
+                <svg
+                  class="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                  />
+                </svg>
               </button>
             </div>
-            <div class="hidden sm:block h-4 w-px bg-white/30" aria-hidden="true"></div>
+            <div
+              class="hidden sm:block h-4 w-px bg-white/30"
+              aria-hidden="true"
+            ></div>
             <div class="relative">
-              <button type="button" id="lang-btn" class="flex items-center gap-1.5 p-1 header-action-btn text-sm font-medium">
-                <span class="flag-icon" style="background-image: url(&quot;https://flagcdn.com/w40/us.png&quot;);"></span>
+              <button
+                type="button"
+                id="lang-btn"
+                class="flex items-center gap-1.5 p-1 header-action-btn text-sm font-medium"
+              >
+                <span
+                  class="flag-icon"
+                  style="
+                    background-image: url(&quot;https://flagcdn.com/w40/us.png&quot;);
+                  "
+                ></span>
                 <span id="current-lang">EN</span>
-                <svg class="w-3.5 h-3.5 text-white/80" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                <svg
+                  class="w-3.5 h-3.5 text-white/80"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
               </button>
-              <div id="lang-dropdown" class="absolute right-0 top-full mt-2 hidden w-32 dropdown-menu py-1 z-50">
-                <a href="#" class="dropdown-item flex items-center gap-2 lang-option" data-lang="EN"><span class="flag-icon" style="background-image: url(&quot;https://flagcdn.com/w40/us.png&quot;);"></span>English</a>
-                <a href="#" class="dropdown-item flex items-center gap-2 lang-option" data-lang="VN"><span class="flag-icon" style="background-image: url(&quot;https://flagcdn.com/w40/vn.png&quot;);"></span>Tiếng Việt</a>
+              <div
+                id="lang-dropdown"
+                class="absolute right-0 top-full mt-2 hidden w-32 dropdown-menu py-1 z-50"
+              >
+                <a
+                  href="#"
+                  class="dropdown-item flex items-center gap-2 lang-option"
+                  data-lang="EN"
+                  ><span
+                    class="flag-icon"
+                    style="
+                      background-image: url(&quot;https://flagcdn.com/w40/us.png&quot;);
+                    "
+                  ></span
+                  >English</a
+                >
+                <a
+                  href="#"
+                  class="dropdown-item flex items-center gap-2 lang-option"
+                  data-lang="VN"
+                  ><span
+                    class="flag-icon"
+                    style="
+                      background-image: url(&quot;https://flagcdn.com/w40/vn.png&quot;);
+                    "
+                  ></span
+                  >Tiếng Việt</a
+                >
               </div>
             </div>
-            <button type="button" id="mobile-menu-toggle" class="lg:hidden p-2 text-white hover:text-white/80 transition-colors focus:outline-none" aria-label="Toggle Navigation Menu">
-              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+            <button
+              type="button"
+              id="mobile-menu-toggle"
+              class="lg:hidden p-2 text-white hover:text-white/80 transition-colors focus:outline-none"
+              aria-label="Toggle Navigation Menu"
+            >
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
             </button>
           </div>
         </div>
@@ -75,21 +198,74 @@
     </header>
 
     <!-- Mobile Menu -->
-    <div id="mobile-menu" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 hidden flex-col justify-between">
-      <div class="bg-gray-900 w-4/5 max-w-sm h-full flex flex-col p-6 overflow-y-auto">
-        <div class="flex items-center justify-between pb-6 border-b border-gray-800">
-          <a href="index.html" class="flex items-center"><img src="assets/images/logo-header.png" alt="Zobotek Logo" class="h-8 w-auto"/></a>
-          <button type="button" id="mobile-menu-close" class="text-gray-400 hover:text-white p-2" aria-label="Close menu">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+    <div
+      id="mobile-menu"
+      class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 hidden flex-col justify-between"
+    >
+      <div
+        class="bg-gray-900 w-4/5 max-w-sm h-full flex flex-col p-6 overflow-y-auto"
+      >
+        <div
+          class="flex items-center justify-between pb-6 border-b border-gray-800"
+        >
+          <a href="index.html" class="flex items-center"
+            ><img
+              src="assets/images/logo-header.png"
+              alt="Zobotek Logo"
+              class="h-8 w-auto"
+          /></a>
+          <button
+            type="button"
+            id="mobile-menu-close"
+            class="text-gray-400 hover:text-white p-2"
+            aria-label="Close menu"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
           </button>
         </div>
         <nav class="flex flex-col gap-4 py-6">
-          <a href="about.html" class="mobile-nav-link text-lg font-medium text-white hover:text-primary transition-colors">About Us</a>
-          <a href="power-supplies.html" class="mobile-nav-link text-lg font-medium text-white hover:text-primary transition-colors">Products</a>
-          <a href="manufacturing.html" class="mobile-nav-link text-lg font-medium text-white hover:text-primary transition-colors">Manufacturing</a>
-          <a href="certifications.html" class="mobile-nav-link text-lg font-medium text-primary">Certifications</a>
-          <a href="applications.html" class="mobile-nav-link text-lg font-medium text-white hover:text-primary transition-colors">Applications</a>
-          <a href="contact.html" class="mobile-nav-link text-lg font-medium text-white hover:text-primary transition-colors">Contact</a>
+          <a
+            href="about.html"
+            class="mobile-nav-link text-lg font-medium text-white hover:text-primary transition-colors"
+            >About Us</a
+          >
+          <a
+            href="power-supplies.html"
+            class="mobile-nav-link text-lg font-medium text-white hover:text-primary transition-colors"
+            >Products</a
+          >
+          <a
+            href="manufacturing.html"
+            class="mobile-nav-link text-lg font-medium text-white hover:text-primary transition-colors"
+            >Manufacturing</a
+          >
+          <a
+            href="certifications.html"
+            class="mobile-nav-link text-lg font-medium text-primary"
+            >Certifications</a
+          >
+          <a
+            href="applications.html"
+            class="mobile-nav-link text-lg font-medium text-white hover:text-primary transition-colors"
+            >Applications</a
+          >
+          <a
+            href="contact.html"
+            class="mobile-nav-link text-lg font-medium text-white hover:text-primary transition-colors"
+            >Contact</a
+          >
         </nav>
       </div>
     </div>
@@ -98,154 +274,626 @@
       <!-- Hero Banner -->
       <section class="page-hero">
         <div aria-hidden="true" class="absolute inset-0 pointer-events-none">
-          <img src="assets/images/herobanner-bg.png" alt="" class="w-full h-full object-cover"/>
+          <img
+            src="assets/images/herobanner-bg.png"
+            alt=""
+            class="w-full h-full object-cover"
+          />
           <div class="page-hero-overlay"></div>
         </div>
-        <h1 class="heading-h1 text-white text-center relative z-10 px-4 max-w-3xl">Certifications</h1>
+        <h1
+          class="heading-h1 text-white text-center relative z-10 px-4 max-w-3xl"
+        >
+          Certifications
+        </h1>
       </section>
 
       <!-- Certification Cards Grid -->
-      <section class="py-16 lg:py-24 bg-white">
+      <section class="py-12 lg:pt-16 lg:pb-25 bg-white">
         <div class="container">
           <div class="flex flex-col gap-14 items-center">
             <!-- Section Header -->
-            <div class="flex flex-col gap-5 items-center text-center" data-aos="fade-up">
+            <div
+              class="flex flex-col gap-5 items-center text-center"
+              data-aos="fade-up"
+            >
               <span class="badge-tag">CERTIFICATIONS</span>
               <h2 class="heading-h3 text-gray-900">Chứng nhận toàn cầu</h2>
             </div>
 
             <!-- Cert Cards Grid — 3 cols -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full" data-aos="fade-up" data-aos-delay="100">
-
+            <div
+              class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
               <!-- Cert Card Template -->
               <!-- IECEE -->
-              <div class="bg-[#f7f7f7] border border-gray-200 rounded-lg p-8 flex flex-col gap-4 relative overflow-hidden">
+              <div
+                class="bg-[#f7f7f7] border border-gray-200 rounded-lg p-8 flex flex-col gap-4 relative overflow-hidden"
+              >
                 <div class="flex gap-4 items-center">
                   <div class="bg-primary rounded-full p-2 shrink-0">
-                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                    <svg
+                      class="w-6 h-6 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
                   </div>
                   <div class="flex flex-col gap-1">
                     <p class="font-orbitron text-sm text-gray-900">CB</p>
-                    <p class="font-bold text-lg text-primary leading-7">IECEE</p>
+                    <p class="font-bold text-lg text-primary leading-7">
+                      IECEE
+                    </p>
                   </div>
                 </div>
                 <div class="border-t border-gray-200"></div>
                 <ul class="flex flex-col gap-3">
-                  <li class="flex items-start gap-3 text-base text-gray-500 font-medium leading-6">
-                    <svg class="w-[18px] h-[18px] mt-0.5 shrink-0 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                  <li
+                    class="flex items-start gap-3 text-base text-gray-500 font-medium leading-6"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="18"
+                      height="18"
+                      viewBox="0 0 18 18"
+                      fill="none"
+                      class="mt-0.5 shrink-0"
+                    >
+                      <path
+                        d="M6.75 13.5L11.25 9L6.75 4.5"
+                        stroke="#CE181E"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                      />
+                    </svg>
                     Chương trình chứng nhận quốc tế
                   </li>
-                  <li class="flex items-start gap-3 text-base text-gray-500 font-medium leading-6">
-                    <svg class="w-[18px] h-[18px] mt-0.5 shrink-0 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                  <li
+                    class="flex items-start gap-3 text-base text-gray-500 font-medium leading-6"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="18"
+                      height="18"
+                      viewBox="0 0 18 18"
+                      fill="none"
+                      class="mt-0.5 shrink-0"
+                    >
+                      <path
+                        d="M6.75 13.5L11.25 9L6.75 4.5"
+                        stroke="#CE181E"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                      />
+                    </svg>
                     Hỗ trợ tiếp cận thị trường toàn cầu
                   </li>
-                  <li class="flex items-start gap-3 text-base text-gray-500 font-medium leading-6">
-                    <svg class="w-[18px] h-[18px] mt-0.5 shrink-0 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                  <li
+                    class="flex items-start gap-3 text-base text-gray-500 font-medium leading-6"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="18"
+                      height="18"
+                      viewBox="0 0 18 18"
+                      fill="none"
+                      class="mt-0.5 shrink-0"
+                    >
+                      <path
+                        d="M6.75 13.5L11.25 9L6.75 4.5"
+                        stroke="#CE181E"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                      />
+                    </svg>
                     Được công nhận tại 50+ quốc gia
                   </li>
                 </ul>
+                <img
+                  src="assets/images/certifications-card-bg.png"
+                  alt=""
+                  class="absolute right-0 bottom-0 w-[47px] h-[52px] pointer-events-none"
+                />
               </div>
 
               <!-- CCC -->
-              <div class="bg-[#f7f7f7] border border-gray-200 rounded-lg p-8 flex flex-col gap-4 relative overflow-hidden">
+              <div
+                class="bg-[#f7f7f7] border border-gray-200 rounded-lg p-8 flex flex-col gap-4 relative overflow-hidden"
+              >
                 <div class="flex gap-4 items-center">
                   <div class="bg-primary rounded-full p-2 shrink-0">
-                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                    <svg
+                      class="w-6 h-6 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
                   </div>
                   <div class="flex flex-col gap-1">
                     <p class="font-orbitron text-sm text-gray-900">CCC</p>
-                    <p class="font-bold text-lg text-primary leading-7">Trung Quốc</p>
+                    <p class="font-bold text-lg text-primary leading-7">
+                      Trung Quốc
+                    </p>
                   </div>
                 </div>
                 <div class="border-t border-gray-200"></div>
                 <ul class="flex flex-col gap-3">
-                  <li class="flex items-start gap-3 text-base text-gray-500 font-medium leading-6"><svg class="w-[18px] h-[18px] mt-0.5 shrink-0 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>Chứng nhận bắt buộc Trung Quốc</li>
-                  <li class="flex items-start gap-3 text-base text-gray-500 font-medium leading-6"><svg class="w-[18px] h-[18px] mt-0.5 shrink-0 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>Bắt buộc cho thị trường Trung Quốc</li>
-                  <li class="flex items-start gap-3 text-base text-gray-500 font-medium leading-6"><svg class="w-[18px] h-[18px] mt-0.5 shrink-0 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>Tuân thủ an toàn và EMC</li>
+                  <li
+                    class="flex items-start gap-3 text-base text-gray-500 font-medium leading-6"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="18"
+                      height="18"
+                      viewBox="0 0 18 18"
+                      fill="none"
+                      class="mt-0.5 shrink-0"
+                    >
+                      <path
+                        d="M6.75 13.5L11.25 9L6.75 4.5"
+                        stroke="#CE181E"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                      /></svg
+                    >Chứng nhận bắt buộc Trung Quốc
+                  </li>
+                  <li
+                    class="flex items-start gap-3 text-base text-gray-500 font-medium leading-6"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="18"
+                      height="18"
+                      viewBox="0 0 18 18"
+                      fill="none"
+                      class="mt-0.5 shrink-0"
+                    >
+                      <path
+                        d="M6.75 13.5L11.25 9L6.75 4.5"
+                        stroke="#CE181E"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                      /></svg
+                    >Bắt buộc cho thị trường Trung Quốc
+                  </li>
+                  <li
+                    class="flex items-start gap-3 text-base text-gray-500 font-medium leading-6"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="18"
+                      height="18"
+                      viewBox="0 0 18 18"
+                      fill="none"
+                      class="mt-0.5 shrink-0"
+                    >
+                      <path
+                        d="M6.75 13.5L11.25 9L6.75 4.5"
+                        stroke="#CE181E"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                      /></svg
+                    >Tuân thủ an toàn và EMC
+                  </li>
                 </ul>
+                <img
+                  src="assets/images/certifications-card-bg.png"
+                  alt=""
+                  class="absolute right-0 bottom-0 w-[47px] h-[52px] pointer-events-none"
+                />
               </div>
 
               <!-- KC -->
-              <div class="bg-[#f7f7f7] border border-gray-200 rounded-lg p-8 flex flex-col gap-4 relative overflow-hidden">
+              <div
+                class="bg-[#f7f7f7] border border-gray-200 rounded-lg p-8 flex flex-col gap-4 relative overflow-hidden"
+              >
                 <div class="flex gap-4 items-center">
                   <div class="bg-primary rounded-full p-2 shrink-0">
-                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                    <svg
+                      class="w-6 h-6 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
                   </div>
                   <div class="flex flex-col gap-1">
                     <p class="font-orbitron text-sm text-gray-900">KC</p>
-                    <p class="font-bold text-lg text-primary leading-7">Hàn Quốc</p>
+                    <p class="font-bold text-lg text-primary leading-7">
+                      Hàn Quốc
+                    </p>
                   </div>
                 </div>
                 <div class="border-t border-gray-200"></div>
                 <ul class="flex flex-col gap-3">
-                  <li class="flex items-start gap-3 text-base text-gray-500 font-medium leading-6"><svg class="w-[18px] h-[18px] mt-0.5 shrink-0 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>Dấu chứng nhận Hàn Quốc</li>
-                  <li class="flex items-start gap-3 text-base text-gray-500 font-medium leading-6"><svg class="w-[18px] h-[18px] mt-0.5 shrink-0 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>Bắt buộc cho thị trường Hàn Quốc</li>
-                  <li class="flex items-start gap-3 text-base text-gray-500 font-medium leading-6"><svg class="w-[18px] h-[18px] mt-0.5 shrink-0 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>Tuân thủ an toàn và EMC</li>
+                  <li
+                    class="flex items-start gap-3 text-base text-gray-500 font-medium leading-6"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="18"
+                      height="18"
+                      viewBox="0 0 18 18"
+                      fill="none"
+                      class="mt-0.5 shrink-0"
+                    >
+                      <path
+                        d="M6.75 13.5L11.25 9L6.75 4.5"
+                        stroke="#CE181E"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                      /></svg
+                    >Dấu chứng nhận Hàn Quốc
+                  </li>
+                  <li
+                    class="flex items-start gap-3 text-base text-gray-500 font-medium leading-6"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="18"
+                      height="18"
+                      viewBox="0 0 18 18"
+                      fill="none"
+                      class="mt-0.5 shrink-0"
+                    >
+                      <path
+                        d="M6.75 13.5L11.25 9L6.75 4.5"
+                        stroke="#CE181E"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                      /></svg
+                    >Bắt buộc cho thị trường Hàn Quốc
+                  </li>
+                  <li
+                    class="flex items-start gap-3 text-base text-gray-500 font-medium leading-6"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="18"
+                      height="18"
+                      viewBox="0 0 18 18"
+                      fill="none"
+                      class="mt-0.5 shrink-0"
+                    >
+                      <path
+                        d="M6.75 13.5L11.25 9L6.75 4.5"
+                        stroke="#CE181E"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                      /></svg
+                    >Tuân thủ an toàn và EMC
+                  </li>
                 </ul>
+                <img
+                  src="assets/images/certifications-card-bg.png"
+                  alt=""
+                  class="absolute right-0 bottom-0 w-[47px] h-[52px] pointer-events-none"
+                />
               </div>
 
               <!-- UKCA -->
-              <div class="bg-[#f7f7f7] border border-gray-200 rounded-lg p-8 flex flex-col gap-4 relative overflow-hidden">
+              <div
+                class="bg-[#f7f7f7] border border-gray-200 rounded-lg p-8 flex flex-col gap-4 relative overflow-hidden"
+              >
                 <div class="flex gap-4 items-center">
                   <div class="bg-primary rounded-full p-2 shrink-0">
-                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                    <svg
+                      class="w-6 h-6 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
                   </div>
                   <div class="flex flex-col gap-1">
                     <p class="font-orbitron text-sm text-gray-900">UKCA</p>
-                    <p class="font-bold text-lg text-primary leading-7">Vương quốc Anh</p>
+                    <p class="font-bold text-lg text-primary leading-7">
+                      Vương quốc Anh
+                    </p>
                   </div>
                 </div>
                 <div class="border-t border-gray-200"></div>
                 <ul class="flex flex-col gap-3">
-                  <li class="flex items-start gap-3 text-base text-gray-500 font-medium leading-6"><svg class="w-[18px] h-[18px] mt-0.5 shrink-0 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>Đánh giá phù hợp Vương quốc Anh</li>
-                  <li class="flex items-start gap-3 text-base text-gray-500 font-medium leading-6"><svg class="w-[18px] h-[18px] mt-0.5 shrink-0 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>Bắt buộc cho thị trường Anh sau Brexit</li>
-                  <li class="flex items-start gap-3 text-base text-gray-500 font-medium leading-6"><svg class="w-[18px] h-[18px] mt-0.5 shrink-0 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>Thay thế dấu CE tại Anh</li>
+                  <li
+                    class="flex items-start gap-3 text-base text-gray-500 font-medium leading-6"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="18"
+                      height="18"
+                      viewBox="0 0 18 18"
+                      fill="none"
+                      class="mt-0.5 shrink-0"
+                    >
+                      <path
+                        d="M6.75 13.5L11.25 9L6.75 4.5"
+                        stroke="#CE181E"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                      /></svg
+                    >Đánh giá phù hợp Vương quốc Anh
+                  </li>
+                  <li
+                    class="flex items-start gap-3 text-base text-gray-500 font-medium leading-6"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="18"
+                      height="18"
+                      viewBox="0 0 18 18"
+                      fill="none"
+                      class="mt-0.5 shrink-0"
+                    >
+                      <path
+                        d="M6.75 13.5L11.25 9L6.75 4.5"
+                        stroke="#CE181E"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                      /></svg
+                    >Bắt buộc cho thị trường Anh sau Brexit
+                  </li>
+                  <li
+                    class="flex items-start gap-3 text-base text-gray-500 font-medium leading-6"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="18"
+                      height="18"
+                      viewBox="0 0 18 18"
+                      fill="none"
+                      class="mt-0.5 shrink-0"
+                    >
+                      <path
+                        d="M6.75 13.5L11.25 9L6.75 4.5"
+                        stroke="#CE181E"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                      /></svg
+                    >Thay thế dấu CE tại Anh
+                  </li>
                 </ul>
+                <img
+                  src="assets/images/certifications-card-bg.png"
+                  alt=""
+                  class="absolute right-0 bottom-0 w-[47px] h-[52px] pointer-events-none"
+                />
               </div>
 
               <!-- RCM -->
-              <div class="bg-[#f7f7f7] border border-gray-200 rounded-lg p-8 flex flex-col gap-4 relative overflow-hidden">
+              <div
+                class="bg-[#f7f7f7] border border-gray-200 rounded-lg p-8 flex flex-col gap-4 relative overflow-hidden"
+              >
                 <div class="flex gap-4 items-center">
                   <div class="bg-primary rounded-full p-2 shrink-0">
-                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                    <svg
+                      class="w-6 h-6 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
                   </div>
                   <div class="flex flex-col gap-1">
                     <p class="font-orbitron text-sm text-gray-900">RCM</p>
-                    <p class="font-bold text-lg text-primary leading-7">Úc/New Zealand</p>
+                    <p class="font-bold text-lg text-primary leading-7">
+                      Úc/New Zealand
+                    </p>
                   </div>
                 </div>
                 <div class="border-t border-gray-200"></div>
                 <ul class="flex flex-col gap-3">
-                  <li class="flex items-start gap-3 text-base text-gray-500 font-medium leading-6"><svg class="w-[18px] h-[18px] mt-0.5 shrink-0 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>Dấu tuân thủ quy định</li>
-                  <li class="flex items-start gap-3 text-base text-gray-500 font-medium leading-6"><svg class="w-[18px] h-[18px] mt-0.5 shrink-0 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>Bắt buộc cho thị trường Úc</li>
-                  <li class="flex items-start gap-3 text-base text-gray-500 font-medium leading-6"><svg class="w-[18px] h-[18px] mt-0.5 shrink-0 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>Tuân thủ an toàn và EMC</li>
+                  <li
+                    class="flex items-start gap-3 text-base text-gray-500 font-medium leading-6"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="18"
+                      height="18"
+                      viewBox="0 0 18 18"
+                      fill="none"
+                      class="mt-0.5 shrink-0"
+                    >
+                      <path
+                        d="M6.75 13.5L11.25 9L6.75 4.5"
+                        stroke="#CE181E"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                      /></svg
+                    >Dấu tuân thủ quy định
+                  </li>
+                  <li
+                    class="flex items-start gap-3 text-base text-gray-500 font-medium leading-6"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="18"
+                      height="18"
+                      viewBox="0 0 18 18"
+                      fill="none"
+                      class="mt-0.5 shrink-0"
+                    >
+                      <path
+                        d="M6.75 13.5L11.25 9L6.75 4.5"
+                        stroke="#CE181E"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                      /></svg
+                    >Bắt buộc cho thị trường Úc
+                  </li>
+                  <li
+                    class="flex items-start gap-3 text-base text-gray-500 font-medium leading-6"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="18"
+                      height="18"
+                      viewBox="0 0 18 18"
+                      fill="none"
+                      class="mt-0.5 shrink-0"
+                    >
+                      <path
+                        d="M6.75 13.5L11.25 9L6.75 4.5"
+                        stroke="#CE181E"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                      /></svg
+                    >Tuân thủ an toàn và EMC
+                  </li>
                 </ul>
+                <img
+                  src="assets/images/certifications-card-bg.png"
+                  alt=""
+                  class="absolute right-0 bottom-0 w-[47px] h-[52px] pointer-events-none"
+                />
               </div>
 
               <!-- CE -->
-              <div class="bg-[#f7f7f7] border border-gray-200 rounded-lg p-8 flex flex-col gap-4 relative overflow-hidden">
+              <div
+                class="bg-[#f7f7f7] border border-gray-200 rounded-lg p-8 flex flex-col gap-4 relative overflow-hidden"
+              >
                 <div class="flex gap-4 items-center">
                   <div class="bg-primary rounded-full p-2 shrink-0">
-                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                    <svg
+                      class="w-6 h-6 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
                   </div>
                   <div class="flex flex-col gap-1">
                     <p class="font-orbitron text-sm text-gray-900">CE</p>
-                    <p class="font-bold text-lg text-primary leading-7">Châu Âu</p>
+                    <p class="font-bold text-lg text-primary leading-7">
+                      Châu Âu
+                    </p>
                   </div>
                 </div>
                 <div class="border-t border-gray-200"></div>
                 <ul class="flex flex-col gap-3">
-                  <li class="flex items-start gap-3 text-base text-gray-500 font-medium leading-6"><svg class="w-[18px] h-[18px] mt-0.5 shrink-0 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>Conformité Européenne</li>
-                  <li class="flex items-start gap-3 text-base text-gray-500 font-medium leading-6"><svg class="w-[18px] h-[18px] mt-0.5 shrink-0 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>Bắt buộc cho thị trường Châu Âu</li>
-                  <li class="flex items-start gap-3 text-base text-gray-500 font-medium leading-6"><svg class="w-[18px] h-[18px] mt-0.5 shrink-0 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>An toàn, sức khỏe và bảo vệ môi trường</li>
+                  <li
+                    class="flex items-start gap-3 text-base text-gray-500 font-medium leading-6"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="18"
+                      height="18"
+                      viewBox="0 0 18 18"
+                      fill="none"
+                      class="mt-0.5 shrink-0"
+                    >
+                      <path
+                        d="M6.75 13.5L11.25 9L6.75 4.5"
+                        stroke="#CE181E"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                      /></svg
+                    >Conformité Européenne
+                  </li>
+                  <li
+                    class="flex items-start gap-3 text-base text-gray-500 font-medium leading-6"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="18"
+                      height="18"
+                      viewBox="0 0 18 18"
+                      fill="none"
+                      class="mt-0.5 shrink-0"
+                    >
+                      <path
+                        d="M6.75 13.5L11.25 9L6.75 4.5"
+                        stroke="#CE181E"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                      /></svg
+                    >Bắt buộc cho thị trường Châu Âu
+                  </li>
+                  <li
+                    class="flex items-start gap-3 text-base text-gray-500 font-medium leading-6"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="18"
+                      height="18"
+                      viewBox="0 0 18 18"
+                      fill="none"
+                      class="mt-0.5 shrink-0"
+                    >
+                      <path
+                        d="M6.75 13.5L11.25 9L6.75 4.5"
+                        stroke="#CE181E"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                      /></svg
+                    >An toàn, sức khỏe và bảo vệ môi trường
+                  </li>
                 </ul>
+                <img
+                  src="assets/images/certifications-card-bg.png"
+                  alt=""
+                  class="absolute right-0 bottom-0 w-[47px] h-[52px] pointer-events-none"
+                />
               </div>
 
               <!-- FCC -->
-              <div class="bg-[#f7f7f7] border border-gray-200 rounded-lg p-8 flex flex-col gap-4 relative overflow-hidden">
+              <div
+                class="bg-[#f7f7f7] border border-gray-200 rounded-lg p-8 flex flex-col gap-4 relative overflow-hidden"
+              >
                 <div class="flex gap-4 items-center">
                   <div class="bg-primary rounded-full p-2 shrink-0">
-                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                    <svg
+                      class="w-6 h-6 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
                   </div>
                   <div class="flex flex-col gap-1">
                     <p class="font-orbitron text-sm text-gray-900">FCC</p>
@@ -254,48 +902,257 @@
                 </div>
                 <div class="border-t border-gray-200"></div>
                 <ul class="flex flex-col gap-3">
-                  <li class="flex items-start gap-3 text-base text-gray-500 font-medium leading-6"><svg class="w-[18px] h-[18px] mt-0.5 shrink-0 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>Ủy ban Truyền thông Liên bang</li>
-                  <li class="flex items-start gap-3 text-base text-gray-500 font-medium leading-6"><svg class="w-[18px] h-[18px] mt-0.5 shrink-0 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>Bắt buộc cho thiết bị điện tử tại Mỹ</li>
-                  <li class="flex items-start gap-3 text-base text-gray-500 font-medium leading-6"><svg class="w-[18px] h-[18px] mt-0.5 shrink-0 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>Tương thích điện từ</li>
+                  <li
+                    class="flex items-start gap-3 text-base text-gray-500 font-medium leading-6"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="18"
+                      height="18"
+                      viewBox="0 0 18 18"
+                      fill="none"
+                      class="mt-0.5 shrink-0"
+                    >
+                      <path
+                        d="M6.75 13.5L11.25 9L6.75 4.5"
+                        stroke="#CE181E"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                      /></svg
+                    >Ủy ban Truyền thông Liên bang
+                  </li>
+                  <li
+                    class="flex items-start gap-3 text-base text-gray-500 font-medium leading-6"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="18"
+                      height="18"
+                      viewBox="0 0 18 18"
+                      fill="none"
+                      class="mt-0.5 shrink-0"
+                    >
+                      <path
+                        d="M6.75 13.5L11.25 9L6.75 4.5"
+                        stroke="#CE181E"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                      /></svg
+                    >Bắt buộc cho thiết bị điện tử tại Mỹ
+                  </li>
+                  <li
+                    class="flex items-start gap-3 text-base text-gray-500 font-medium leading-6"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="18"
+                      height="18"
+                      viewBox="0 0 18 18"
+                      fill="none"
+                      class="mt-0.5 shrink-0"
+                    >
+                      <path
+                        d="M6.75 13.5L11.25 9L6.75 4.5"
+                        stroke="#CE181E"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                      /></svg
+                    >Tương thích điện từ
+                  </li>
                 </ul>
+                <img
+                  src="assets/images/certifications-card-bg.png"
+                  alt=""
+                  class="absolute right-0 bottom-0 w-[47px] h-[52px] pointer-events-none"
+                />
               </div>
 
               <!-- RoHS -->
-              <div class="bg-[#f7f7f7] border border-gray-200 rounded-lg p-8 flex flex-col gap-4 relative overflow-hidden">
+              <div
+                class="bg-[#f7f7f7] border border-gray-200 rounded-lg p-8 flex flex-col gap-4 relative overflow-hidden"
+              >
                 <div class="flex gap-4 items-center">
                   <div class="bg-primary rounded-full p-2 shrink-0">
-                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                    <svg
+                      class="w-6 h-6 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
                   </div>
                   <div class="flex flex-col gap-1">
                     <p class="font-orbitron text-sm text-gray-900">RoHS</p>
-                    <p class="font-bold text-lg text-primary leading-7">Toàn cầu</p>
+                    <p class="font-bold text-lg text-primary leading-7">
+                      Toàn cầu
+                    </p>
                   </div>
                 </div>
                 <div class="border-t border-gray-200"></div>
                 <ul class="flex flex-col gap-3">
-                  <li class="flex items-start gap-3 text-base text-gray-500 font-medium leading-6"><svg class="w-[18px] h-[18px] mt-0.5 shrink-0 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>Hạn chế chất độc hại</li>
-                  <li class="flex items-start gap-3 text-base text-gray-500 font-medium leading-6"><svg class="w-[18px] h-[18px] mt-0.5 shrink-0 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>Giới hạn sử dụng vật liệu độc hại cụ thể</li>
-                  <li class="flex items-start gap-3 text-base text-gray-500 font-medium leading-6"><svg class="w-[18px] h-[18px] mt-0.5 shrink-0 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>Tuân thủ môi trường</li>
+                  <li
+                    class="flex items-start gap-3 text-base text-gray-500 font-medium leading-6"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="18"
+                      height="18"
+                      viewBox="0 0 18 18"
+                      fill="none"
+                      class="mt-0.5 shrink-0"
+                    >
+                      <path
+                        d="M6.75 13.5L11.25 9L6.75 4.5"
+                        stroke="#CE181E"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                      /></svg
+                    >Hạn chế chất độc hại
+                  </li>
+                  <li
+                    class="flex items-start gap-3 text-base text-gray-500 font-medium leading-6"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="18"
+                      height="18"
+                      viewBox="0 0 18 18"
+                      fill="none"
+                      class="mt-0.5 shrink-0"
+                    >
+                      <path
+                        d="M6.75 13.5L11.25 9L6.75 4.5"
+                        stroke="#CE181E"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                      /></svg
+                    >Giới hạn sử dụng vật liệu độc hại cụ thể
+                  </li>
+                  <li
+                    class="flex items-start gap-3 text-base text-gray-500 font-medium leading-6"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="18"
+                      height="18"
+                      viewBox="0 0 18 18"
+                      fill="none"
+                      class="mt-0.5 shrink-0"
+                    >
+                      <path
+                        d="M6.75 13.5L11.25 9L6.75 4.5"
+                        stroke="#CE181E"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                      /></svg
+                    >Tuân thủ môi trường
+                  </li>
                 </ul>
+                <img
+                  src="assets/images/certifications-card-bg.png"
+                  alt=""
+                  class="absolute right-0 bottom-0 w-[47px] h-[52px] pointer-events-none"
+                />
               </div>
 
               <!-- PSE -->
-              <div class="bg-[#f7f7f7] border border-gray-200 rounded-lg p-8 flex flex-col gap-4 relative overflow-hidden">
+              <div
+                class="bg-[#f7f7f7] border border-gray-200 rounded-lg p-8 flex flex-col gap-4 relative overflow-hidden"
+              >
                 <div class="flex gap-4 items-center">
                   <div class="bg-primary rounded-full p-2 shrink-0">
-                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                    <svg
+                      class="w-6 h-6 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
                   </div>
                   <div class="flex flex-col gap-1">
                     <p class="font-orbitron text-sm text-gray-900">PSE</p>
-                    <p class="font-bold text-lg text-primary leading-7">Nhật Bản</p>
+                    <p class="font-bold text-lg text-primary leading-7">
+                      Nhật Bản
+                    </p>
                   </div>
                 </div>
                 <div class="border-t border-gray-200"></div>
                 <ul class="flex flex-col gap-3">
-                  <li class="flex items-start gap-3 text-base text-gray-500 font-medium leading-6"><svg class="w-[18px] h-[18px] mt-0.5 shrink-0 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>Dấu an toàn sản phẩm Nhật Bản</li>
-                  <li class="flex items-start gap-3 text-base text-gray-500 font-medium leading-6"><svg class="w-[18px] h-[18px] mt-0.5 shrink-0 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>Bắt buộc cho thị trường Nhật Bản</li>
-                  <li class="flex items-start gap-3 text-base text-gray-500 font-medium leading-6"><svg class="w-[18px] h-[18px] mt-0.5 shrink-0 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>Tuân thủ luật thiết bị điện và an toàn vật tư</li>
+                  <li
+                    class="flex items-start gap-3 text-base text-gray-500 font-medium leading-6"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="18"
+                      height="18"
+                      viewBox="0 0 18 18"
+                      fill="none"
+                      class="mt-0.5 shrink-0"
+                    >
+                      <path
+                        d="M6.75 13.5L11.25 9L6.75 4.5"
+                        stroke="#CE181E"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                      /></svg
+                    >Dấu an toàn sản phẩm Nhật Bản
+                  </li>
+                  <li
+                    class="flex items-start gap-3 text-base text-gray-500 font-medium leading-6"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="18"
+                      height="18"
+                      viewBox="0 0 18 18"
+                      fill="none"
+                      class="mt-0.5 shrink-0"
+                    >
+                      <path
+                        d="M6.75 13.5L11.25 9L6.75 4.5"
+                        stroke="#CE181E"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                      /></svg
+                    >Bắt buộc cho thị trường Nhật Bản
+                  </li>
+                  <li
+                    class="flex items-start gap-3 text-base text-gray-500 font-medium leading-6"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="18"
+                      height="18"
+                      viewBox="0 0 18 18"
+                      fill="none"
+                      class="mt-0.5 shrink-0"
+                    >
+                      <path
+                        d="M6.75 13.5L11.25 9L6.75 4.5"
+                        stroke="#CE181E"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                      /></svg
+                    >Tuân thủ luật thiết bị điện và an toàn vật tư
+                  </li>
                 </ul>
+                <img
+                  src="assets/images/certifications-card-bg.png"
+                  alt=""
+                  class="absolute right-0 bottom-0 w-[47px] h-[52px] pointer-events-none"
+                />
               </div>
             </div>
           </div>
@@ -303,52 +1160,123 @@
       </section>
 
       <!-- Dark Compliance Standards Section -->
-      <section class="bg-[#171717] py-16 lg:py-24 overflow-hidden">
+      <section class="bg-[#171717] py-16 lg:py-22 overflow-hidden">
         <div class="container">
-          <div class="flex flex-col gap-6 items-start" data-aos="fade-up">
+          <div class="flex flex-col gap-12 items-start" data-aos="fade-up">
             <!-- Section Header -->
             <div class="flex flex-col gap-5 w-full">
               <div class="flex flex-col gap-5">
-                <span class="badge-tag-white self-start">TIÊU CHUẨN TUÂN THỦ</span>
-                <h2 class="heading-h3 text-white">Tiêu chuẩn tuân thủ nghiêm ngặt</h2>
+                <span class="badge-tag-white self-start"
+                  >TIÊU CHUẨN TUÂN THỦ</span
+                >
+                <h2 class="heading-h3 text-white">
+                  Tiêu chuẩn tuân thủ nghiêm ngặt
+                </h2>
               </div>
-              <p class="text-sm font-medium text-gray-300 max-w-2xl leading-[1.4]">
-                Sản phẩm của chúng tôi được thiết kế thử nghiệm và phê duyệt tuân thủ các nhóm tiêu chuẩn quốc tế nghiêm ngặt nhất.
+              <p
+                class="text-sm font-medium text-gray-300 max-w-3xl leading-[1.4]"
+              >
+                Sản phẩm của chúng tôi được thiết kế thử nghiệm và phê duyệt
+                tuân thủ các nhóm tiêu chuẩn quốc tế nghiêm ngặt nhất.
               </p>
             </div>
 
-            <!-- Three-column Standards Table -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-0 w-full divide-x divide-gray-700" data-aos="fade-up" data-aos-delay="100">
+            <!-- Four-column Standards Table -->
+            <div
+              class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 xl:gap-8 w-full"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
               <!-- Safety Standards -->
-              <div class="flex flex-col gap-6 px-8 py-6">
-                <h3 class="text-lg font-semibold text-white leading-7">Tiêu chuẩn an toàn</h3>
+              <div class="flex flex-col gap-6">
+                <h3 class="text-lg font-semibold text-white leading-7">
+                  Tiêu chuẩn an toàn
+                </h3>
                 <div class="border-t border-gray-700"></div>
-                <div class="flex flex-col gap-4 text-sm font-medium leading-[1.4] text-gray-300">
-                  <p><span class="text-white">IEC 60950:</span> Thiết bị công nghệ thông tin</p>
-                  <p><span class="text-white">IEC 61347:</span> Thiết bị điều khiển nguồn LED</p>
-                  <p><span class="text-white">IEC 62368:</span> Thiết bị âm thanh/video và công nghệ truyền thông</p>
+                <div
+                  class="flex flex-col gap-4 text-sm font-medium leading-[1.4] text-gray-300"
+                >
+                  <p>
+                    <span class="text-white">IEC 60950:</span> Thiết bị công
+                    nghệ thông tin
+                  </p>
+                  <p>
+                    <span class="text-white">IEC 61347:</span> Thiết bị điều
+                    khiển nguồn LED
+                  </p>
+                  <p>
+                    <span class="text-white">IEC 62368:</span> Thiết bị âm
+                    thanh/video và công nghệ truyền thông
+                  </p>
                 </div>
               </div>
 
               <!-- EMC Standards -->
-              <div class="flex flex-col gap-6 px-8 py-6">
-                <h3 class="text-lg font-semibold text-white leading-7">Tiêu chuẩn EMC</h3>
+              <div class="flex flex-col gap-6">
+                <h3 class="text-lg font-semibold text-white leading-7">
+                  Tiêu chuẩn EMC
+                </h3>
                 <div class="border-t border-gray-700"></div>
-                <div class="flex flex-col gap-4 text-sm font-medium leading-[1.4] text-gray-300">
-                  <p><span class="text-white">CISPR 32:</span> Đặc tính phát xạ của thiết bị multimedia</p>
-                  <p><span class="text-white">CISPR 35:</span> Miễn nhiễm của thiết bị multimedia</p>
-                  <p><span class="text-white">EN 55032:</span> Tiêu chuẩn EMC Châu Âu cho thiết bị multimedia</p>
+                <div
+                  class="flex flex-col gap-4 text-sm font-medium leading-[1.4] text-gray-300"
+                >
+                  <p>
+                    <span class="text-white">EN 55032:</span> Phát xạ điện từ
+                    của thiết bị đa phương tiện
+                  </p>
+                  <p>
+                    <span class="text-white">EN 55035:</span> Khả năng miễn
+                    nhiễm của thiết bị đa phương tiện
+                  </p>
+                  <p>
+                    <span class="text-white">FCC Part 15:</span> Quy định về
+                    nhiễu sóng vô tuyến tại Mỹ
+                  </p>
+                  <p>
+                    <span class="text-white">ICES-003:</span> Tiêu chuẩn tương
+                    thích điện từ tại Canada
+                  </p>
                 </div>
               </div>
 
               <!-- Environmental Standards -->
-              <div class="flex flex-col gap-6 px-8 py-6">
-                <h3 class="text-lg font-semibold text-white leading-7">Tiêu chuẩn môi trường</h3>
+              <div class="flex flex-col gap-6">
+                <h3 class="text-lg font-semibold text-white leading-7">
+                  Tiêu chuẩn môi trường
+                </h3>
                 <div class="border-t border-gray-700"></div>
-                <div class="flex flex-col gap-4 text-sm font-medium leading-[1.4] text-gray-300">
-                  <p><span class="text-white">RoHS:</span> Hạn chế chất độc hại trong thiết bị điện</p>
-                  <p><span class="text-white">WEEE:</span> Quản lý thiết bị điện/điện tử thải bỏ</p>
-                  <p><span class="text-white">ErP:</span> Thiết kế thân thiện môi trường cho các sản phẩm liên quan đến năng lượng</p>
+                <div
+                  class="flex flex-col gap-4 text-sm font-medium leading-[1.4] text-gray-300"
+                >
+                  <p>
+                    <span class="text-white">RoHS:</span> Hạn chế chất độc hại
+                    trong linh kiện điện tử
+                  </p>
+                  <p>
+                    <span class="text-white">REACH:</span> Kiểm soát mức độ an
+                    toàn hóa chất sản xuất
+                  </p>
+                  <p>
+                    <span class="text-white">WEEE:</span> Quản lý quy trình thải
+                    bỏ thiết bị điện tử
+                  </p>
+                </div>
+              </div>
+
+              <!-- Quality Management -->
+              <div class="flex flex-col gap-6">
+                <h3 class="text-lg font-semibold text-white leading-7">
+                  Quản lý chất lượng
+                </h3>
+                <div class="border-t border-gray-700"></div>
+                <div
+                  class="flex flex-col gap-4 text-sm font-medium leading-[1.4] text-gray-300"
+                >
+                  <p>
+                    <span class="text-white">ISO 9001:</span> Hệ thống quản lý
+                    chất lượng đạt chuẩn quốc tế, kiểm soát toàn diện từ khâu
+                    thiết kế R&D, linh kiện đầu vào đến quy trình thành phẩm.
+                  </p>
                 </div>
               </div>
             </div>
@@ -362,48 +1290,122 @@
       <div class="container space-y-12 relative z-10">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
           <div class="lg:col-span-4 space-y-6">
-            <a href="index.html" class="inline-block" aria-label="Zobotek Homepage">
-              <img src="assets/images/logo-footer.png" alt="Zobotek Logo" class="h-16 sm:h-20 w-auto"/>
+            <a
+              href="index.html"
+              class="inline-block"
+              aria-label="Zobotek Homepage"
+            >
+              <img
+                src="assets/images/logo-footer.png"
+                alt="Zobotek Logo"
+                class="h-16 sm:h-20 w-auto"
+              />
             </a>
           </div>
           <div class="lg:col-span-4">
-            <div class="flex flex-col gap-4 text-base sm:text-lg font-semibold text-white">
+            <div
+              class="flex flex-col gap-4 text-base sm:text-lg font-semibold text-white"
+            >
               <a href="index.html" class="footer-link">Home</a>
               <a href="about.html" class="footer-link">About Us</a>
               <a href="power-supplies.html" class="footer-link">Products</a>
               <a href="manufacturing.html" class="footer-link">Manufacturing</a>
-              <a href="certifications.html" class="footer-link">Certification</a>
+              <a href="certifications.html" class="footer-link"
+                >Certification</a
+              >
               <a href="applications.html" class="footer-link">Applications</a>
               <a href="contact.html" class="footer-link">Contact us</a>
             </div>
           </div>
           <div class="lg:col-span-4 space-y-6 text-base text-white/90">
             <div class="flex items-start gap-3">
-              <svg class="w-6 h-6 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              <svg
+                class="w-6 h-6 shrink-0 mt-0.5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                />
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                />
+              </svg>
               <span>[Address]</span>
             </div>
             <div class="flex items-center gap-3">
-              <svg class="w-6 h-6 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-              <a href="mailto:example@zobotek.com" class="footer-link">example@zobotek.com</a>
+              <svg
+                class="w-6 h-6 shrink-0"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                />
+              </svg>
+              <a href="mailto:example@zobotek.com" class="footer-link"
+                >example@zobotek.com</a
+              >
             </div>
             <div class="flex flex-wrap items-center gap-8 pt-1">
               <div class="flex items-center gap-3">
-                <svg class="w-6 h-6 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                <svg
+                  class="w-6 h-6 shrink-0"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                  />
+                </svg>
                 <a href="tel:+0012345678" class="footer-link">+00 1234 5678</a>
               </div>
               <div class="flex items-center gap-3">
-                <svg class="w-6 h-6 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/></svg>
+                <svg
+                  class="w-6 h-6 shrink-0"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"
+                  />
+                </svg>
                 <a href="tel:+0012345678" class="footer-link">+00 1234 5678</a>
               </div>
             </div>
           </div>
         </div>
-        <div class="border-t border-primary-90/30 pt-3 flex flex-col sm:flex-row items-center justify-between gap-4 text-base text-primary-90 font-medium">
+        <div
+          class="border-t border-primary-90/30 pt-3 flex flex-col sm:flex-row items-center justify-between gap-4 text-base text-primary-90 font-medium"
+        >
           <p>Copyright &copy; 2026 Zobotek. All rights reserved.</p>
           <div class="flex items-center gap-2">
-            <a href="#" class="hover:text-white transition-colors">Terms and Conditions</a>
+            <a href="#" class="hover:text-white transition-colors"
+              >Terms and Conditions</a
+            >
             <span class="text-white">|</span>
-            <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+            <a href="#" class="hover:text-white transition-colors"
+              >Privacy Policy</a
+            >
           </div>
         </div>
       </div>
