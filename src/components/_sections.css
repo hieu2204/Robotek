@@ -92,5 +92,26 @@
     @apply text-primary font-medium group-hover:text-primary;
   }
 
+  /* =========================================================
+     Inner Page Hero Banner Component
+     Used by: usv.html, manufacturing.html, certifications.html,
+              applications.html, contact.html, product-detail pages
+     - Figma: h-[394px], same background + rgba(186,81,81,0.78) overlay
+     - Normal document flow: sits after fixed header (pt-[100px])
+     ========================================================= */
+  .page-hero {
+    @apply relative h-[394px] flex items-center justify-center overflow-hidden pt-[100px];
+    /* pt-[100px]: offset for fixed header height */
+  }
+
+  .page-hero-overlay {
+    @apply absolute inset-0 pointer-events-none;
+    background-color: rgba(186, 81, 81, 0.78);
+  }
+
+  /* White variant badge tag — for dark section backgrounds */
+  .badge-tag-white {
+    @apply inline-flex items-center justify-center px-6 py-2 font-orbitron font-semibold text-base leading-6 text-gray-900 bg-white;
+  }
 
 }

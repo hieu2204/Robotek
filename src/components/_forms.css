@@ -1,0 +1,30 @@
+@layer components {
+  /* Contact Form Field Component
+     Pattern: label + underline-only input (no box border)
+     Used exclusively in Contact page inquiry form
+     #484f57 = Figma label color (one-off, not in design system token list)
+     #999 = placeholder text color (one-off) */
+  .form-field {
+    @apply flex flex-col gap-2 w-full;
+  }
+
+  .form-field__label {
+    @apply text-[#484f57] text-lg font-semibold leading-7;
+  }
+
+  .form-field__label--required::after {
+    content: " *";
+    @apply text-red;
+  }
+
+  .form-field__input {
+    @apply pb-3 border-b border-gray-200 text-[#999] text-lg font-medium leading-7 w-full bg-transparent;
+    @apply focus:outline-none focus:border-primary transition-colors;
+    @apply placeholder:text-[#999];
+  }
+
+  /* Submit button for contact form - full-width solid red */
+  .form-submit {
+    @apply w-full bg-primary text-white font-bold text-base leading-6 px-8 py-4 flex items-center justify-center hover:bg-red-700 transition-colors;
+  }
+}

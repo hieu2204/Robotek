@@ -119,15 +119,46 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // 6. Certifications Swiper Carousel
-  if (typeof Swiper !== "undefined" && document.querySelector(".cert-swiper")) {
-    new Swiper(".cert-swiper", {
+  // 6a. Certifications Swiper Carousel - Homepage (Frame 2147262621: Displays 4.2 cards on large screens)
+  if (
+    typeof Swiper !== "undefined" &&
+    document.querySelector(".home-cert-swiper")
+  ) {
+    new Swiper(".home-cert-swiper", {
       slidesPerView: "auto",
       spaceBetween: 24,
       loop: false,
+      grabCursor: true,
       navigation: {
         nextEl: "#cert-next",
         prevEl: "#cert-prev",
+      },
+      breakpoints: {
+        640: {
+          slidesPerView: 2.5,
+          spaceBetween: 20,
+        },
+        1024: {
+          slidesPerView: 4.2,
+          spaceBetween: 24,
+        },
+      },
+    });
+  }
+
+  // 6b. Certifications Swiper Carousel - Detail Page (Frame 2147264288: Displays exactly 5 cards on large screens)
+  if (
+    typeof Swiper !== "undefined" &&
+    document.querySelector(".detail-cert-swiper")
+  ) {
+    new Swiper(".detail-cert-swiper", {
+      slidesPerView: "auto",
+      spaceBetween: 24,
+      loop: false,
+      grabCursor: true,
+      navigation: {
+        nextEl: "#cert-next-btn",
+        prevEl: "#cert-prev-btn",
       },
     });
   }

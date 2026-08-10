@@ -1,0 +1,445 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rescue USV — Remote-Controlled Life Buoy | Zobotek</title>
+    <meta
+      name="description"
+      content="Zobotek Rescue USV: Remote-controlled life buoy with GPS navigation, self-righting design and IP67 marine-grade protection. Fast, safe, and reliable water rescue."
+    />
+    <link rel="stylesheet" href="assets/css/vendor/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="assets/css/vendor/aos.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script defer src="assets/js/vendor/swiper-bundle.min.js"></script>
+    <script defer src="assets/js/vendor/aos.min.js"></script>
+    <script defer src="assets/js/main.js"></script>
+  </head>
+  <body
+    class="font-sans text-gray-900 bg-white antialiased selection:bg-primary selection:text-white"
+  >
+    <!-- Header (Solid variant) -->
+    <header class="header--solid bg-primary">
+      <div class="container flex items-center justify-between h-full">
+        <div class="flex-1 min-w-0 flex items-center justify-start">
+          <a href="index.html" class="lg:hidden flex items-center" aria-label="Zobotek Homepage">
+            <img src="assets/images/logo-header.png" alt="Zobotek Logo" />
+          </a>
+        </div>
+        <nav class="hidden lg:flex items-center justify-center gap-6 xl:gap-10 2xl:gap-18 shrink-0">
+          <a href="about.html" class="nav-link">About Us</a>
+          <div class="relative group">
+            <a href="power-supplies.html" class="nav-link is-active flex items-center gap-1">
+              <span>Products</span>
+              <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </a>
+            <div class="absolute left-0 top-full pt-2 hidden group-hover:block w-52 z-50">
+              <div class="dropdown-menu">
+                <a href="power-supplies.html" class="dropdown-item">Power Supplies</a>
+                <a href="usv.html" class="dropdown-item text-primary font-semibold">USV Innovations</a>
+              </div>
+            </div>
+          </div>
+          <a href="manufacturing.html" class="nav-link">Manufacturing</a>
+          <a href="index.html" class="flex items-center px-2 xl:px-4 group focus:outline-none shrink-0" aria-label="Zobotek Homepage">
+            <div class="relative h-10 xl:h-12 2xl:h-14 w-auto flex items-center">
+              <img src="assets/images/logo-header.png" alt="Zobotek Logo" class="h-full w-auto"/>
+            </div>
+          </a>
+          <a href="certifications.html" class="nav-link">Certifications</a>
+          <a href="applications.html" class="nav-link">Applications</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+        </nav>
+        <div class="flex-1 min-w-0 flex items-center justify-end gap-2 sm:gap-3">
+          <div class="flex items-center gap-2 sm:gap-3 text-white relative">
+            <div class="relative hidden sm:block">
+              <button type="button" id="search-btn" class="p-1.5 header-action-btn" aria-label="Search">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                </svg>
+              </button>
+            </div>
+            <div class="hidden sm:block h-4 w-px bg-white/30" aria-hidden="true"></div>
+            <div class="relative">
+              <button type="button" id="lang-btn" class="flex items-center gap-1.5 p-1 header-action-btn text-sm font-medium">
+                <span class="flag-icon" style="background-image: url(&quot;https://flagcdn.com/w40/us.png&quot;);"></span>
+                <span id="current-lang">EN</span>
+                <svg class="w-3.5 h-3.5 text-white/80" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                </svg>
+              </button>
+              <div id="lang-dropdown" class="absolute right-0 top-full mt-2 hidden w-32 dropdown-menu py-1 z-50">
+                <a href="#" class="dropdown-item flex items-center gap-2 lang-option" data-lang="EN">
+                  <span class="flag-icon" style="background-image: url(&quot;https://flagcdn.com/w40/us.png&quot;);"></span>English
+                </a>
+                <a href="#" class="dropdown-item flex items-center gap-2 lang-option" data-lang="VN">
+                  <span class="flag-icon" style="background-image: url(&quot;https://flagcdn.com/w40/vn.png&quot;);"></span>Tiếng Việt
+                </a>
+              </div>
+            </div>
+            <button type="button" id="mobile-menu-toggle" class="lg:hidden p-2 text-white hover:text-white/80 transition-colors focus:outline-none" aria-label="Toggle Navigation Menu">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 hidden flex-col justify-between">
+      <div class="bg-gray-900 w-4/5 max-w-sm h-full flex flex-col p-6 overflow-y-auto">
+        <div class="flex items-center justify-between pb-6 border-b border-gray-800">
+          <a href="index.html" class="flex items-center">
+            <img src="assets/images/logo-header.png" alt="Zobotek Logo" class="h-8 w-auto"/>
+          </a>
+          <button type="button" id="mobile-menu-close" class="text-gray-400 hover:text-white p-2" aria-label="Close menu">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+          </button>
+        </div>
+        <nav class="flex flex-col gap-4 py-6">
+          <a href="about.html" class="mobile-nav-link text-lg font-medium text-white hover:text-primary transition-colors">About Us</a>
+          <a href="usv.html" class="mobile-nav-link text-lg font-medium text-primary">Products</a>
+          <a href="manufacturing.html" class="mobile-nav-link text-lg font-medium text-white hover:text-primary transition-colors">Manufacturing</a>
+          <a href="certifications.html" class="mobile-nav-link text-lg font-medium text-white hover:text-primary transition-colors">Certifications</a>
+          <a href="applications.html" class="mobile-nav-link text-lg font-medium text-white hover:text-primary transition-colors">Applications</a>
+          <a href="contact.html" class="mobile-nav-link text-lg font-medium text-white hover:text-primary transition-colors">Contact</a>
+        </nav>
+      </div>
+    </div>
+
+    <main>
+      <!-- Back Link -->
+      <div class="pt-[100px] bg-white">
+        <div class="container py-6">
+          <a href="usv.html" class="inline-flex items-center gap-2 text-gray-500 font-semibold text-base hover:text-primary transition-colors">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+            </svg>
+            Back
+          </a>
+        </div>
+      </div>
+
+      <!-- Product Detail Section -->
+      <section class="bg-white pb-16 lg:pb-24">
+        <div class="container">
+          <div class="grid grid-cols-1 lg:grid-cols-[auto_1fr] gap-10 lg:gap-18 items-start">
+
+            <!-- Left: Thumbnail + Main Image Gallery -->
+            <div class="flex gap-6 lg:gap-10 items-start">
+              <!-- Thumbnails -->
+              <div class="flex flex-col gap-4 shrink-0">
+                <div class="w-[107px] h-[124px] overflow-hidden border-2 border-primary cursor-pointer">
+                  <img src="assets/images/usv-product-main.png" alt="USV thumbnail 1" class="w-full h-full object-cover"/>
+                </div>
+                <div class="w-[107px] h-[123px] overflow-hidden border border-gray-200 cursor-pointer hover:border-primary transition-colors">
+                  <img src="assets/images/usv-product-1.png" alt="USV thumbnail 2" class="w-full h-full object-cover"/>
+                </div>
+                <div class="w-[107px] h-[124px] overflow-hidden border border-gray-200 cursor-pointer hover:border-primary transition-colors">
+                  <img src="assets/images/usv-product-2.png" alt="USV thumbnail 3" class="w-full h-full object-cover"/>
+                </div>
+                <div class="w-[107px] h-[123px] overflow-hidden border border-gray-200 cursor-pointer hover:border-primary transition-colors">
+                  <img src="assets/images/usv-product-3.png" alt="USV thumbnail 4" class="w-full h-full object-cover"/>
+                </div>
+                <div class="w-[107px] h-[124px] overflow-hidden border border-gray-200 cursor-pointer hover:border-primary transition-colors">
+                  <img src="assets/images/usv-product-main.png" alt="USV thumbnail 5" class="w-full h-full object-cover"/>
+                </div>
+              </div>
+
+              <!-- Main Image -->
+              <div class="relative w-[300px] sm:w-[400px] lg:w-[583px] h-auto aspect-[583/710] overflow-hidden">
+                <img
+                  src="assets/images/usv-product-main.png"
+                  alt="Rescue USV — Remote-Controlled Life Buoy"
+                  class="w-full h-full object-cover"
+                />
+                <!-- Arrow Navigation -->
+                <div class="absolute inset-x-4 top-1/2 -translate-y-1/2 flex justify-between items-center pointer-events-none">
+                  <button class="bg-primary text-white p-3 rounded-full pointer-events-auto hover:bg-red-700 transition-colors" aria-label="Previous image">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                    </svg>
+                  </button>
+                  <button class="bg-primary text-white p-3 rounded-full pointer-events-auto hover:bg-red-700 transition-colors" aria-label="Next image">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right: Product Info -->
+            <div class="flex flex-col gap-10 max-w-3xl">
+              <!-- SKU + Breadcrumb -->
+              <div class="space-y-2">
+                <div class="border-t border-gray-200 pt-2">
+                  <p class="font-orbitron text-sm text-gray-900">USV - 1</p>
+                </div>
+                <!-- Breadcrumb -->
+                <nav class="flex items-center gap-2 text-base font-medium text-gray-500" aria-label="Breadcrumb">
+                  <a href="index.html" class="hover:text-primary transition-colors">Home</a>
+                  <svg class="w-4 h-4 opacity-30" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                  </svg>
+                  <a href="usv.html" class="hover:text-primary transition-colors">Products</a>
+                  <svg class="w-4 h-4 opacity-30" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                  </svg>
+                  <span class="text-green-90 font-medium">Rescue USV</span>
+                </nav>
+              </div>
+
+              <!-- Product Title + Subtitle -->
+              <div class="space-y-3">
+                <h1 class="heading-h1 text-green-90">
+                  Rescue USV — Remote-Controlled Life Buoy
+                </h1>
+                <p class="text-base font-medium text-gray-500">Fast - Safe - Reliable</p>
+              </div>
+
+              <!-- Divider -->
+              <div class="border-t border-gray-200"></div>
+
+              <!-- Overview -->
+              <div class="space-y-3">
+                <h2 class="text-lg font-semibold text-[#333]">Overview:</h2>
+                <ul class="list-disc pl-6 space-y-2 text-base font-medium text-gray-500">
+                  <li>Remote Control: Operate from a safe distance with no risk to rescuers</li>
+                  <li>GPS Navigation: Precise positioning with return-to-home and waypoint navigation</li>
+                  <li>Rapid Response: High-speed movement on water, faster victim reach than traditional methods</li>
+                  <li>Self-Righting Design: Auto-flips if capsized, stable in rough water, marine-grade build</li>
+                  <li>Long Battery Life: Extended operation time with quick-swap battery and power-saving mode</li>
+                  <li>Two-Way Communication: Built-in speaker to reassure and guide victims, audio feedback for operators</li>
+                </ul>
+              </div>
+
+              <!-- Divider -->
+              <div class="border-t border-gray-200"></div>
+
+              <!-- Key Features -->
+              <div class="space-y-4">
+                <h2 class="text-lg font-semibold text-[#333]">Key Features:</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-0 divide-x divide-gray-200">
+                  <!-- Feature 1 -->
+                  <div class="flex flex-col gap-5 items-start pr-6">
+                    <svg class="w-7 h-8 text-primary shrink-0" viewBox="0 0 19 20" fill="none">
+                      <path d="M12.414 20L18.0125 13.3063L17.9111 0L0 20H12.414Z" fill="currentColor"/>
+                    </svg>
+                    <h3 class="font-semibold text-2xl leading-8 text-green-90">Remote Control Operation</h3>
+                  </div>
+                  <!-- Feature 2 -->
+                  <div class="flex flex-col gap-5 items-start px-6">
+                    <svg class="w-7 h-8 text-primary shrink-0" viewBox="0 0 19 20" fill="none">
+                      <path d="M12.414 20L18.0125 13.3063L17.9111 0L0 20H12.414Z" fill="currentColor"/>
+                    </svg>
+                    <h3 class="font-semibold text-2xl leading-8 text-green-90">GPS Waypoint Navigation</h3>
+                  </div>
+                  <!-- Feature 3 -->
+                  <div class="flex flex-col gap-5 items-start pl-6">
+                    <svg class="w-7 h-8 text-primary shrink-0" viewBox="0 0 19 20" fill="none">
+                      <path d="M12.414 20L18.0125 13.3063L17.9111 0L0 20H12.414Z" fill="currentColor"/>
+                    </svg>
+                    <h3 class="font-semibold text-2xl leading-8 text-green-90">Self-Righting Design</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Advantages + Specs Section -->
+      <section class="py-16 lg:py-24 bg-white">
+        <div class="container">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-18 items-start">
+
+            <!-- Left: Advantages Accordion -->
+            <div class="flex flex-col gap-10">
+              <div class="flex flex-col gap-5 items-center text-center">
+                <span class="badge-tag">ADVANTAGE</span>
+                <h2 class="heading-h3 text-[#2d3139]">Advantages over traditional rescue methods</h2>
+              </div>
+              <div class="flex flex-col gap-4">
+                <div class="bg-white border border-red-200 rounded-lg p-6">
+                  <p class="text-lg font-medium text-[#1d1d1d] leading-7">Speed: Reaches victims faster than rescue swimmers</p>
+                </div>
+                <div class="border border-red-200 rounded-lg p-6">
+                  <p class="text-lg font-medium text-[#1d1d1d] leading-7">Safety: No risk to rescue personnel</p>
+                </div>
+                <div class="border border-red-200 rounded-lg p-6">
+                  <p class="text-lg font-medium text-[#1d1d1d] leading-7">Efficiency: Can operate in conditions too dangerous for rescuers</p>
+                </div>
+                <div class="border border-red-200 rounded-lg p-6">
+                  <p class="text-lg font-medium text-[#1d1d1d] leading-7">Precision: GPS positioning to exact location</p>
+                </div>
+                <div class="border border-red-200 rounded-lg p-6">
+                  <p class="text-lg font-medium text-[#1d1d1d] leading-7">Endurance: Operates longer than human swimmers</p>
+                </div>
+                <div class="border border-red-200 rounded-lg p-6">
+                  <p class="text-lg font-medium text-[#1d1d1d] leading-7">Versatility: Works in various water conditions</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right: Technical Specifications Table -->
+            <div class="flex flex-col gap-10">
+              <div class="flex flex-col gap-5 items-center text-center">
+                <span class="badge-tag">SPECS</span>
+                <h2 class="heading-h3 text-gray-900">Technical Specifications</h2>
+              </div>
+              <!-- Specs Table -->
+              <div class="bg-gradient-to-b from-[#eff0f3] to-[#fdfcfd] p-10 overflow-hidden">
+                <div class="bg-white overflow-hidden">
+                  <!-- Header Row -->
+                  <div class="bg-[#860000] flex items-center px-8 py-4">
+                    <div class="flex-1 text-white font-semibold text-base leading-6">Specification</div>
+                    <div class="flex-1 text-white font-semibold text-base leading-6 pl-4">Description</div>
+                  </div>
+                  <!-- Data Rows -->
+                  <div class="divide-y divide-[#f4f5f6]">
+                    <div class="flex items-center px-8 h-16">
+                      <div class="flex-1 font-semibold text-base text-[#121417]">Size</div>
+                      <div class="flex-1 font-semibold text-base text-[#121417] pl-4">Compact, portable design</div>
+                    </div>
+                    <div class="flex items-center px-8 h-16">
+                      <div class="flex-1 font-semibold text-base text-[#121417]">Weight</div>
+                      <div class="flex-1 font-semibold text-base text-[#121417] pl-4">Lightweight, easy to deploy</div>
+                    </div>
+                    <div class="flex items-center px-8 h-16">
+                      <div class="flex-1 font-semibold text-base text-[#121417]">Max Speed</div>
+                      <div class="flex-1 font-semibold text-base text-[#121417] pl-4">High-speed movement on water</div>
+                    </div>
+                    <div class="flex items-center px-8 h-16">
+                      <div class="flex-1 font-semibold text-base text-[#121417]">Operating Range</div>
+                      <div class="flex-1 font-semibold text-base text-[#121417] pl-4">Remote control up to 500m</div>
+                    </div>
+                    <div class="flex items-center px-8 h-16">
+                      <div class="flex-1 font-semibold text-base text-[#121417]">Battery Life</div>
+                      <div class="flex-1 font-semibold text-base text-[#121417] pl-4">30+ minutes continuous operation</div>
+                    </div>
+                    <div class="flex items-center px-8 h-16">
+                      <div class="flex-1 font-semibold text-base text-[#121417]">Charging Time</div>
+                      <div class="flex-1 font-semibold text-base text-[#121417] pl-4">Fast charging</div>
+                    </div>
+                    <div class="flex items-center px-8 h-16">
+                      <div class="flex-1 font-semibold text-base text-[#121417]">Control Method</div>
+                      <div class="flex-1 font-semibold text-base text-[#121417] pl-4">Remote control 2.4GHz + GPS</div>
+                    </div>
+                    <div class="flex items-center px-8 h-16">
+                      <div class="flex-1 font-semibold text-base text-[#121417]">Waterproof Rating</div>
+                      <div class="flex-1 font-semibold text-base text-[#121417] pl-4">IP67 marine grade</div>
+                    </div>
+                    <div class="flex items-center px-8 h-16">
+                      <div class="flex-1 font-semibold text-base text-[#121417]">Operating Temperature</div>
+                      <div class="flex-1 font-semibold text-base text-[#121417] pl-4">-10°C to +50°C</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Applications Section -->
+      <section class="py-16 lg:py-24 bg-gray-50">
+        <div class="container">
+          <div class="flex flex-col gap-12 items-center">
+            <div class="flex flex-col gap-5 items-center text-center" data-aos="fade-up">
+              <span class="badge-tag">APPLICATIONS</span>
+              <h2 class="heading-h3 text-gray-900 max-w-3xl">Real-world deployment in critical scenarios</h2>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full" data-aos="fade-up" data-aos-delay="100">
+              <div class="relative aspect-video overflow-hidden group">
+                <img src="assets/images/usv-application.png" alt="Water rescue application" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"/>
+                <div class="absolute inset-0 bg-gradient-to-t from-gray-900/70 to-transparent flex items-end p-6">
+                  <p class="text-white font-semibold text-lg">Water Rescue Operations</p>
+                </div>
+              </div>
+              <div class="relative aspect-video overflow-hidden group">
+                <img src="assets/images/usv-product-2.png" alt="Maritime surveillance" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"/>
+                <div class="absolute inset-0 bg-gradient-to-t from-gray-900/70 to-transparent flex items-end p-6">
+                  <p class="text-white font-semibold text-lg">Maritime Surveillance</p>
+                </div>
+              </div>
+              <div class="relative aspect-video overflow-hidden group">
+                <img src="assets/images/usv-product-3.png" alt="Hydrographic survey" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"/>
+                <div class="absolute inset-0 bg-gradient-to-t from-gray-900/70 to-transparent flex items-end p-6">
+                  <p class="text-white font-semibold text-lg">Hydrographic Survey</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-footer-bg text-white pt-14 pb-8 overflow-hidden relative">
+      <div class="container space-y-12 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
+          <div class="lg:col-span-4 space-y-6">
+            <a href="index.html" class="inline-block" aria-label="Zobotek Homepage">
+              <img src="assets/images/logo-footer.png" alt="Zobotek Logo" class="h-16 sm:h-20 w-auto"/>
+            </a>
+          </div>
+          <div class="lg:col-span-4">
+            <div class="flex flex-col gap-4 text-base sm:text-lg font-semibold text-white">
+              <a href="index.html" class="footer-link">Home</a>
+              <a href="about.html" class="footer-link">About Us</a>
+              <a href="power-supplies.html" class="footer-link">Products</a>
+              <a href="manufacturing.html" class="footer-link">Manufacturing</a>
+              <a href="certifications.html" class="footer-link">Certification</a>
+              <a href="applications.html" class="footer-link">Applications</a>
+              <a href="contact.html" class="footer-link">Contact us</a>
+            </div>
+          </div>
+          <div class="lg:col-span-4 space-y-6 text-base text-white/90">
+            <div class="flex items-start gap-3">
+              <svg class="w-6 h-6 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+              </svg>
+              <span>[Address]</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <svg class="w-6 h-6 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+              </svg>
+              <a href="mailto:example@zobotek.com" class="footer-link">example@zobotek.com</a>
+            </div>
+            <div class="flex flex-wrap items-center gap-8 pt-1">
+              <div class="flex items-center gap-3">
+                <svg class="w-6 h-6 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                </svg>
+                <a href="tel:+0012345678" class="footer-link">+00 1234 5678</a>
+              </div>
+              <div class="flex items-center gap-3">
+                <svg class="w-6 h-6 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/>
+                </svg>
+                <a href="tel:+0012345678" class="footer-link">+00 1234 5678</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="border-t border-primary-90/30 pt-3 flex flex-col sm:flex-row items-center justify-between gap-4 text-base text-primary-90 font-medium">
+          <p>Copyright &copy; 2026 Zobotek. All rights reserved.</p>
+          <div class="flex items-center gap-2">
+            <a href="#" class="hover:text-white transition-colors">Terms and Conditions</a>
+            <span class="text-white">|</span>
+            <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

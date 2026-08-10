@@ -5,6 +5,7 @@
 @import "./components/_cards.css";
 @import "./components/_sections.css";
 @import "./components/_navigation.css";
+@import "./components/_forms.css";
 
 @theme {
   --breakpoint-3xl: 120rem;
@@ -27,6 +28,7 @@
   --color-red-200: #ffc3c3;
   --color-red-400: #ff8484;
   --color-footer-bg: #820000;
+  --color-green-90: #15322d;
 }
 
 /* Base Body Styles */
@@ -102,12 +104,64 @@ html {
 
   /* Certifications Swiper Controls Active & Disabled States */
   #cert-prev,
-  #cert-next {
-    @apply text-primary transition-all duration-200 cursor-pointer w-10 h-10 flex items-center justify-center;
+  #cert-next,
+  #cert-prev-btn,
+  #cert-next-btn {
+    @apply text-primary transition-all duration-200 cursor-pointer w-10 h-10 flex items-center justify-center select-none;
   }
 
   #cert-prev.swiper-button-disabled,
-  #cert-next.swiper-button-disabled {
-    @apply text-gray-300 opacity-40 cursor-not-allowed pointer-events-none;
+  #cert-next.swiper-button-disabled,
+  #cert-prev-btn.swiper-button-disabled,
+  #cert-next-btn.swiper-button-disabled {
+    @apply text-[#64748B] opacity-50 cursor-not-allowed pointer-events-none;
+  }
+
+  /* Tech Specs Table Custom Scrollbar matching Figma Frame 2147264289 specs */
+  .custom-table-scrollbar::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+
+  .custom-table-scrollbar::-webkit-scrollbar-track {
+    background: #d9d9d9;
+    border-radius: 24px;
+  }
+
+  .custom-table-scrollbar::-webkit-scrollbar-thumb {
+    background: #396bcf;
+    border-radius: 24px;
+  }
+
+  .custom-table-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: #396bcf #d9d9d9;
+  }
+
+  /* Fancybox Modal Unified Layout & Image Sizing */
+  .fancybox__container .f-panzoom__wrapper {
+    max-width: min(600px, 85vw) !important;
+    max-height: min(560px, 65vh) !important;
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+  .fancybox__container .f-panzoom__viewport {
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+  .fancybox__container .f-panzoom__content {
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
+    object-fit: contain !important;
+  }
+
+  .fancybox__container .f-caption {
+    padding-top: 12px !important;
+    position: relative !important;
+    z-index: 10 !important;
   }
 }
