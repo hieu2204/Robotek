@@ -1090,7 +1090,7 @@
 
           <!-- Section 2: THE QUALITIES (All Products Feature) -->
           <div
-            class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start"
+            class="grid grid-cols-1 xl:grid-cols-2 gap-8 lg:gap-12 items-stretch"
             data-aos="fade-up"
           >
             <!-- Left Column: Qualities List -->
@@ -1103,7 +1103,8 @@
               <div class="space-y-6">
                 <!-- Feature Item 1: Active Red Card -->
                 <div
-                  class="bg-primary border border-red-200 px-4 py-3.5 sm:p-4 rounded-xs flex items-center gap-3 text-white font-semibold text-base sm:text-lg leading-7 shadow-sm"
+                  class="qualities-item is-active cursor-pointer bg-primary border border-red-200 px-4 py-3.5 sm:p-4 rounded-xs flex items-center gap-3 text-white font-semibold text-base sm:text-lg leading-7 shadow-sm transition-all duration-300"
+                  data-img="assets/images/qualities-img.png"
                 >
                   <svg class="w-5 h-5 shrink-0" viewBox="0 0 19 20" fill="none">
                     <path
@@ -1119,7 +1120,8 @@
 
                 <!-- Feature Item 2: Normal Card -->
                 <div
-                  class="border border-red-200 px-4 py-3.5 sm:p-4 rounded-xs flex items-center gap-3 text-gray-900 font-semibold text-base sm:text-lg leading-7 hover:border-primary transition-colors"
+                  class="qualities-item cursor-pointer border border-red-200 px-4 py-3.5 sm:p-4 rounded-xs flex items-center gap-3 text-gray-900 font-semibold text-base sm:text-lg leading-7 hover:border-primary transition-all duration-300"
+                  data-img="assets/images/product-ps1.png"
                 >
                   <svg
                     class="w-5 h-5 shrink-0 text-primary"
@@ -1138,7 +1140,8 @@
 
                 <!-- Feature Item 3: Normal Card -->
                 <div
-                  class="border border-red-200 px-4 py-3.5 sm:p-4 rounded-xs flex items-center gap-3 text-gray-900 font-semibold text-base sm:text-lg leading-7 hover:border-primary transition-colors"
+                  class="qualities-item cursor-pointer border border-red-200 px-4 py-3.5 sm:p-4 rounded-xs flex items-center gap-3 text-gray-900 font-semibold text-base sm:text-lg leading-7 hover:border-primary transition-all duration-300"
+                  data-img="assets/images/product-ps2.png"
                 >
                   <svg
                     class="w-5 h-5 shrink-0 text-primary"
@@ -1158,7 +1161,8 @@
 
                 <!-- Feature Item 4: Normal Card -->
                 <div
-                  class="border border-red-200 px-4 py-3.5 sm:p-4 rounded-xs flex items-center gap-3 text-gray-900 font-semibold text-base sm:text-lg leading-7 hover:border-primary transition-colors"
+                  class="qualities-item cursor-pointer border border-red-200 px-4 py-3.5 sm:p-4 rounded-xs flex items-center gap-3 text-gray-900 font-semibold text-base sm:text-lg leading-7 hover:border-primary transition-all duration-300"
+                  data-img="assets/images/product-ps3.png"
                 >
                   <svg
                     class="w-5 h-5 shrink-0 text-primary"
@@ -1180,12 +1184,13 @@
 
             <!-- Right Column: Qualities Equipment Image -->
             <div
-              class="relative w-full aspect-[852/544] rounded-xs overflow-hidden shadow-lg border border-gray-100"
+              class="relative w-full h-full min-h-[350px] rounded-xs overflow-hidden shadow-lg border border-gray-100"
             >
               <img
+                id="qualities-target-img"
                 src="assets/images/qualities-img.png"
                 alt="Zobotek Power Supply Testing Equipment and USV System"
-                class="w-full h-full object-cover"
+                class="w-full h-full object-cover transition-opacity duration-300"
               />
             </div>
           </div>

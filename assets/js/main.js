@@ -487,6 +487,50 @@ document.addEventListener("DOMContentLoaded", () => {
       },
     });
   }
+
+  // 12. Power Supplies - The Qualities Feature Switcher
+  const qualitiesItems = document.querySelectorAll(".qualities-item");
+  const qualitiesImg = document.getElementById("qualities-target-img");
+
+  if (qualitiesItems.length > 0 && qualitiesImg) {
+    qualitiesItems.forEach((item) => {
+      item.addEventListener("click", () => {
+        const newImgSrc = item.getAttribute("data-img");
+        if (!newImgSrc) return;
+
+        // Reset all items to inactive state
+        qualitiesItems.forEach((el) => {
+          el.classList.remove(
+            "bg-primary",
+            "text-white",
+            "shadow-sm",
+            "is-active",
+          );
+          el.classList.add("text-gray-900", "hover:border-primary");
+          const svg = el.querySelector("svg");
+          if (svg) svg.classList.add("text-primary");
+        });
+
+        // Activate clicked item
+        item.classList.add(
+          "bg-primary",
+          "text-white",
+          "shadow-sm",
+          "is-active",
+        );
+        item.classList.remove("text-gray-900", "hover:border-primary");
+        const activeSvg = item.querySelector("svg");
+        if (activeSvg) activeSvg.classList.remove("text-primary");
+
+        // Smooth image transition
+        qualitiesImg.style.opacity = "0.3";
+        setTimeout(() => {
+          qualitiesImg.src = newImgSrc;
+          qualitiesImg.style.opacity = "1";
+        }, 150);
+      });
+    });
+  }
 });
 
 // AOS – Animate On Scroll
