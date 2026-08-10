@@ -5,15 +5,23 @@
   }
 
   .product-card-img {
-    @apply relative aspect-[517/455] w-full overflow-hidden border border-white/10 transition-colors duration-300 group-hover:border-primary;
+    @apply relative aspect-[414/365] w-full overflow-hidden border border-gray-200 transition-colors duration-300 group-hover:border-primary rounded-xs;
+  }
+
+  .product-card-img--dark {
+    @apply relative aspect-[517/455] w-full overflow-hidden border border-white/10 transition-colors duration-300 group-hover:border-primary rounded-xs;
   }
 
   .product-card-badge {
-    @apply absolute top-0 left-0 bg-gray-700 group-hover:bg-primary transition-colors px-6 py-2 text-white font-orbitron font-semibold text-sm tracking-wider;
+    @apply absolute top-0 left-0 bg-[#434343] group-hover:bg-primary transition-colors px-6 py-1.5 text-white font-orbitron font-semibold text-xs tracking-wider z-10;
   }
 
   .product-card-badge--gray {
     @apply absolute top-0 left-0 bg-[#434343] group-hover:bg-primary transition-colors px-6 py-1.5 text-white font-orbitron font-semibold text-xs tracking-wider z-10;
+  }
+
+  .product-card-badge--red {
+    @apply absolute top-0 left-0 bg-primary px-6 py-1.5 text-white font-orbitron font-semibold text-xs tracking-wider z-10;
   }
 
   .product-card-overlay {
@@ -21,7 +29,15 @@
   }
 
   .product-card-info {
+    @apply pt-4 border-t border-gray-300 space-y-2 mt-5;
+  }
+
+  .product-card-info--dark {
     @apply pt-4 border-t border-white space-y-1 mt-5;
+  }
+
+  .product-card-corner {
+    @apply absolute bottom-0 right-0 z-10 pointer-events-none;
   }
 
   /* Swiper Circular Control Buttons */

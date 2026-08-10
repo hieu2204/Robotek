@@ -189,7 +189,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // 7b. Power Supplies Page Swiper Carousel (2-row stacked slides)
+  // 7b. Power Supplies & USV Page Swiper Carousels (2-row stacked slides)
   if (
     typeof Swiper !== "undefined" &&
     document.querySelector(".ps-page-swiper")
@@ -202,6 +202,36 @@ document.addEventListener("DOMContentLoaded", () => {
       navigation: {
         nextEl: "#ps-next",
         prevEl: "#ps-prev",
+      },
+      breakpoints: {
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 24,
+        },
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 24,
+        },
+        1024: {
+          slidesPerView: 4,
+          spaceBetween: 24,
+        },
+      },
+    });
+  }
+
+  if (
+    typeof Swiper !== "undefined" &&
+    document.querySelector(".usv-page-swiper")
+  ) {
+    new Swiper(".usv-page-swiper", {
+      slidesPerView: 1,
+      spaceBetween: 24,
+      loop: false,
+      speed: 400,
+      navigation: {
+        nextEl: "#usv-next",
+        prevEl: "#usv-prev",
       },
       breakpoints: {
         640: {

@@ -378,12 +378,12 @@
         <div class="container space-y-16 lg:space-y-18 relative z-10">
           <!-- Section Header -->
           <div
-            class="flex flex-col items-center gap-5 text-center max-w-5xl mx-auto"
+            class="flex flex-col items-center gap-5 text-center max-w-[1436px] mx-auto"
             data-aos="fade-up"
           >
             <span class="badge-tag">PRODUCT</span>
             <p
-              class="heading-h3 text-gray-900 text-center font-semibold text-2xl sm:text-3xl lg:text-[32px] leading-snug lg:leading-10"
+              class="heading-h3"
             >
               Zobotek is developing advanced Unmanned Surface Vehicles (USV) for
               water rescue and maritime safety applications. Our USV products
@@ -393,270 +393,650 @@
             </p>
           </div>
 
-          <!-- Products Grid — Row 1 -->
-          <div class="space-y-6" data-aos="fade-up" data-aos-delay="100">
-            <div
-              class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
-            >
-              <!-- USV Card 1 -->
-              <div class="product-card group">
-                <div
-                  class="product-card-img rounded-xs border border-red-400 group-hover:border-primary transition-colors overflow-hidden relative aspect-[414/365] w-full"
-                >
-                  <img
-                    src="assets/images/usv-product-1.png"
-                    alt="Rescue USV - Remote-Controlled Life Buoy"
-                    class="w-full h-full object-cover"
-                  />
-                  <span class="product-card-badge--red">USED IN:</span>
-                  <div class="product-card-overlay">
-                    <a
-                      href="product-detail-usv.html"
-                      class="btn-card-explore"
-                    >
-                      <span>EXPLORE NOW</span>
-                      <svg
-                        class="w-4 h-4"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M19 9l-7 7-7-7"
+          <!-- Products Showcase Carousel / Grid -->
+          <div class="space-y-8" data-aos="fade-up" data-aos-delay="100">
+            <div class="swiper usv-page-swiper">
+              <div class="swiper-wrapper">
+                <!-- Column Slide 1 (USV - 1 top & bottom) -->
+                <div class="swiper-slide">
+                  <div class="flex flex-col gap-6 sm:gap-8">
+                    <!-- Top Product Card -->
+                    <div class="product-card group">
+                      <div class="product-card-img">
+                        <img
+                          src="assets/images/usv-product-1.png"
+                          alt="Rescue USV - Remote-Controlled Life Buoy"
+                          class="w-full h-full object-cover"
                         />
-                      </svg>
-                    </a>
-                  </div>
-                </div>
-                <div class="pt-4 border-t border-gray-300 space-y-2 mt-5">
-                  <p class="font-orbitron font-normal text-sm text-gray-900">
-                    USV - 1
-                  </p>
-                  <h3 class="font-sans font-medium text-lg text-gray-900 leading-7">
-                    Rescue USV — Remote-Controlled Life Buoy
-                  </h3>
-                </div>
-              </div>
+                        <span class="product-card-badge--gray">RESCUE</span>
+                        <img
+                          src="assets/images/img-bottom-product.png"
+                          alt=""
+                          class="product-card-corner"
+                        />
+                        <div class="product-card-overlay">
+                          <a
+                            href="product-detail-usv.html"
+                            class="btn-card-explore"
+                          >
+                            <span>EXPLORE NOW</span>
+                            <svg
+                              class="w-4 h-4"
+                              fill="none"
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M19 9l-7 7-7-7"
+                              />
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="product-card-info">
+                        <p class="font-orbitron font-normal text-sm text-gray-900">
+                          USV - 1
+                        </p>
+                        <h3
+                          class="font-sans font-medium text-lg text-gray-900 leading-7 min-h-14"
+                        >
+                          Rescue USV — Remote-Controlled Life Buoy
+                        </h3>
+                      </div>
+                    </div>
 
-              <!-- USV Card 2 -->
-              <div class="product-card group">
-                <div
-                  class="product-card-img rounded-xs border border-gray-200 group-hover:border-primary transition-colors overflow-hidden relative aspect-[414/365] w-full"
-                >
-                  <img
-                    src="assets/images/usv-product-2.png"
-                    alt="Patrol USV"
-                    class="w-full h-full object-cover"
-                  />
-                  <span class="product-card-badge--gray">USV</span>
-                  <div class="product-card-overlay">
-                    <a
-                      href="product-detail-usv.html"
-                      class="btn-card-explore"
-                    >
-                      <span>EXPLORE NOW</span>
-                      <svg
-                        class="w-4 h-4"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M19 9l-7 7-7-7"
+                    <!-- Bottom Product Card -->
+                    <div class="product-card group">
+                      <div class="product-card-img">
+                        <img
+                          src="assets/images/usv-product-1.png"
+                          alt="Rescue USV"
+                          class="w-full h-full object-cover"
                         />
-                      </svg>
-                    </a>
+                        <span class="product-card-badge--gray">RESCUE</span>
+                        <img
+                          src="assets/images/img-bottom-product.png"
+                          alt=""
+                          class="product-card-corner"
+                        />
+                        <div class="product-card-overlay">
+                          <a
+                            href="product-detail-usv.html"
+                            class="btn-card-explore"
+                          >
+                            <span>EXPLORE NOW</span>
+                            <svg
+                              class="w-4 h-4"
+                              fill="none"
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M19 9l-7 7-7-7"
+                              />
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="product-card-info">
+                        <p class="font-orbitron font-normal text-sm text-gray-900">
+                          USV - 1
+                        </p>
+                        <h3
+                          class="font-sans font-medium text-lg text-gray-900 leading-7 min-h-14"
+                        >
+                          Rescue USV — Remote-Controlled Life Buoy
+                        </h3>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <div class="pt-4 border-t border-gray-300 space-y-2 mt-5">
-                  <p class="font-orbitron font-normal text-sm text-gray-900">
-                    USV - 2
-                  </p>
-                  <h3 class="font-sans font-medium text-lg text-gray-900 leading-7">
-                    Patrol USV — Autonomous Maritime Surveillance
-                  </h3>
-                </div>
-              </div>
 
-              <!-- USV Card 3 -->
-              <div class="product-card group">
-                <div
-                  class="product-card-img rounded-xs border border-gray-200 group-hover:border-primary transition-colors overflow-hidden relative aspect-[414/365] w-full"
-                >
-                  <img
-                    src="assets/images/usv-product-3.png"
-                    alt="Survey USV"
-                    class="w-full h-full object-cover"
-                  />
-                  <span class="product-card-badge--gray">USV</span>
-                  <div class="product-card-overlay">
-                    <a
-                      href="product-detail-usv.html"
-                      class="btn-card-explore"
-                    >
-                      <span>EXPLORE NOW</span>
-                      <svg
-                        class="w-4 h-4"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M19 9l-7 7-7-7"
+                <!-- Column Slide 2 (USV - 2 top & bottom) -->
+                <div class="swiper-slide">
+                  <div class="flex flex-col gap-6 sm:gap-8">
+                    <!-- Top Product Card -->
+                    <div class="product-card group">
+                      <div class="product-card-img">
+                        <img
+                          src="assets/images/usv-product-2.png"
+                          alt="Patrol USV"
+                          class="w-full h-full object-cover"
                         />
-                      </svg>
-                    </a>
-                  </div>
-                </div>
-                <div class="pt-4 border-t border-gray-300 space-y-2 mt-5">
-                  <p class="font-orbitron font-normal text-sm text-gray-900">
-                    USV - 3
-                  </p>
-                  <h3 class="font-sans font-medium text-lg text-gray-900 leading-7">
-                    Survey USV — Hydrographic Data Collection
-                  </h3>
-                </div>
-              </div>
+                        <span class="product-card-badge--gray">PATROL</span>
+                        <img
+                          src="assets/images/img-bottom-product.png"
+                          alt=""
+                          class="product-card-corner"
+                        />
+                        <div class="product-card-overlay">
+                          <a
+                            href="product-detail-usv.html"
+                            class="btn-card-explore"
+                          >
+                            <span>EXPLORE NOW</span>
+                            <svg
+                              class="w-4 h-4"
+                              fill="none"
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M19 9l-7 7-7-7"
+                              />
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="product-card-info">
+                        <p class="font-orbitron font-normal text-sm text-gray-900">
+                          USV - 2
+                        </p>
+                        <h3
+                          class="font-sans font-medium text-lg text-gray-900 leading-7 min-h-14"
+                        >
+                          Patrol USV — Autonomous Maritime Surveillance
+                        </h3>
+                      </div>
+                    </div>
 
-              <!-- USV Card 4 -->
-              <div class="product-card group">
-                <div
-                  class="product-card-img rounded-xs border border-gray-200 group-hover:border-primary transition-colors overflow-hidden relative aspect-[414/365] w-full"
-                >
-                  <img
-                    src="assets/images/usv-product-1.png"
-                    alt="Cargo USV"
-                    class="w-full h-full object-cover"
-                  />
-                  <span class="product-card-badge--gray">USV</span>
-                  <div class="product-card-overlay">
-                    <a
-                      href="product-detail-usv.html"
-                      class="btn-card-explore"
-                    >
-                      <span>EXPLORE NOW</span>
-                      <svg
-                        class="w-4 h-4"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M19 9l-7 7-7-7"
+                    <!-- Bottom Product Card -->
+                    <div class="product-card group">
+                      <div class="product-card-img">
+                        <img
+                          src="assets/images/usv-product-2.png"
+                          alt="Patrol USV"
+                          class="w-full h-full object-cover"
                         />
-                      </svg>
-                    </a>
+                        <span class="product-card-badge--gray">PATROL</span>
+                        <img
+                          src="assets/images/img-bottom-product.png"
+                          alt=""
+                          class="product-card-corner"
+                        />
+                        <div class="product-card-overlay">
+                          <a
+                            href="product-detail-usv.html"
+                            class="btn-card-explore"
+                          >
+                            <span>EXPLORE NOW</span>
+                            <svg
+                              class="w-4 h-4"
+                              fill="none"
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M19 9l-7 7-7-7"
+                              />
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="product-card-info">
+                        <p class="font-orbitron font-normal text-sm text-gray-900">
+                          USV - 2
+                        </p>
+                        <h3
+                          class="font-sans font-medium text-lg text-gray-900 leading-7 min-h-14"
+                        >
+                          Patrol USV — Autonomous Maritime Surveillance
+                        </h3>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <div class="pt-4 border-t border-gray-300 space-y-2 mt-5">
-                  <p class="font-orbitron font-normal text-sm text-gray-900">
-                    USV - 4
-                  </p>
-                  <h3 class="font-sans font-medium text-lg text-gray-900 leading-7">
-                    Cargo USV — Autonomous Supply Delivery
-                  </h3>
+
+                <!-- Column Slide 3 (USV - 3 top & bottom) -->
+                <div class="swiper-slide">
+                  <div class="flex flex-col gap-6 sm:gap-8">
+                    <!-- Top Product Card -->
+                    <div class="product-card group">
+                      <div class="product-card-img">
+                        <img
+                          src="assets/images/usv-product-3.png"
+                          alt="Survey USV"
+                          class="w-full h-full object-cover"
+                        />
+                        <span class="product-card-badge--gray">SURVEY</span>
+                        <img
+                          src="assets/images/img-bottom-product.png"
+                          alt=""
+                          class="product-card-corner"
+                        />
+                        <div class="product-card-overlay">
+                          <a
+                            href="product-detail-usv.html"
+                            class="btn-card-explore"
+                          >
+                            <span>EXPLORE NOW</span>
+                            <svg
+                              class="w-4 h-4"
+                              fill="none"
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M19 9l-7 7-7-7"
+                              />
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="product-card-info">
+                        <p class="font-orbitron font-normal text-sm text-gray-900">
+                          USV - 3
+                        </p>
+                        <h3
+                          class="font-sans font-medium text-lg text-gray-900 leading-7 min-h-14"
+                        >
+                          Survey USV — Hydrographic Data Collection
+                        </h3>
+                      </div>
+                    </div>
+
+                    <!-- Bottom Product Card -->
+                    <div class="product-card group">
+                      <div class="product-card-img">
+                        <img
+                          src="assets/images/usv-product-3.png"
+                          alt="Survey USV"
+                          class="w-full h-full object-cover"
+                        />
+                        <span class="product-card-badge--gray">SURVEY</span>
+                        <img
+                          src="assets/images/img-bottom-product.png"
+                          alt=""
+                          class="product-card-corner"
+                        />
+                        <div class="product-card-overlay">
+                          <a
+                            href="product-detail-usv.html"
+                            class="btn-card-explore"
+                          >
+                            <span>EXPLORE NOW</span>
+                            <svg
+                              class="w-4 h-4"
+                              fill="none"
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M19 9l-7 7-7-7"
+                              />
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="product-card-info">
+                        <p class="font-orbitron font-normal text-sm text-gray-900">
+                          USV - 3
+                        </p>
+                        <h3
+                          class="font-sans font-medium text-lg text-gray-900 leading-7 min-h-14"
+                        >
+                          Survey USV — Hydrographic Data Collection
+                        </h3>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Column Slide 4 (USV - 4 top & bottom) -->
+                <div class="swiper-slide">
+                  <div class="flex flex-col gap-6 sm:gap-8">
+                    <!-- Top Product Card -->
+                    <div class="product-card group">
+                      <div class="product-card-img">
+                        <img
+                          src="assets/images/usv-product-1.png"
+                          alt="Cargo USV"
+                          class="w-full h-full object-cover"
+                        />
+                        <span class="product-card-badge--gray">CARGO</span>
+                        <img
+                          src="assets/images/img-bottom-product.png"
+                          alt=""
+                          class="product-card-corner"
+                        />
+                        <div class="product-card-overlay">
+                          <a
+                            href="product-detail-usv.html"
+                            class="btn-card-explore"
+                          >
+                            <span>EXPLORE NOW</span>
+                            <svg
+                              class="w-4 h-4"
+                              fill="none"
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M19 9l-7 7-7-7"
+                              />
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="product-card-info">
+                        <p class="font-orbitron font-normal text-sm text-gray-900">
+                          USV - 4
+                        </p>
+                        <h3
+                          class="font-sans font-medium text-lg text-gray-900 leading-7 min-h-14"
+                        >
+                          Cargo USV — Autonomous Supply Delivery
+                        </h3>
+                      </div>
+                    </div>
+
+                    <!-- Bottom Product Card -->
+                    <div class="product-card group">
+                      <div class="product-card-img">
+                        <img
+                          src="assets/images/usv-product-1.png"
+                          alt="Cargo USV"
+                          class="w-full h-full object-cover"
+                        />
+                        <span class="product-card-badge--gray">CARGO</span>
+                        <img
+                          src="assets/images/img-bottom-product.png"
+                          alt=""
+                          class="product-card-corner"
+                        />
+                        <div class="product-card-overlay">
+                          <a
+                            href="product-detail-usv.html"
+                            class="btn-card-explore"
+                          >
+                            <span>EXPLORE NOW</span>
+                            <svg
+                              class="w-4 h-4"
+                              fill="none"
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M19 9l-7 7-7-7"
+                              />
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="product-card-info">
+                        <p class="font-orbitron font-normal text-sm text-gray-900">
+                          USV - 4
+                        </p>
+                        <h3
+                          class="font-sans font-medium text-lg text-gray-900 leading-7 min-h-14"
+                        >
+                          Cargo USV — Autonomous Supply Delivery
+                        </h3>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Column Slide 5 (USV - 5 top & bottom) -->
+                <div class="swiper-slide">
+                  <div class="flex flex-col gap-6 sm:gap-8">
+                    <!-- Top Product Card -->
+                    <div class="product-card group">
+                      <div class="product-card-img">
+                        <img
+                          src="assets/images/usv-product-2.png"
+                          alt="Firefighting USV"
+                          class="w-full h-full object-cover"
+                        />
+                        <span class="product-card-badge--gray">USV</span>
+                        <img
+                          src="assets/images/img-bottom-product.png"
+                          alt=""
+                          class="product-card-corner"
+                        />
+                        <div class="product-card-overlay">
+                          <a
+                            href="product-detail-usv.html"
+                            class="btn-card-explore"
+                          >
+                            <span>EXPLORE NOW</span>
+                            <svg
+                              class="w-4 h-4"
+                              fill="none"
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M19 9l-7 7-7-7"
+                              />
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="product-card-info">
+                        <p class="font-orbitron font-normal text-sm text-gray-900">
+                          USV - 5
+                        </p>
+                        <h3
+                          class="font-sans font-medium text-lg text-gray-900 leading-7 min-h-14"
+                        >
+                          Firefighting USV — Rapid Water Response
+                        </h3>
+                      </div>
+                    </div>
+
+                    <!-- Bottom Product Card -->
+                    <div class="product-card group">
+                      <div class="product-card-img">
+                        <img
+                          src="assets/images/usv-product-2.png"
+                          alt="Firefighting USV"
+                          class="w-full h-full object-cover"
+                        />
+                        <span class="product-card-badge--gray">USV</span>
+                        <img
+                          src="assets/images/img-bottom-product.png"
+                          alt=""
+                          class="product-card-corner"
+                        />
+                        <div class="product-card-overlay">
+                          <a
+                            href="product-detail-usv.html"
+                            class="btn-card-explore"
+                          >
+                            <span>EXPLORE NOW</span>
+                            <svg
+                              class="w-4 h-4"
+                              fill="none"
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M19 9l-7 7-7-7"
+                              />
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="product-card-info">
+                        <p class="font-orbitron font-normal text-sm text-gray-900">
+                          USV - 5
+                        </p>
+                        <h3
+                          class="font-sans font-medium text-lg text-gray-900 leading-7 min-h-14"
+                        >
+                          Firefighting USV — Rapid Water Response
+                        </h3>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Column Slide 6 (USV - 6 top & bottom) -->
+                <div class="swiper-slide">
+                  <div class="flex flex-col gap-6 sm:gap-8">
+                    <!-- Top Product Card -->
+                    <div class="product-card group">
+                      <div class="product-card-img">
+                        <img
+                          src="assets/images/usv-product-3.png"
+                          alt="Defense USV"
+                          class="w-full h-full object-cover"
+                        />
+                        <span class="product-card-badge--gray">USV</span>
+                        <img
+                          src="assets/images/img-bottom-product.png"
+                          alt=""
+                          class="product-card-corner"
+                        />
+                        <div class="product-card-overlay">
+                          <a
+                            href="product-detail-usv.html"
+                            class="btn-card-explore"
+                          >
+                            <span>EXPLORE NOW</span>
+                            <svg
+                              class="w-4 h-4"
+                              fill="none"
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M19 9l-7 7-7-7"
+                              />
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="product-card-info">
+                        <p class="font-orbitron font-normal text-sm text-gray-900">
+                          USV - 6
+                        </p>
+                        <h3
+                          class="font-sans font-medium text-lg text-gray-900 leading-7 min-h-14"
+                        >
+                          Defense USV — Tactical Coastal Guard
+                        </h3>
+                      </div>
+                    </div>
+
+                    <!-- Bottom Product Card -->
+                    <div class="product-card group">
+                      <div class="product-card-img">
+                        <img
+                          src="assets/images/usv-product-3.png"
+                          alt="Defense USV"
+                          class="w-full h-full object-cover"
+                        />
+                        <span class="product-card-badge--gray">USV</span>
+                        <img
+                          src="assets/images/img-bottom-product.png"
+                          alt=""
+                          class="product-card-corner"
+                        />
+                        <div class="product-card-overlay">
+                          <a
+                            href="product-detail-usv.html"
+                            class="btn-card-explore"
+                          >
+                            <span>EXPLORE NOW</span>
+                            <svg
+                              class="w-4 h-4"
+                              fill="none"
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M19 9l-7 7-7-7"
+                              />
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="product-card-info">
+                        <p class="font-orbitron font-normal text-sm text-gray-900">
+                          USV - 6
+                        </p>
+                        <h3
+                          class="font-sans font-medium text-lg text-gray-900 leading-7 min-h-14"
+                        >
+                          Defense USV — Tactical Coastal Guard
+                        </h3>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
 
-            <!-- Row 2 -->
-            <div
-              class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
-            >
-              <!-- Repeat pattern for row 2 -->
-              <div class="product-card group">
-                <div
-                  class="product-card-img rounded-xs border border-red-400 group-hover:border-primary transition-colors overflow-hidden relative aspect-[414/365] w-full"
-                >
-                  <img
-                    src="assets/images/usv-product-1.png"
-                    alt="Rescue USV"
-                    class="w-full h-full object-cover"
-                  />
-                  <span class="product-card-badge--red">USED IN:</span>
-                  <div class="product-card-overlay">
-                    <a href="product-detail-usv.html" class="btn-card-explore">
-                      <span>EXPLORE NOW</span>
-                      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                      </svg>
-                    </a>
-                  </div>
-                </div>
-                <div class="pt-4 border-t border-gray-300 space-y-2 mt-5">
-                  <p class="font-orbitron font-normal text-sm text-gray-900">USV - 1</p>
-                  <h3 class="font-sans font-medium text-lg text-gray-900 leading-7">Ultra-Slim Series: 36W ~ 750W</h3>
-                </div>
-              </div>
-              <div class="product-card group">
-                <div class="product-card-img rounded-xs border border-gray-200 group-hover:border-primary transition-colors overflow-hidden relative aspect-[414/365] w-full">
-                  <img src="assets/images/usv-product-2.png" alt="PFC Series" class="w-full h-full object-cover"/>
-                  <span class="product-card-badge--gray">PFC</span>
-                  <div class="product-card-overlay">
-                    <a href="product-detail-usv.html" class="btn-card-explore"><span>EXPLORE NOW</span><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></a>
-                  </div>
-                </div>
-                <div class="pt-4 border-t border-gray-300 space-y-2 mt-5">
-                  <p class="font-orbitron font-normal text-sm text-gray-900">USV - 2</p>
-                  <h3 class="font-sans font-medium text-lg text-gray-900 leading-7">PFC Series: 150W ~ 4000W</h3>
-                </div>
-              </div>
-              <div class="product-card group">
-                <div class="product-card-img rounded-xs border border-gray-200 group-hover:border-primary transition-colors overflow-hidden relative aspect-[414/365] w-full">
-                  <img src="assets/images/usv-product-3.png" alt="Standard Series" class="w-full h-full object-cover"/>
-                  <span class="product-card-badge--gray">STANDARD</span>
-                  <div class="product-card-overlay">
-                    <a href="product-detail-usv.html" class="btn-card-explore"><span>EXPLORE NOW</span><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></a>
-                  </div>
-                </div>
-                <div class="pt-4 border-t border-gray-300 space-y-2 mt-5">
-                  <p class="font-orbitron font-normal text-sm text-gray-900">USV - 3</p>
-                  <h3 class="font-sans font-medium text-lg text-gray-900 leading-7">Standard Series: 36W ~ 1000W</h3>
-                </div>
-              </div>
-              <div class="product-card group">
-                <div class="product-card-img rounded-xs border border-gray-200 group-hover:border-primary transition-colors overflow-hidden relative aspect-[414/365] w-full">
-                  <img src="assets/images/usv-product-1.png" alt="LED Driver Series" class="w-full h-full object-cover"/>
-                  <span class="product-card-badge--gray">LED</span>
-                  <div class="product-card-overlay">
-                    <a href="product-detail-usv.html" class="btn-card-explore"><span>EXPLORE NOW</span><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></a>
-                  </div>
-                </div>
-                <div class="pt-4 border-t border-gray-300 space-y-2 mt-5">
-                  <p class="font-orbitron font-normal text-sm text-gray-900">USV - 4</p>
-                  <h3 class="font-sans font-medium text-lg text-gray-900 leading-7">LED Driver Series: 12W ~ 600W</h3>
-                </div>
-              </div>
-            </div>
-
-            <!-- Carousel Navigation Buttons -->
+            <!-- Navigation Controls -->
             <div class="flex items-center justify-center gap-4 pt-4">
               <button
+                type="button"
+                id="usv-prev"
                 class="swiper-btn-circle"
-                aria-label="Previous"
+                aria-label="Previous Products"
               >
-                <svg class="w-5 h-5 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                <svg class="w-6 h-6" viewBox="0 0 32 32" fill="none">
+                  <path
+                    d="M20 24L12 16L20 8"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
                 </svg>
               </button>
               <button
+                type="button"
+                id="usv-next"
                 class="swiper-btn-circle"
-                aria-label="Next"
+                aria-label="Next Products"
               >
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                <svg class="w-6 h-6" viewBox="0 0 32 32" fill="none">
+                  <path
+                    d="M12 24L20 16L12 8"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
                 </svg>
               </button>
             </div>
