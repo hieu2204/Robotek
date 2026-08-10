@@ -119,7 +119,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // 6a. Certifications Swiper Carousel - Homepage (Frame 2147262621: Displays 4.2 cards on large screens)
+  // 6a. Certifications Swiper Carousel - Homepage (Frame 2147262621)
   if (
     typeof Swiper !== "undefined" &&
     document.querySelector(".home-cert-swiper")
@@ -127,21 +127,12 @@ document.addEventListener("DOMContentLoaded", () => {
     new Swiper(".home-cert-swiper", {
       slidesPerView: "auto",
       spaceBetween: 24,
+      slidesOffsetAfter: 24,
       loop: false,
       grabCursor: true,
       navigation: {
         nextEl: "#cert-next",
         prevEl: "#cert-prev",
-      },
-      breakpoints: {
-        640: {
-          slidesPerView: 2.5,
-          spaceBetween: 20,
-        },
-        1024: {
-          slidesPerView: 4.2,
-          spaceBetween: 24,
-        },
       },
     });
   }
@@ -374,7 +365,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const currentImgSrc = peoplePanelImage.getAttribute("src");
     const initialActive =
       Array.from(items).find(
-        (item) => item.getAttribute("data-image") === currentImgSrc
+        (item) => item.getAttribute("data-image") === currentImgSrc,
       ) || items[0];
 
     if (initialActive) {
@@ -399,6 +390,103 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // 10. Product Detail Gallery & Fancybox Modal Preview
+  const mainImg = document.getElementById("main-product-img");
+  const mainImgLink = document.getElementById("main-product-link");
+  const thumbnails = document.querySelectorAll(
+    "#product-thumbnails .thumbnail-btn",
+  );
+
+  if (thumbnails.length > 0) {
+    let currentIndex = 0;
+
+    const galleryItems = Array.from(thumbnails).map((thumb, i) => ({
+      src: thumb.getAttribute("data-img"),
+      thumb: thumb.getAttribute("data-img"),
+      caption: thumb.getAttribute("data-caption") || `Product Image ${i + 1}`,
+      width: 800,
+      height: 800,
+    }));
+
+    const updateGalleryImage = (index) => {
+      thumbnails.forEach((t, idx) => {
+        if (idx === index) {
+          t.classList.remove("thumbnail-btn--inactive");
+          t.classList.add("thumbnail-btn--active");
+        } else {
+          t.classList.remove("thumbnail-btn--active");
+          t.classList.add("thumbnail-btn--inactive");
+        }
+      });
+      const newSrc = thumbnails[index].getAttribute("data-img");
+      if (mainImg) mainImg.src = newSrc;
+      currentIndex = index;
+    };
+
+    thumbnails.forEach((thumb, idx) => {
+      thumb.addEventListener("click", () => updateGalleryImage(idx));
+    });
+
+    const prevImgBtn = document.getElementById("prev-img-btn");
+    const nextImgBtn = document.getElementById("next-img-btn");
+
+    if (prevImgBtn) {
+      prevImgBtn.addEventListener("click", () => {
+        const newIndex =
+          (currentIndex - 1 + thumbnails.length) % thumbnails.length;
+        updateGalleryImage(newIndex);
+      });
+    }
+
+    if (nextImgBtn) {
+      nextImgBtn.addEventListener("click", () => {
+        const newIndex = (currentIndex + 1) % thumbnails.length;
+        updateGalleryImage(newIndex);
+      });
+    }
+
+    if (mainImgLink) {
+      mainImgLink.addEventListener("click", (e) => {
+        e.preventDefault();
+        if (typeof Fancybox !== "undefined") {
+          Fancybox.show(galleryItems, {
+            startIndex: currentIndex,
+            Images: {
+              fit: "contain",
+              zoom: false,
+            },
+            Toolbar: {
+              display: {
+                left: ["infobar"],
+                middle: [],
+                right: ["slideshow", "fullscreen", "thumbs", "close"],
+              },
+            },
+            Thumbs: {
+              autoStart: true,
+            },
+          });
+        }
+      });
+    }
+  }
+
+  // 11. Applications Swiper Carousel
+  if (typeof Swiper !== "undefined" && document.querySelector(".app-swiper")) {
+    new Swiper(".app-swiper", {
+      slidesPerView: 1,
+      spaceBetween: 24,
+      loop: true,
+      navigation: {
+        nextEl: "#app-next",
+        prevEl: "#app-prev",
+      },
+      breakpoints: {
+        640: { slidesPerView: 2 },
+        1024: { slidesPerView: 3 },
+      },
+    });
+  }
 });
 
 // AOS – Animate On Scroll

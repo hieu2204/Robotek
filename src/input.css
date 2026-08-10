@@ -29,6 +29,12 @@
   --color-red-400: #ff8484;
   --color-footer-bg: #820000;
   --color-green-90: #15322d;
+  /* Shared content colors (product pages, contact, applications) */
+  --color-table-header: #860000;
+  --color-table-text: #121417;
+  --color-body-text: #333333;
+  --color-body-dark: #1d1d1d;
+  --color-section-heading: #2d3139;
 }
 
 /* Base Body Styles */

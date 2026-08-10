@@ -526,10 +526,8 @@
 
                 <!-- Featured Bullet List -->
                 <div class="flex flex-col gap-2 w-full">
-                  <h2
-                    class="font-semibold text-[18px] text-[#333] leading-[28px]"
-                  >
-                    Featured:
+                  <h2 class="font-semibold text-lg text-body-text leading-7">
+                    Overview:
                   </h2>
                   <ul
                     class="list-disc pl-6 space-y-1 text-base font-medium text-gray-500 leading-6"
@@ -561,9 +559,7 @@
 
                 <!-- Protection Grid -->
                 <div class="flex flex-col gap-5 w-full">
-                  <h2
-                    class="font-semibold text-[18px] text-[#333] leading-[28px]"
-                  >
+                  <h2 class="font-semibold text-lg text-body-text leading-7">
                     Proctection:
                   </h2>
                   <div
@@ -574,13 +570,13 @@
                       class="flex flex-col gap-5 items-start sm:pr-6 pt-4 sm:pt-0"
                     >
                       <svg
-                        class="w-[28px] h-[32px] shrink-0"
+                        class="w-7 h-8 shrink-0"
                         viewBox="0 0 28 32"
                         fill="none"
                       >
                         <path
                           d="M19.2973 31.0895L28 20.6843L27.8423 0L0 31.0895H19.2973Z"
-                          fill="#CE181E"
+                          fill="var(--color-danger)"
                         />
                       </svg>
                       <h3
@@ -594,13 +590,13 @@
                       class="flex flex-col gap-5 items-start sm:px-6 pt-4 sm:pt-0"
                     >
                       <svg
-                        class="w-[28px] h-[32px] shrink-0"
+                        class="w-7 h-8 shrink-0"
                         viewBox="0 0 28 32"
                         fill="none"
                       >
                         <path
                           d="M19.2973 31.0895L28 20.6843L27.8423 0L0 31.0895H19.2973Z"
-                          fill="#CE181E"
+                          fill="var(--color-danger)"
                         />
                       </svg>
                       <h3
@@ -614,13 +610,13 @@
                       class="flex flex-col gap-5 items-start sm:pl-6 pt-4 sm:pt-0"
                     >
                       <svg
-                        class="w-[28px] h-[32px] shrink-0"
+                        class="w-7 h-8 shrink-0"
                         viewBox="0 0 28 32"
                         fill="none"
                       >
                         <path
                           d="M19.2973 31.0895L28 20.6843L27.8423 0L0 31.0895H19.2973Z"
-                          fill="#CE181E"
+                          fill="var(--color-danger)"
                         />
                       </svg>
                       <h3
@@ -789,7 +785,7 @@
 
             <!-- Tech Specs Table Container -->
             <div
-              class="bg-gradient-to-b from-[#eff0f3] to-[#fdfcfd] p-3 sm:p-6 lg:p-10 w-full overflow-hidden"
+              class="bg-gradient-to-b from-gray-100 to-white p-3 sm:p-6 lg:p-10 w-full overflow-hidden"
             >
               <div
                 class="bg-white rounded-xs border border-gray-200 overflow-hidden"
@@ -799,35 +795,25 @@
                   <div class="min-w-[700px]">
                     <!-- Table Header (Fixed Row outside vertical scroll) -->
                     <table
-                      class="w-full table-fixed border-collapse text-left bg-[#860000]"
+                      class="w-full table-fixed border-collapse text-left bg-table-header"
                     >
                       <thead>
                         <tr
-                          class="bg-[#860000] text-white font-semibold text-base leading-6"
+                          class="border-b border-gray-200 text-white font-semibold text-base leading-6"
                         >
-                          <th
-                            class="w-1/5 px-4 sm:px-6 lg:px-8 py-3 lg:py-4 font-semibold"
-                          >
+                          <th class="w-1/5 px-4 sm:px-6 lg:px-8 py-3 lg:py-4">
                             Model
                           </th>
-                          <th
-                            class="w-1/5 px-2 sm:px-3 lg:px-4 py-3 lg:py-4 font-semibold"
-                          >
+                          <th class="w-1/5 px-2 sm:px-3 lg:px-4 py-3 lg:py-4">
                             Power
                           </th>
-                          <th
-                            class="w-1/5 px-2 sm:px-3 lg:px-4 py-3 lg:py-4 font-semibold"
-                          >
+                          <th class="w-1/5 px-2 sm:px-3 lg:px-4 py-3 lg:py-4">
                             Input Voltage
                           </th>
-                          <th
-                            class="w-1/5 px-2 sm:px-3 lg:px-4 py-3 lg:py-4 font-semibold"
-                          >
+                          <th class="w-1/5 px-2 sm:px-3 lg:px-4 py-3 lg:py-4">
                             Output Options
                           </th>
-                          <th
-                            class="w-1/5 px-4 sm:px-6 lg:px-8 py-3 lg:py-4 font-semibold"
-                          >
+                          <th class="w-1/5 px-4 sm:px-6 lg:px-8 py-3 lg:py-4">
                             Dimensions (mm)
                           </th>
                         </tr>
@@ -842,7 +828,7 @@
                         class="w-full table-fixed border-collapse text-left"
                       >
                         <tbody
-                          class="divide-y divide-[#f4f5f6] text-base text-[#121417]"
+                          class="divide-y divide-[#f4f5f6] text-base text-table-text"
                         >
                           <tr
                             class="h-12 sm:h-14 lg:h-16 hover:bg-gray-50 transition-colors"
@@ -1256,7 +1242,7 @@
       </section>
 
       <!-- Certifications Swiper Section (Frame 2147264288) -->
-      <section class="relative py-16 lg:py-24 bg-gray-50 overflow-hidden">
+      <section class="relative py-16 lg:py-24 overflow-hidden">
         <!-- Background Image (people-bg.png) -->
         <div class="absolute inset-0 z-0 pointer-events-none">
           <img
@@ -1282,11 +1268,7 @@
               </div>
               <a href="#" class="btn-explore self-start">
                 <span>DOWNLOAD DATASHEET</span>
-                <svg
-                  class="w-5 h-5 shrink-0"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                >
+                <svg class="w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="none">
                   <path
                     d="M10 17L15 12M15 12L10 7"
                     stroke="currentColor"
@@ -1302,54 +1284,8 @@
             <div
               class="w-full max-w-[956px] flex flex-col gap-6 overflow-hidden"
             >
-              <div class="swiper detail-cert-swiper cert-swiper w-full">
+              <div class="swiper detail-cert-swiper w-full">
                 <div class="swiper-wrapper">
-                  <div class="swiper-slide !w-[172px] shrink-0">
-                    <div class="cert-card">
-                      <img
-                        src="assets/images/cert-1.png"
-                        alt="IECEE Certification"
-                        class="cert-card-img"
-                      />
-                    </div>
-                  </div>
-                  <div class="swiper-slide !w-[172px] shrink-0">
-                    <div class="cert-card">
-                      <img
-                        src="assets/images/cert-2.png"
-                        alt="CCC Certification"
-                        class="cert-card-img"
-                      />
-                    </div>
-                  </div>
-                  <div class="swiper-slide !w-[172px] shrink-0">
-                    <div class="cert-card">
-                      <img
-                        src="assets/images/cert-3.png"
-                        alt="KC Certification"
-                        class="cert-card-img"
-                      />
-                    </div>
-                  </div>
-                  <div class="swiper-slide !w-[172px] shrink-0">
-                    <div class="cert-card">
-                      <img
-                        src="assets/images/cert-4.png"
-                        alt="UKCA Certification"
-                        class="cert-card-img"
-                      />
-                    </div>
-                  </div>
-                  <div class="swiper-slide !w-[172px] shrink-0">
-                    <div class="cert-card">
-                      <img
-                        src="assets/images/cert-5.png"
-                        alt="RCM Certification"
-                        class="cert-card-img"
-                      />
-                    </div>
-                  </div>
-                  <!-- Duplicate set for seamless continuous looping -->
                   <div class="swiper-slide !w-[172px] shrink-0">
                     <div class="cert-card">
                       <img
@@ -1590,118 +1526,5 @@
         </div>
       </div>
     </footer>
-
-    <!-- Interactive Scripts for Gallery, Fancybox, Swiper -->
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        // Thumbnail click gallery preview switch
-        const mainImg = document.getElementById("main-product-img");
-        const mainImgLink = document.getElementById("main-product-link");
-        const thumbnails = document.querySelectorAll(
-          "#product-thumbnails .thumbnail-btn",
-        );
-        let currentIndex = 0;
-
-        // Build fixed gallery items array for Fancybox directly from thumbnails
-        const galleryItems = Array.from(thumbnails).map((thumb, i) => ({
-          src: thumb.getAttribute("data-img"),
-          thumb: thumb.getAttribute("data-img"),
-          caption:
-            thumb.getAttribute("data-caption") ||
-            `Ultra-Slim Series Power Supply - Image ${i + 1}`,
-          width: 800,
-          height: 800,
-        }));
-
-        const updateGalleryImage = (index) => {
-          thumbnails.forEach((t, idx) => {
-            if (idx === index) {
-              t.classList.remove("thumbnail-btn--inactive");
-              t.classList.add("thumbnail-btn--active");
-            } else {
-              t.classList.remove("thumbnail-btn--active");
-              t.classList.add("thumbnail-btn--inactive");
-            }
-          });
-          const newSrc = thumbnails[index].getAttribute("data-img");
-          if (mainImg) mainImg.src = newSrc;
-          currentIndex = index;
-        };
-
-        thumbnails.forEach((thumb, idx) => {
-          thumb.addEventListener("click", () => updateGalleryImage(idx));
-        });
-
-        document
-          .getElementById("prev-img-btn")
-          ?.addEventListener("click", () => {
-            const newIndex =
-              (currentIndex - 1 + thumbnails.length) % thumbnails.length;
-            updateGalleryImage(newIndex);
-          });
-
-        document
-          .getElementById("next-img-btn")
-          ?.addEventListener("click", () => {
-            const newIndex = (currentIndex + 1) % thumbnails.length;
-            updateGalleryImage(newIndex);
-          });
-
-        // Open Fancybox natively via Fancybox.show with exact startIndex when main image is clicked
-        if (mainImgLink) {
-          mainImgLink.addEventListener("click", (e) => {
-            e.preventDefault();
-            if (typeof Fancybox !== "undefined") {
-              Fancybox.show(galleryItems, {
-                startIndex: currentIndex,
-                Images: {
-                  fit: "contain",
-                  zoom: false,
-                },
-                Toolbar: {
-                  display: {
-                    left: ["infobar"],
-                    middle: [],
-                    right: ["slideshow", "fullscreen", "thumbs", "close"],
-                  },
-                },
-                Thumbs: {
-                  autoStart: true,
-                },
-              });
-            }
-          });
-        }
-
-        // Initialize Applications Swiper
-        if (typeof Swiper !== "undefined") {
-          new Swiper(".app-swiper", {
-            slidesPerView: 1,
-            spaceBetween: 24,
-            loop: true,
-            navigation: {
-              nextEl: "#app-next",
-              prevEl: "#app-prev",
-            },
-            breakpoints: {
-              640: { slidesPerView: 2 },
-              1024: { slidesPerView: 3 },
-            },
-          });
-
-          // Initialize Certifications Swiper
-          new Swiper(".cert-swiper", {
-            slidesPerView: "auto",
-            spaceBetween: 24,
-            loop: true,
-            grabCursor: true,
-            navigation: {
-              nextEl: "#cert-next-btn",
-              prevEl: "#cert-prev-btn",
-            },
-          });
-        }
-      });
-    </script>
   </body>
 </html>
