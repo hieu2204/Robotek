@@ -36,6 +36,11 @@
   --color-table-header: #860000;
   --color-table-text: #121417;
   --color-body-text: #333333;
+  --color-text-scale-80: #262626;
+  --color-neutral-400: #999999;
+  --color-foundation-gray-500: #484f57;
+  --color-required: #ed2525;
+  --color-primary-30: #00a194;
   --color-body-dark: #1d1d1d;
   --color-section-heading: #2d3139;
 }

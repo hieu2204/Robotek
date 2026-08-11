@@ -109,6 +109,11 @@
     background-color: rgba(186, 81, 81, 0.78);
   }
 
+  /* Contact social icon link — Figma size: 45px */
+  .contact-social-link {
+    @apply size-[45px] shrink-0 transition-opacity hover:opacity-80;
+  }
+
   /* White variant badge tag — for dark section backgrounds */
   .badge-tag-white {
     @apply inline-flex items-center justify-center px-6 py-2 font-orbitron font-semibold text-base leading-6 text-gray-900 bg-white;
