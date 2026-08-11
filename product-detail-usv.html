@@ -654,38 +654,126 @@
                   Advantages over traditional rescue methods
                 </h2>
               </div>
-              <!-- Advantage Items -->
+              <!-- Advantage Items (Accordion Dropdown) -->
               <div class="flex flex-col gap-6">
-                <div class="bg-white border border-red-200 rounded-lg p-6">
-                  <p class="text-lg font-medium text-body-dark leading-7">
-                    Speed: Reaches victims faster than rescue swimmers
-                  </p>
+                <!-- Item 1 (Active by default) -->
+                <div class="advantage-item is-active rounded-lg border border-red-200 bg-white p-6 transition-all duration-300">
+                  <button
+                    type="button"
+                    class="advantage-toggle flex w-full items-center justify-between text-left focus:outline-none cursor-pointer"
+                    aria-expanded="true"
+                  >
+                    <span class="advantage-title text-lg font-medium text-body-dark leading-7">
+                      Speed: Reaches victims faster than rescue swimmers
+                    </span>
+                  </button>
+                  <div class="advantage-content-wrapper">
+                    <div class="advantage-content-inner">
+                      <div class="pt-4 mt-4 border-t border-red-100 text-base font-normal text-gray-600 leading-relaxed">
+                        Deploys rapidly from shore or vessel, navigating water currents at speeds up to 15–20 knots to reach distressed swimmers in seconds.
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div class="border border-red-200 rounded-lg p-6">
-                  <p class="text-lg font-medium text-body-dark leading-7">
-                    Safety: No risk to rescue personnel
-                  </p>
+
+                <!-- Item 2 -->
+                <div class="advantage-item rounded-lg border border-red-200 bg-white p-6 transition-all duration-300 hover:border-red-400">
+                  <button
+                    type="button"
+                    class="advantage-toggle flex w-full items-center justify-between text-left focus:outline-none cursor-pointer"
+                    aria-expanded="false"
+                  >
+                    <span class="advantage-title text-lg font-medium text-body-dark leading-7">
+                      Safety: No risk to rescue personnel
+                    </span>
+                  </button>
+                  <div class="advantage-content-wrapper">
+                    <div class="advantage-content-inner">
+                      <div class="pt-4 mt-4 border-t border-red-100 text-base font-normal text-gray-600 leading-relaxed">
+                        Protects human rescuers by executing hazardous water rescue operations, handling rough seas and turbulent currents remotely.
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div class="border border-red-200 rounded-lg p-6">
-                  <p class="text-lg font-medium text-body-dark leading-7">
-                    Efficiency: Can operate in conditions too dangerous for
-                    rescuers
-                  </p>
+
+                <!-- Item 3 -->
+                <div class="advantage-item rounded-lg border border-red-200 bg-white p-6 transition-all duration-300 hover:border-red-400">
+                  <button
+                    type="button"
+                    class="advantage-toggle flex w-full items-center justify-between text-left focus:outline-none cursor-pointer"
+                    aria-expanded="false"
+                  >
+                    <span class="advantage-title text-lg font-medium text-body-dark leading-7">
+                      Efficiency: Can operate in conditions too dangerous for rescuers
+                    </span>
+                  </button>
+                  <div class="advantage-content-wrapper">
+                    <div class="advantage-content-inner">
+                      <div class="pt-4 mt-4 border-t border-red-100 text-base font-normal text-gray-600 leading-relaxed">
+                        Operates reliably through storm conditions, high waves, flood waters, and low-visibility night environments without fatigue.
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div class="border border-red-200 rounded-lg p-6">
-                  <p class="text-lg font-medium text-body-dark leading-7">
-                    Precision: GPS positioning to exact location
-                  </p>
+
+                <!-- Item 4 -->
+                <div class="advantage-item rounded-lg border border-red-200 bg-white p-6 transition-all duration-300 hover:border-red-400">
+                  <button
+                    type="button"
+                    class="advantage-toggle flex w-full items-center justify-between text-left focus:outline-none cursor-pointer"
+                    aria-expanded="false"
+                  >
+                    <span class="advantage-title text-lg font-medium text-body-dark leading-7">
+                      Precision: GPS positioning to exact location
+                    </span>
+                  </button>
+                  <div class="advantage-content-wrapper">
+                    <div class="advantage-content-inner">
+                      <div class="pt-4 mt-4 border-t border-red-100 text-base font-normal text-gray-600 leading-relaxed">
+                        Integrates high-precision GPS positioning and auto-hover technology to navigate straight to coordinates and stay in position.
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div class="border border-red-200 rounded-lg p-6">
-                  <p class="text-lg font-medium text-body-dark leading-7">
-                    Endurance: Operates longer than human swimmers
-                  </p>
+
+                <!-- Item 5 -->
+                <div class="advantage-item rounded-lg border border-red-200 bg-white p-6 transition-all duration-300 hover:border-red-400">
+                  <button
+                    type="button"
+                    class="advantage-toggle flex w-full items-center justify-between text-left focus:outline-none cursor-pointer"
+                    aria-expanded="false"
+                  >
+                    <span class="advantage-title text-lg font-medium text-body-dark leading-7">
+                      Endurance: Operates longer than human swimmers
+                    </span>
+                  </button>
+                  <div class="advantage-content-wrapper">
+                    <div class="advantage-content-inner">
+                      <div class="pt-4 mt-4 border-t border-red-100 text-base font-normal text-gray-600 leading-relaxed">
+                        High-capacity lithium battery system delivers continuous operation for extended missions with real-time battery monitoring.
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div class="border border-red-200 rounded-lg p-6">
-                  <p class="text-lg font-medium text-body-dark leading-7">
-                    Versatility: Works in various water conditions
-                  </p>
+
+                <!-- Item 6 -->
+                <div class="advantage-item rounded-lg border border-red-200 bg-white p-6 transition-all duration-300 hover:border-red-400">
+                  <button
+                    type="button"
+                    class="advantage-toggle flex w-full items-center justify-between text-left focus:outline-none cursor-pointer"
+                    aria-expanded="false"
+                  >
+                    <span class="advantage-title text-lg font-medium text-body-dark leading-7">
+                      Versatility: Works in various water conditions
+                    </span>
+                  </button>
+                  <div class="advantage-content-wrapper">
+                    <div class="advantage-content-inner">
+                      <div class="pt-4 mt-4 border-t border-red-100 text-base font-normal text-gray-600 leading-relaxed">
+                        Adaptable hull design operates in lakes, rivers, reservoirs, coastal waters, and flooded urban rescue scenarios.
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

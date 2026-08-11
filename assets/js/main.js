@@ -241,6 +241,37 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // 7c. Applications Swiper Carousel (Product Detail Pages)
+  if (
+    typeof Swiper !== "undefined" &&
+    document.querySelector(".app-swiper")
+  ) {
+    new Swiper(".app-swiper", {
+      slidesPerView: 1,
+      spaceBetween: 24,
+      loop: false,
+      speed: 400,
+      navigation: {
+        nextEl: "#app-next",
+        prevEl: "#app-prev",
+      },
+      breakpoints: {
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 24,
+        },
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 24,
+        },
+        1280: {
+          slidesPerView: 4,
+          spaceBetween: 24,
+        },
+      },
+    });
+  }
+
   // 8. Journey Swiper Carousel (About Us Page)
   if (
     typeof Swiper !== "undefined" &&
@@ -590,6 +621,33 @@ document.addEventListener("DOMContentLoaded", () => {
           }
         });
       });
+    });
+  }
+
+  // 12. Advantage Items Accordion (Single-Open Dropdown)
+  const advantageItems = document.querySelectorAll(".advantage-item");
+  if (advantageItems.length > 0) {
+    advantageItems.forEach((item) => {
+      const toggleBtn = item.querySelector(".advantage-toggle");
+
+      if (toggleBtn) {
+        toggleBtn.addEventListener("click", () => {
+          const isActive = item.classList.contains("is-active");
+
+          // Close all items first (Single-Open behavior)
+          advantageItems.forEach((otherItem) => {
+            otherItem.classList.remove("is-active");
+            const otherBtn = otherItem.querySelector(".advantage-toggle");
+            if (otherBtn) otherBtn.setAttribute("aria-expanded", "false");
+          });
+
+          // If the clicked item was NOT active, activate it
+          if (!isActive) {
+            item.classList.add("is-active");
+            toggleBtn.setAttribute("aria-expanded", "true");
+          }
+        });
+      }
     });
   }
 });
