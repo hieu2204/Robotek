@@ -2,14 +2,14 @@
   /* Unified Header Base & Variants (Fixed Header Strategy) */
   header,
   .header {
-    @apply fixed inset-x-0 top-0 z-50 w-full h-[100px] transition-all duration-300;
+    @apply fixed inset-x-0 top-0 z-50 w-full h-25 transition-all duration-300;
   }
 
   .header--overlay {
     @apply bg-transparent;
     background: linear-gradient(
       180deg,
-      #ce181e 0%,
+      var(--color-primary) 0%,
       rgba(104, 12, 15, 0) 77.16%
     );
   }
@@ -39,6 +39,10 @@
   /* Header Utility Action Buttons (Search, Lang, Mobile Menu Toggle) */
   .header-action-btn {
     @apply text-white hover:opacity-80 transition-opacity duration-200 focus:outline-none cursor-pointer;
+  }
+
+  .mobile-menu-panel {
+    @apply h-full w-[85%] max-w-sm overflow-y-auto border-l border-gray-800 bg-gray-900 p-6 shadow-2xl flex flex-col justify-between;
   }
 
   /* Navigation Dropdowns & Elements */

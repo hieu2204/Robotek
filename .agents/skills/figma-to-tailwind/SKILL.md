@@ -97,6 +97,42 @@ _Không được viết utility composition mới trước khi hoàn thành Exis
 
 ---
 
+### 4. Existing Implementation Refactor Mode
+
+**Kích hoạt** khi người dùng yêu cầu:
+
+- review hoặc refactor code UI hiện có;
+- loại bỏ duplicate Tailwind classes;
+- thay inline typography bằng component có sẵn;
+- giảm arbitrary values;
+- chuẩn hóa code theo design system;
+- cleanup một page, section hoặc component đã implement.
+
+**Mục tiêu mặc định**:
+
+- Giữ nguyên visual output và behavior hiện tại.
+- Chỉ refactor trong scope người dùng yêu cầu.
+- Không tự động inspect lại toàn bộ Figma nếu người dùng chỉ yêu cầu code cleanup và không báo visual mismatch.
+
+**Workflow bắt buộc**:
+
+1. Xác định chính xác refactor scope.
+2. Inspect CSS/Tailwind entry và toàn bộ `@layer components`.
+3. Search các semantic component hiện có liên quan đến scope.
+4. Tạo Reuse Candidate Table.
+5. Scan scope cho:
+   - arbitrary values;
+   - long typography compositions;
+   - duplicate button/card/badge compositions;
+   - component classes bị kết hợp với utilities ghi đè.
+6. So sánh complete visual signature.
+7. Reuse existing component khi signature tương đương.
+8. Với mỗi arbitrary value còn giữ lại, ghi rõ lý do.
+9. Chạy repository search lần cuối để xác nhận không còn recreation đã biết.
+10. Chạy `npm run build`.
+
+Không được coi task hoàn tất nếu chưa thực hiện bước 4, 8 và 9.
+
 ## Quy trình triển khai chi tiết
 
 ### Step 1: Kiểm tra Repository hiện tại & Reusability Inventory
@@ -117,14 +153,22 @@ Trước khi viết code hoặc cấu hình:
    - _Không được giả định tên file chắc chắn tồn tại; phải inspect cấu trúc repo thực tế._
    - **Tạo Mental Inventory**:
 
-     ```text
-     component / class → semantic role → visual signature → variants → nơi đang được sử dụng
-     ```
+     Trước khi sửa markup, agent phải tạo một Reuse Candidate Table cho scope hiện tại:
 
-     - Ví dụ:
-       - `.heading-h1` → Page/Hero H1 → Inter Tight / 48px / 600 / 58px / -0.48px → color intentionally external
-       - `.badge-tag` → Small section label → Orbitron / 14px / 600 / uppercase
-       - `.btn-primary` → Primary CTA button
+| Target element | Existing candidate | Candidate definition | Signature match | Decision |
+|---|---|---|---|---|
+| Hero H1 | `.heading-h1` | CSS file + selector | exact / compatible / mismatch | reuse / variant / one-off |
+
+Inventory phải dựa trên repository search thực tế, không dựa vào trí nhớ.
+
+Đối với mỗi typography element trong scope, agent phải search:
+
+- semantic heading/body/label classes;
+- definitions trong `@layer components`;
+- existing usages trên các page khác;
+- utilities hoặc variants đang override component.
+
+Agent không được bắt đầu rewrite markup trước khi hoàn thành inventory này.
 
 ---
 
@@ -436,7 +480,19 @@ Sau khi hoàn thành viết mã nguồn UI nhưng TRƯỚC KHI bàn giao, agent 
 4. Long button / card / badge compositions đang recreate an existing component.
 5. Newly-created components trùng lập với existing components trong repository.
 6. Nếu phát hiện element đang recreate existing semantic component (ví dụ: `<h1 class="text-3xl sm:text-4xl lg:text-[48px] ...">` trong khi dự án đã có `.heading-h1`), BẮT BUỘC refactor về `<h1 class="heading-h1 text-white">` NẾU computed visual output tương đương.
-7. _Lưu ý_: Chỉ refactor khi visual output tương đương. Nếu không chắc chắn → giữ implementation hiện tại. Visual Fidelity > DRY.
+7. _Lưu ý_: Chỉ refactor khi visual output tương đương. Nếu chưa chắc chắn, agent không được tự động giữ implementation hiện tại.
+
+Agent phải tiếp tục kiểm tra:
+
+1. definition của existing component;
+2. relevant usages;
+3. responsive variants;
+4. computed signature từ CSS source;
+5. Figma source nếu task liên quan đến visual mismatch.
+
+Chỉ được giữ inline composition sau khi xác minh component hiện có không tương đương. Quyết định này phải được ghi trong final report.
+
+Visual Fidelity > DRY không phải là lý do để bỏ qua repository inspection hoặc component reuse.
 
 #### 11.2. Visual Safety (An toàn Giao diện)
 

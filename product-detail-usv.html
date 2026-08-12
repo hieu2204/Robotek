@@ -281,14 +281,20 @@
 
     <main>
       <!-- Back Link -->
-      <div class="pt-[100px] bg-white">
-        <div class="container py-6">
+      <div class="pt-25 bg-white">
+        <div class="container py-6"></div>
+      </div>
+
+      <!-- Product Details Section -->
+      <section class="bg-white pb-8 sm:pb-12 lg:pb-18">
+        <div class="container">
+          <!-- Desktop Back Button (Figma node 95:3652 — PRODUCTS DETAILS: USV) -->
           <a
-            href="usv.html"
-            class="inline-flex items-center gap-2 text-gray-500 font-semibold text-base hover:text-primary transition-colors"
+            href="javascript:history.back()"
+            class="hidden 2xl:inline-flex items-center gap-2 text-base font-semibold text-gray-500 hover:text-primary transition-colors mb-6 w-fit"
           >
             <svg
-              class="w-5 h-5"
+              class="w-6 h-6 shrink-0"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -297,35 +303,93 @@
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 stroke-width="2"
-                d="M15 19l-7-7 7-7"
+                d="M10 19l-7-7m0 0l7-7m-7 7h18"
               />
             </svg>
-            Back
+            <span>Back</span>
           </a>
-        </div>
-      </div>
 
-      <!-- Product Details Section -->
-      <section class="bg-white pb-12 lg:pb-18">
-        <div class="container">
-          <div
-            class="grid grid-cols-1 2xl:grid-cols-[auto_1fr] gap-10 2xl:gap-18 items-start"
-          >
+          <!-- Mobile Navigation Helper (Figma node 95:5287 — usv-product-details-mobile) -->
+          <div class="flex flex-col gap-3 mb-4 sm:mb-6 2xl:hidden">
+            <nav
+              class="flex flex-wrap items-center gap-2 text-xs sm:text-sm font-medium text-gray-500"
+              aria-label="Breadcrumb"
+            >
+              <a href="index.html" class="hover:text-primary transition-colors"
+                >Home</a
+              >
+              <svg
+                class="w-3.5 h-3.5 opacity-30 shrink-0"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+              <a href="usv.html" class="hover:text-primary transition-colors"
+                >Products</a
+              >
+              <svg
+                class="w-3.5 h-3.5 opacity-30 shrink-0"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+              <span class="text-primary  font-semibold truncate"
+                >Rescue USV</span
+              >
+            </nav>
+            <a
+              href="javascript:history.back()"
+              class="inline-flex items-center gap-1.5 text-base font-semibold text-gray-500 hover:text-primary transition-colors w-fit"
+            >
+              <svg
+                class="w-5 h-5 shrink-0"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M10 19l-7-7m0 0l7-7m-7 7h18"
+                />
+              </svg>
+              <span>Back</span>
+            </a>
+          </div>
+
+          <div class="product-detail-layout">
             <!-- Left: Thumbnail List + Main Image Gallery with Fancybox -->
             <div
-              class="flex flex-col-reverse sm:flex-row gap-4 2xl:gap-10 items-center sm:items-start justify-center 2xl:justify-start w-full 2xl:w-auto shrink-0"
+              class="flex flex-col-reverse md:flex-row gap-4 2xl:gap-10 items-center md:items-start justify-center 2xl:justify-start w-full 2xl:w-auto shrink-0"
             >
               <!-- Thumbnails Column -->
               <div
-                class="flex flex-row sm:flex-col gap-3 sm:gap-4 overflow-x-auto max-w-full sm:max-w-none shrink-0 py-1 sm:py-0"
+                class="flex flex-row md:flex-col gap-3 md:gap-4 overflow-x-auto max-w-full md:max-w-none shrink-0 py-1 md:py-0"
                 id="product-thumbnails"
               >
                 <button
                   type="button"
                   class="thumbnail-btn thumbnail-btn--active"
-                  data-img="assets/images/usv-product-main.png"
+                  data-type="image"
+                  data-src="assets/images/usv-product-main.png"
                   data-caption="Rescue USV — Remote-Controlled Life Buoy - Image 1"
                   aria-label="View thumbnail 1"
+                  aria-current="true"
                 >
                   <img
                     src="assets/images/usv-product-main.png"
@@ -336,9 +400,11 @@
                 <button
                   type="button"
                   class="thumbnail-btn thumbnail-btn--inactive"
-                  data-img="assets/images/usv-product-1.png"
+                  data-type="image"
+                  data-src="assets/images/usv-product-1.png"
                   data-caption="Rescue USV — Remote-Controlled Life Buoy - Image 2"
                   aria-label="View thumbnail 2"
+                  aria-current="false"
                 >
                   <img
                     src="assets/images/usv-product-1.png"
@@ -349,9 +415,11 @@
                 <button
                   type="button"
                   class="thumbnail-btn thumbnail-btn--inactive"
-                  data-img="assets/images/usv-product-2.png"
+                  data-type="image"
+                  data-src="assets/images/usv-product-2.png"
                   data-caption="Rescue USV — Remote-Controlled Life Buoy - Image 3"
                   aria-label="View thumbnail 3"
+                  aria-current="false"
                 >
                   <img
                     src="assets/images/usv-product-2.png"
@@ -362,9 +430,11 @@
                 <button
                   type="button"
                   class="thumbnail-btn thumbnail-btn--inactive"
-                  data-img="assets/images/usv-product-3.png"
+                  data-type="image"
+                  data-src="assets/images/usv-product-3.png"
                   data-caption="Rescue USV — Remote-Controlled Life Buoy - Image 4"
                   aria-label="View thumbnail 4"
+                  aria-current="false"
                 >
                   <img
                     src="assets/images/usv-product-3.png"
@@ -375,13 +445,31 @@
                 <button
                   type="button"
                   class="thumbnail-btn thumbnail-btn--inactive"
-                  data-img="assets/images/usv-product-main.png"
+                  data-type="image"
+                  data-src="assets/images/usv-product-main.png"
                   data-caption="Rescue USV — Remote-Controlled Life Buoy - Image 5"
                   aria-label="View thumbnail 5"
+                  aria-current="false"
                 >
                   <img
                     src="assets/images/usv-product-main.png"
                     alt="USV thumbnail 5"
+                    class="thumbnail-btn__img"
+                  />
+                </button>
+                <button
+                  type="button"
+                  class="thumbnail-btn thumbnail-btn--inactive"
+                  data-type="video"
+                  data-src="assets/video/sunset_cloud_mountain.mp4"
+                  data-poster="assets/images/product-ps1.png"
+                  data-caption="Rescue USV product demonstration video"
+                  aria-label="View Rescue USV product demonstration video"
+                  aria-current="false"
+                >
+                  <img
+                    src="assets/images/product-ps1.png"
+                    alt="Poster for the Rescue USV product demonstration video"
                     class="thumbnail-btn__img"
                   />
                 </button>
@@ -404,13 +492,13 @@
 
                 <!-- Navigation Arrows -->
                 <div
-                  class="absolute inset-x-6 top-1/2 -translate-y-1/2 flex justify-between items-center pointer-events-none z-10"
+                  class="absolute inset-x-2 sm:inset-x-6 top-1/2 -translate-y-1/2 flex justify-between items-center pointer-events-none z-10"
                 >
                   <button
                     type="button"
                     id="prev-img-btn"
-                    class="bg-primary text-white p-3 rounded-full pointer-events-auto hover:bg-red-700 transition-colors shadow-md flex items-center justify-center"
-                    aria-label="Previous image"
+                    class="bg-primary text-white p-2.5 sm:p-3 rounded-full pointer-events-auto hover:bg-red-700 transition-colors shadow-md flex items-center justify-center"
+                    aria-label="Previous media"
                   >
                     <svg
                       class="w-5 h-5"
@@ -429,8 +517,8 @@
                   <button
                     type="button"
                     id="next-img-btn"
-                    class="bg-primary text-white p-3 rounded-full pointer-events-auto hover:bg-red-700 transition-colors shadow-md flex items-center justify-center"
-                    aria-label="Next image"
+                    class="bg-primary text-white p-2.5 sm:p-3 rounded-full pointer-events-auto hover:bg-red-700 transition-colors shadow-md flex items-center justify-center"
+                    aria-label="Next media"
                   >
                     <svg
                       class="w-5 h-5"
@@ -450,186 +538,165 @@
               </div>
             </div>
 
-            <!-- Right: Product Information Column -->
-            <div class="flex flex-col gap-10 w-full 2xl:max-w-[926px]">
+            <!-- Right: Product Information Column (product-info-block) -->
+            <div class="flex flex-col gap-6 sm:gap-8 w-full 2xl:max-w-231.5">
               <!-- SKU Row -->
               <div class="flex flex-col gap-2 w-full">
                 <div class="border-t border-gray-900 w-full"></div>
-                <p
-                  class="font-orbitron font-normal text-sm text-gray-900 leading-[1.4]"
-                >
-                  USV - 1
-                </p>
+                <p class="product-sku">USV - 1</p>
               </div>
 
-              <!-- Product Details Content Block -->
-              <div class="flex flex-col gap-6 w-full">
-                <!-- Breadcrumb + Title + Subtitle -->
-                <div class="flex flex-col gap-6 w-full">
-                  <!-- Breadcrumb -->
-                  <nav
-                    class="flex items-center gap-2 text-base font-medium text-gray-500"
-                    aria-label="Breadcrumb"
+              <!-- Product Details Header Block -->
+              <div class="flex flex-col gap-4 sm:gap-6 w-full">
+                <!-- Breadcrumb (Desktop only — PRODUCTS DETAILS: USV node 95:3741) -->
+                <nav
+                  class="hidden 2xl:flex flex-wrap items-center gap-2 text-base font-medium text-gray-500"
+                  aria-label="Breadcrumb"
+                >
+                  <a
+                    href="index.html"
+                    class="hover:text-primary transition-colors"
+                    >Home</a
                   >
-                    <a
-                      href="index.html"
-                      class="hover:text-primary transition-colors"
-                      >Home</a
-                    >
-                    <svg
-                      class="w-4 h-4 opacity-30 shrink-0"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M9 5l7 7-7 7"
-                      />
-                    </svg>
-                    <a
-                      href="usv.html"
-                      class="hover:text-primary transition-colors"
-                      >Products</a
-                    >
-                    <svg
-                      class="w-4 h-4 opacity-30 shrink-0"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M9 5l7 7-7 7"
-                      />
-                    </svg>
-                    <span class="text-green-90 font-medium">Rescue USV</span>
-                  </nav>
-
-                  <!-- Product Title + Subtitle -->
-                  <div class="flex flex-col gap-3 w-full">
-                    <h1 class="heading-h1 text-green-90">
-                      Rescue USV — Remote-Controlled Life Buoy
-                    </h1>
-                    <p class="text-base font-medium text-gray-500 leading-6">
-                      Fast - Safe - Reliable
-                    </p>
-                  </div>
-                </div>
-
-                <!-- Divider 1 -->
-                <div class="border-t border-gray-200 w-full"></div>
-
-                <!-- Overview Bullet List -->
-                <div class="flex flex-col gap-2 w-full">
-                  <h2 class="font-semibold text-lg text-body-text leading-7">
-                    Overview:
-                  </h2>
-                  <ul
-                    class="list-disc pl-6 space-y-1 text-base font-medium text-gray-500 leading-6"
+                  <svg
+                    class="w-4 h-4 opacity-30 shrink-0"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
                   >
-                    <li>
-                      Remote Control: Operate from a safe distance with no risk
-                      to rescuers
-                    </li>
-                    <li>
-                      GPS Navigation: Precise positioning with return-to-home
-                      and waypoint navigation
-                    </li>
-                    <li>
-                      Rapid Response: High-speed movement on water, faster
-                      victim reach than traditional methods
-                    </li>
-                    <li>
-                      Self-Righting Design: Auto-flips if capsized, stable in
-                      rough water, marine-grade build
-                    </li>
-                    <li>
-                      Long Battery Life: Extended operation time with quick-swap
-                      battery and power-saving mode
-                    </li>
-                    <li>
-                      Two-Way Communication: Built-in speaker to reassure and
-                      guide victims, audio feedback for operators
-                    </li>
-                  </ul>
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M9 5l7 7-7 7"
+                    />
+                  </svg>
+                  <a
+                    href="usv.html"
+                    class="hover:text-primary transition-colors"
+                    >Products</a
+                  >
+                  <svg
+                    class="w-4 h-4 opacity-30 shrink-0"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M9 5l7 7-7 7"
+                    />
+                  </svg>
+                  <span class="text-primary 2xl:text-green-90 font-semibold">Rescue USV</span>
+                </nav>
+
+                <!-- Product Title + Subtitle -->
+                <div class="flex flex-col gap-3 w-full">
+                  <h1 class="heading-h1 text-green-90">
+                    Rescue USV — Remote-Controlled Life Buoy
+                  </h1>
+                  <p class="text-base font-medium text-gray-500 leading-6">
+                    Fast - Safe - Reliable
+                  </p>
                 </div>
+              </div>
 
-                <!-- Divider 2 -->
-                <div class="border-t border-gray-200 w-full"></div>
+              <!-- Divider 1 -->
+              <div class="border-t border-gray-200 w-full"></div>
 
-                <!-- Key Features Grid -->
-                <div class="flex flex-col gap-5 w-full">
-                  <h2 class="font-semibold text-lg text-body-text leading-7">
-                    Key Features:
-                  </h2>
+              <!-- Overview Bullet List -->
+              <div class="flex flex-col gap-3 w-full">
+                <h2 class="font-semibold text-lg text-body-text leading-7">
+                  Overview:
+                </h2>
+                <ul class="list-disc pl-5 flex flex-col gap-2 text-base font-medium text-gray-500 leading-6">
+                  <li>
+                    Remote Control: Operate from a safe distance with no risk to rescuers
+                  </li>
+                  <li>
+                    GPS Navigation: Precise positioning with return-to-home and waypoint navigation
+                  </li>
+                  <li>
+                    Rapid Response: High-speed movement on water, faster victim reach than traditional methods
+                  </li>
+                  <li>
+                    Self-Righting Design: Auto-flips if capsized, stable in rough water, marine-grade build
+                  </li>
+                  <li>
+                    Long Battery Life: Extended operation time with quick-swap battery and power-saving mode
+                  </li>
+                  <li>
+                    Two-Way Communication: Built-in speaker to reassure and guide victims, audio feedback for operators
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Divider 2 -->
+              <div class="border-t border-gray-200 w-full"></div>
+
+              <!-- Key Features Grid -->
+              <div class="flex flex-col gap-5 w-full">
+                <h2 class="font-semibold text-lg text-gray-900 leading-7">
+                  Key Features:
+                </h2>
+                <div
+                  class="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-0 divide-y sm:divide-y-0 sm:divide-x divide-gray-200 items-start"
+                >
+                  <!-- Feature 1 -->
                   <div
-                    class="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-0 divide-y sm:divide-y-0 sm:divide-x divide-gray-200 items-start"
+                    class="flex flex-col gap-5 items-start sm:pr-6 pt-4 sm:pt-0"
                   >
-                    <!-- Feature 1 -->
-                    <div
-                      class="flex flex-col gap-5 items-start sm:pr-6 pt-4 sm:pt-0"
+                    <svg
+                      class="w-7 h-8 shrink-0 text-primary"
+                      viewBox="0 0 28 32"
+                      fill="none"
                     >
-                      <svg
-                        class="w-[28px] h-[32px] shrink-0 text-primary"
-                        viewBox="0 0 28 32"
-                        fill="none"
-                      >
-                        <path
-                          d="M19.2973 31.0895L28 20.6843L27.8423 0L0 31.0895H19.2973Z"
-                          fill="currentColor"
-                        />
-                      </svg>
-                      <h3
-                        class="font-semibold text-2xl leading-8 text-green-90"
-                      >
-                        Remote Control Operation
-                      </h3>
-                    </div>
-                    <!-- Feature 2 -->
-                    <div
-                      class="flex flex-col gap-5 items-start sm:px-6 pt-4 sm:pt-0"
+                      <path
+                        d="M19.2973 31.0895L28 20.6843L27.8423 0L0 31.0895H19.2973Z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                    <h3 class="font-semibold text-2xl leading-8 text-green-90">
+                      Remote Control Operation
+                    </h3>
+                  </div>
+                  <!-- Feature 2 -->
+                  <div
+                    class="flex flex-col gap-5 items-start sm:px-6 pt-4 sm:pt-0"
+                  >
+                    <svg
+                      class="w-7 h-8 shrink-0"
+                      viewBox="0 0 28 32"
+                      fill="none"
                     >
-                      <svg
-                        class="w-[28px] h-[32px] shrink-0"
-                        viewBox="0 0 28 32"
-                        fill="none"
-                      >
-                        <path
-                          d="M19.2973 31.0895L28 20.6843L27.8423 0L0 31.0895H19.2973Z"
-                          fill="#CE181E"
-                        />
-                      </svg>
-                      <h3
-                        class="font-semibold text-2xl leading-8 text-green-90"
-                      >
-                        GPS Waypoint Navigation
-                      </h3>
-                    </div>
-                    <!-- Feature 3 -->
-                    <div
-                      class="flex flex-col gap-5 items-start sm:pl-6 pt-4 sm:pt-0"
+                      <path
+                        d="M19.2973 31.0895L28 20.6843L27.8423 0L0 31.0895H19.2973Z"
+                        fill="var(--color-primary)"
+                      />
+                    </svg>
+                    <h3 class="font-semibold text-2xl leading-8 text-green-90">
+                      GPS Waypoint Navigation
+                    </h3>
+                  </div>
+                  <!-- Feature 3 -->
+                  <div
+                    class="flex flex-col gap-5 items-start sm:pl-6 pt-4 sm:pt-0"
+                  >
+                    <svg
+                      class="w-7 h-8 shrink-0"
+                      viewBox="0 0 28 32"
+                      fill="none"
                     >
-                      <svg
-                        class="w-[28px] h-[32px] shrink-0"
-                        viewBox="0 0 28 32"
-                        fill="none"
-                      >
-                        <path
-                          d="M19.2973 31.0895L28 20.6843L27.8423 0L0 31.0895H19.2973Z"
-                          fill="#CE181E"
-                        />
-                      </svg>
-                      <h3
-                        class="font-semibold text-2xl leading-8 text-green-90"
-                      >
-                        Self-Righting Design
-                      </h3>
-                    </div>
+                      <path
+                        d="M19.2973 31.0895L28 20.6843L27.8423 0L0 31.0895H19.2973Z"
+                        fill="var(--color-primary)"
+                      />
+                    </svg>
+                    <h3 class="font-semibold text-2xl leading-8 text-green-90">
+                      Self-Righting Design
+                    </h3>
                   </div>
                 </div>
               </div>
@@ -648,134 +715,232 @@
             <!-- Left: Advantages -->
             <div class="flex flex-col gap-10">
               <!-- Section Header -->
-              <div class="flex flex-col gap-5 items-center text-center">
-                <span class="badge-tag">ADVANTAGE</span>
-                <h2 class="heading-h3 text-section-heading">
-                  Advantages over traditional rescue methods
+              <div class="flex flex-col gap-4 sm:gap-5 items-start sm:items-center text-left sm:text-center">
+                <span class="badge-tag">ADVANTAGES</span>
+                <h2 class="text-2xl sm:heading-h3 font-semibold text-gray-900 sm:text-section-heading leading-8 sm:leading-[40px]">
+                  <span class="sm:hidden">Advantages Over Traditional Rescue</span>
+                  <span class="hidden sm:inline">Advantages over traditional rescue methods</span>
                 </h2>
               </div>
-              <!-- Advantage Items (Accordion Dropdown) -->
-              <div class="flex flex-col gap-6">
+              <!-- Advantage Items -->
+              <ul class="flex flex-col gap-2.5 sm:gap-6">
                 <!-- Item 1 (Active by default) -->
-                <div class="advantage-item is-active rounded-lg border border-red-200 bg-white p-6 transition-all duration-300">
+                <li
+                  class="advantage-item is-active rounded-lg border border-gray-200 sm:border-red-200 bg-white p-3.5 sm:p-6 transition-all duration-300 hover:sm:border-red-400"
+                >
                   <button
                     type="button"
-                    class="advantage-toggle flex w-full items-center justify-between text-left focus:outline-none cursor-pointer"
+                    class="advantage-toggle flex w-full items-center justify-between gap-3 sm:gap-4 text-left focus:outline-none cursor-pointer"
                     aria-expanded="true"
                   >
-                    <span class="advantage-title text-lg font-medium text-body-dark leading-7">
-                      Speed: Reaches victims faster than rescue swimmers
-                    </span>
+                    <div class="flex items-center gap-3 sm:gap-4 w-full">
+                      <!-- Mobile Check Icon -->
+                      <div class="bg-[#ebf7ed] p-1 rounded-full flex items-center justify-center shrink-0 sm:hidden">
+                        <svg class="w-3.5 h-3.5 text-[#249F58]" viewBox="0 0 14 14" fill="none">
+                          <path d="M11.6664 3.5L5.25036 9.9162L2.33398 6.99975" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </div>
+                      <span
+                        class="advantage-title text-sm sm:text-lg font-medium text-gray-900 sm:text-body-dark leading-snug sm:leading-7 flex-1"
+                      >
+                        Speed: Reaches victims faster than rescue swimmers
+                      </span>
+                    </div>
                   </button>
                   <div class="advantage-content-wrapper">
                     <div class="advantage-content-inner">
-                      <div class="pt-4 mt-4 border-t border-red-100 text-base font-normal text-gray-600 leading-relaxed">
-                        Deploys rapidly from shore or vessel, navigating water currents at speeds up to 15–20 knots to reach distressed swimmers in seconds.
+                      <div
+                        class="pt-4 mt-4 border-t border-red-100 text-sm sm:text-base font-normal text-gray-600 leading-relaxed"
+                      >
+                        Deploys rapidly from shore or vessel, navigating water
+                        currents at speeds up to 15–20 knots to reach distressed
+                        swimmers in seconds.
                       </div>
                     </div>
                   </div>
-                </div>
+                </li>
 
                 <!-- Item 2 -->
-                <div class="advantage-item rounded-lg border border-red-200 bg-white p-6 transition-all duration-300 hover:border-red-400">
+                <li
+                  class="advantage-item rounded-lg border border-gray-200 sm:border-red-200 bg-white p-3.5 sm:p-6 transition-all duration-300 hover:sm:border-red-400"
+                >
                   <button
                     type="button"
-                    class="advantage-toggle flex w-full items-center justify-between text-left focus:outline-none cursor-pointer"
+                    class="advantage-toggle flex w-full items-center justify-between gap-3 sm:gap-4 text-left focus:outline-none cursor-pointer"
                     aria-expanded="false"
                   >
-                    <span class="advantage-title text-lg font-medium text-body-dark leading-7">
-                      Safety: No risk to rescue personnel
-                    </span>
+                    <div class="flex items-center gap-3 sm:gap-4 w-full">
+                      <!-- Mobile Check Icon -->
+                      <div class="bg-[#ebf7ed] p-1 rounded-full flex items-center justify-center shrink-0 sm:hidden">
+                        <svg class="w-3.5 h-3.5 text-[#249F58]" viewBox="0 0 14 14" fill="none">
+                          <path d="M11.6664 3.5L5.25036 9.9162L2.33398 6.99975" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </div>
+                      <span
+                        class="advantage-title text-sm sm:text-lg font-medium text-gray-900 sm:text-body-dark leading-snug sm:leading-7 flex-1"
+                      >
+                        Safety: No risk to rescue personnel
+                      </span>
+                    </div>
                   </button>
                   <div class="advantage-content-wrapper">
                     <div class="advantage-content-inner">
-                      <div class="pt-4 mt-4 border-t border-red-100 text-base font-normal text-gray-600 leading-relaxed">
-                        Protects human rescuers by executing hazardous water rescue operations, handling rough seas and turbulent currents remotely.
+                      <div
+                        class="pt-4 mt-4 border-t border-red-100 text-sm sm:text-base font-normal text-gray-600 leading-relaxed"
+                      >
+                        Protects human rescuers by executing hazardous water
+                        rescue operations, handling rough seas and turbulent
+                        currents remotely.
                       </div>
                     </div>
                   </div>
-                </div>
+                </li>
 
                 <!-- Item 3 -->
-                <div class="advantage-item rounded-lg border border-red-200 bg-white p-6 transition-all duration-300 hover:border-red-400">
+                <li
+                  class="advantage-item rounded-lg border border-gray-200 sm:border-red-200 bg-white p-3.5 sm:p-6 transition-all duration-300 hover:sm:border-red-400"
+                >
                   <button
                     type="button"
-                    class="advantage-toggle flex w-full items-center justify-between text-left focus:outline-none cursor-pointer"
+                    class="advantage-toggle flex w-full items-center justify-between gap-3 sm:gap-4 text-left focus:outline-none cursor-pointer"
                     aria-expanded="false"
                   >
-                    <span class="advantage-title text-lg font-medium text-body-dark leading-7">
-                      Efficiency: Can operate in conditions too dangerous for rescuers
-                    </span>
+                    <div class="flex items-center gap-3 sm:gap-4 w-full">
+                      <!-- Mobile Check Icon -->
+                      <div class="bg-[#ebf7ed] p-1 rounded-full flex items-center justify-center shrink-0 sm:hidden">
+                        <svg class="w-3.5 h-3.5 text-[#249F58]" viewBox="0 0 14 14" fill="none">
+                          <path d="M11.6664 3.5L5.25036 9.9162L2.33398 6.99975" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </div>
+                      <span
+                        class="advantage-title text-sm sm:text-lg font-medium text-gray-900 sm:text-body-dark leading-snug sm:leading-7 flex-1"
+                      >
+                        <span class="sm:hidden">Efficiency: Operates in rough or dangerous waters</span>
+                        <span class="hidden sm:inline">Efficiency: Can operate in conditions too dangerous for rescuers</span>
+                      </span>
+                    </div>
                   </button>
                   <div class="advantage-content-wrapper">
                     <div class="advantage-content-inner">
-                      <div class="pt-4 mt-4 border-t border-red-100 text-base font-normal text-gray-600 leading-relaxed">
-                        Operates reliably through storm conditions, high waves, flood waters, and low-visibility night environments without fatigue.
+                      <div
+                        class="pt-4 mt-4 border-t border-red-100 text-sm sm:text-base font-normal text-gray-600 leading-relaxed"
+                      >
+                        Operates reliably through storm conditions, high waves,
+                        flood waters, and low-visibility night environments
+                        without fatigue.
                       </div>
                     </div>
                   </div>
-                </div>
+                </li>
 
                 <!-- Item 4 -->
-                <div class="advantage-item rounded-lg border border-red-200 bg-white p-6 transition-all duration-300 hover:border-red-400">
+                <li
+                  class="advantage-item rounded-lg border border-gray-200 sm:border-red-200 bg-white p-3.5 sm:p-6 transition-all duration-300 hover:sm:border-red-400"
+                >
                   <button
                     type="button"
-                    class="advantage-toggle flex w-full items-center justify-between text-left focus:outline-none cursor-pointer"
+                    class="advantage-toggle flex w-full items-center justify-between gap-3 sm:gap-4 text-left focus:outline-none cursor-pointer"
                     aria-expanded="false"
                   >
-                    <span class="advantage-title text-lg font-medium text-body-dark leading-7">
-                      Precision: GPS positioning to exact location
-                    </span>
+                    <div class="flex items-center gap-3 sm:gap-4 w-full">
+                      <!-- Mobile Check Icon -->
+                      <div class="bg-[#ebf7ed] p-1 rounded-full flex items-center justify-center shrink-0 sm:hidden">
+                        <svg class="w-3.5 h-3.5 text-[#249F58]" viewBox="0 0 14 14" fill="none">
+                          <path d="M11.6664 3.5L5.25036 9.9162L2.33398 6.99975" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </div>
+                      <span
+                        class="advantage-title text-sm sm:text-lg font-medium text-gray-900 sm:text-body-dark leading-snug sm:leading-7 flex-1"
+                      >
+                        Precision: GPS positioning to exact location
+                      </span>
+                    </div>
                   </button>
                   <div class="advantage-content-wrapper">
                     <div class="advantage-content-inner">
-                      <div class="pt-4 mt-4 border-t border-red-100 text-base font-normal text-gray-600 leading-relaxed">
-                        Integrates high-precision GPS positioning and auto-hover technology to navigate straight to coordinates and stay in position.
+                      <div
+                        class="pt-4 mt-4 border-t border-red-100 text-sm sm:text-base font-normal text-gray-600 leading-relaxed"
+                      >
+                        Integrates high-precision GPS positioning and auto-hover
+                        technology to navigate straight to coordinates and stay
+                        in position.
                       </div>
                     </div>
                   </div>
-                </div>
+                </li>
 
                 <!-- Item 5 -->
-                <div class="advantage-item rounded-lg border border-red-200 bg-white p-6 transition-all duration-300 hover:border-red-400">
+                <li
+                  class="advantage-item rounded-lg border border-gray-200 sm:border-red-200 bg-white p-3.5 sm:p-6 transition-all duration-300 hover:sm:border-red-400"
+                >
                   <button
                     type="button"
-                    class="advantage-toggle flex w-full items-center justify-between text-left focus:outline-none cursor-pointer"
+                    class="advantage-toggle flex w-full items-center justify-between gap-3 sm:gap-4 text-left focus:outline-none cursor-pointer"
                     aria-expanded="false"
                   >
-                    <span class="advantage-title text-lg font-medium text-body-dark leading-7">
-                      Endurance: Operates longer than human swimmers
-                    </span>
+                    <div class="flex items-center gap-3 sm:gap-4 w-full">
+                      <!-- Mobile Check Icon -->
+                      <div class="bg-[#ebf7ed] p-1 rounded-full flex items-center justify-center shrink-0 sm:hidden">
+                        <svg class="w-3.5 h-3.5 text-[#249F58]" viewBox="0 0 14 14" fill="none">
+                          <path d="M11.6664 3.5L5.25036 9.9162L2.33398 6.99975" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </div>
+                      <span
+                        class="advantage-title text-sm sm:text-lg font-medium text-gray-900 sm:text-body-dark leading-snug sm:leading-7 flex-1"
+                      >
+                        Endurance: Operates longer than human swimmers
+                      </span>
+                    </div>
                   </button>
                   <div class="advantage-content-wrapper">
                     <div class="advantage-content-inner">
-                      <div class="pt-4 mt-4 border-t border-red-100 text-base font-normal text-gray-600 leading-relaxed">
-                        High-capacity lithium battery system delivers continuous operation for extended missions with real-time battery monitoring.
+                      <div
+                        class="pt-4 mt-4 border-t border-red-100 text-sm sm:text-base font-normal text-gray-600 leading-relaxed"
+                      >
+                        High-capacity lithium battery system delivers continuous
+                        operation for extended missions with real-time battery
+                        monitoring.
                       </div>
                     </div>
                   </div>
-                </div>
+                </li>
 
                 <!-- Item 6 -->
-                <div class="advantage-item rounded-lg border border-red-200 bg-white p-6 transition-all duration-300 hover:border-red-400">
+                <li
+                  class="advantage-item rounded-lg border border-gray-200 sm:border-red-200 bg-white p-3.5 sm:p-6 transition-all duration-300 hover:sm:border-red-400"
+                >
                   <button
                     type="button"
-                    class="advantage-toggle flex w-full items-center justify-between text-left focus:outline-none cursor-pointer"
+                    class="advantage-toggle flex w-full items-center justify-between gap-3 sm:gap-4 text-left focus:outline-none cursor-pointer"
                     aria-expanded="false"
                   >
-                    <span class="advantage-title text-lg font-medium text-body-dark leading-7">
-                      Versatility: Works in various water conditions
-                    </span>
+                    <div class="flex items-center gap-3 sm:gap-4 w-full">
+                      <!-- Mobile Check Icon -->
+                      <div class="bg-[#ebf7ed] p-1 rounded-full flex items-center justify-center shrink-0 sm:hidden">
+                        <svg class="w-3.5 h-3.5 text-[#249F58]" viewBox="0 0 14 14" fill="none">
+                          <path d="M11.6664 3.5L5.25036 9.9162L2.33398 6.99975" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </div>
+                      <span
+                        class="advantage-title text-sm sm:text-lg font-medium text-gray-900 sm:text-body-dark leading-snug sm:leading-7 flex-1"
+                      >
+                        Versatility: Works in various water conditions
+                      </span>
+                    </div>
                   </button>
                   <div class="advantage-content-wrapper">
                     <div class="advantage-content-inner">
-                      <div class="pt-4 mt-4 border-t border-red-100 text-base font-normal text-gray-600 leading-relaxed">
-                        Adaptable hull design operates in lakes, rivers, reservoirs, coastal waters, and flooded urban rescue scenarios.
+                      <div
+                        class="pt-4 mt-4 border-t border-red-100 text-sm sm:text-base font-normal text-gray-600 leading-relaxed"
+                      >
+                        Adaptable hull design operates in lakes, rivers,
+                        reservoirs, coastal waters, and flooded urban rescue
+                        scenarios.
                       </div>
                     </div>
                   </div>
-                </div>
-              </div>
+                </li>
+              </ul>
             </div>
 
             <!-- Right: Technical Specifications Table -->
@@ -788,169 +953,171 @@
                 </h2>
               </div>
 
-              <!-- Tech Specs Table Container — Figma: Tabpanel h-[580px] p-[40px] overflow-clip -->
+              <!-- Tech Specs Table Container — Figma: Tabpanel h-[580px] p-10 overflow-clip -->
               <div
                 class="bg-gradient-to-b from-[#eff0f3] to-[#fdfcfd] p-3 sm:p-6 lg:p-10 w-full overflow-hidden"
               >
                 <div class="bg-white overflow-hidden">
-                  <!-- Header Row (fixed, outside scroll) — Figma: px-[32px] py-[16px] bg-[#860000] -->
-                  <div class="bg-table-header flex items-center px-8 py-4">
+                  <!-- Header Row (fixed, outside scroll) — Figma: px-8 py-4 bg-table-header -->
+                  <div
+                    class="bg-table-header flex items-center px-4 sm:px-8 py-3 sm:py-4"
+                  >
                     <div
-                      class="flex-1 text-white font-semibold text-base leading-6"
+                      class="flex-1 text-white font-semibold text-sm sm:text-base leading-6"
                     >
                       Specification
                     </div>
                     <div
-                      class="flex-1 text-white font-semibold text-base leading-6 pl-4"
+                      class="flex-1 text-white font-semibold text-sm sm:text-base leading-6 pl-3 sm:pl-4"
                     >
                       Description
                     </div>
                   </div>
                   <!-- Data Rows Container — Figma: overflow-y-auto, custom scrollbar (#396bcf thumb) -->
                   <div
-                    class="max-h-[428px] lg:max-h-[500px] overflow-y-auto custom-table-scrollbar"
+                    class="max-h-107 lg:max-h-125 overflow-y-auto custom-table-scrollbar"
                   >
-                    <div class="divide-y divide-[#f4f5f6]">
-                      <div class="flex items-center px-8 h-16">
+                    <div class="divide-y divide-table-divider">
+                      <div class="flex items-center px-4 sm:px-8 h-14 sm:h-16">
                         <div
-                          class="flex-1 font-semibold text-base text-table-text"
+                          class="flex-1 font-semibold text-sm sm:text-base text-table-text"
                         >
                           Size
                         </div>
                         <div
-                          class="flex-1 font-semibold text-base text-table-text pl-4"
+                          class="flex-1 font-semibold text-sm sm:text-base text-table-text pl-3 sm:pl-4"
                         >
                           Compact, portable design
                         </div>
                       </div>
-                      <div class="flex items-center px-8 h-16">
+                      <div class="flex items-center px-4 sm:px-8 h-14 sm:h-16">
                         <div
-                          class="flex-1 font-semibold text-base text-table-text"
+                          class="flex-1 font-semibold text-sm sm:text-base text-table-text"
                         >
                           Weight
                         </div>
                         <div
-                          class="flex-1 font-semibold text-base text-table-text pl-4"
+                          class="flex-1 font-semibold text-sm sm:text-base text-table-text pl-3 sm:pl-4"
                         >
                           Lightweight, easy to deploy
                         </div>
                       </div>
-                      <div class="flex items-center px-8 h-16">
+                      <div class="flex items-center px-4 sm:px-8 h-14 sm:h-16">
                         <div
-                          class="flex-1 font-semibold text-base text-table-text"
+                          class="flex-1 font-semibold text-sm sm:text-base text-table-text"
                         >
                           Max Speed
                         </div>
                         <div
-                          class="flex-1 font-semibold text-base text-table-text pl-4"
+                          class="flex-1 font-semibold text-sm sm:text-base text-table-text pl-3 sm:pl-4"
                         >
                           High-speed movement on water
                         </div>
                       </div>
-                      <div class="flex items-center px-8 h-16">
+                      <div class="flex items-center px-4 sm:px-8 h-14 sm:h-16">
                         <div
-                          class="flex-1 font-semibold text-base text-table-text"
+                          class="flex-1 font-semibold text-sm sm:text-base text-table-text"
                         >
                           Operating Range
                         </div>
                         <div
-                          class="flex-1 font-semibold text-base text-table-text pl-4"
+                          class="flex-1 font-semibold text-sm sm:text-base text-table-text pl-3 sm:pl-4"
                         >
                           Remote control up to 500m
                         </div>
                       </div>
-                      <div class="flex items-center px-8 h-16">
+                      <div class="flex items-center px-4 sm:px-8 h-14 sm:h-16">
                         <div
-                          class="flex-1 font-semibold text-base text-table-text"
+                          class="flex-1 font-semibold text-sm sm:text-base text-table-text"
                         >
                           Battery Life
                         </div>
                         <div
-                          class="flex-1 font-semibold text-base text-table-text pl-4"
+                          class="flex-1 font-semibold text-sm sm:text-base text-table-text pl-3 sm:pl-4"
                         >
                           30+ minutes continuous operation
                         </div>
                       </div>
-                      <div class="flex items-center px-8 h-16">
+                      <div class="flex items-center px-4 sm:px-8 h-14 sm:h-16">
                         <div
-                          class="flex-1 font-semibold text-base text-table-text"
+                          class="flex-1 font-semibold text-sm sm:text-base text-table-text"
                         >
                           Charging Time
                         </div>
                         <div
-                          class="flex-1 font-semibold text-base text-table-text pl-4"
+                          class="flex-1 font-semibold text-sm sm:text-base text-table-text pl-3 sm:pl-4"
                         >
                           Fast charging
                         </div>
                       </div>
-                      <div class="flex items-center px-8 h-16">
+                      <div class="flex items-center px-4 sm:px-8 h-14 sm:h-16">
                         <div
-                          class="flex-1 font-semibold text-base text-table-text"
+                          class="flex-1 font-semibold text-sm sm:text-base text-table-text"
                         >
                           Control Method
                         </div>
                         <div
-                          class="flex-1 font-semibold text-base text-table-text pl-4"
+                          class="flex-1 font-semibold text-sm sm:text-base text-table-text pl-3 sm:pl-4"
                         >
                           Remote control 2.4GHz + GPS
                         </div>
                       </div>
-                      <div class="flex items-center px-8 h-16">
+                      <div class="flex items-center px-4 sm:px-8 h-14 sm:h-16">
                         <div
-                          class="flex-1 font-semibold text-base text-table-text"
+                          class="flex-1 font-semibold text-sm sm:text-base text-table-text"
                         >
                           Waterproof Rating
                         </div>
                         <div
-                          class="flex-1 font-semibold text-base text-table-text pl-4"
+                          class="flex-1 font-semibold text-sm sm:text-base text-table-text pl-3 sm:pl-4"
                         >
                           IP67 marine grade
                         </div>
                       </div>
-                      <div class="flex items-center px-8 h-16">
+                      <div class="flex items-center px-4 sm:px-8 h-14 sm:h-16">
                         <div
-                          class="flex-1 font-semibold text-base text-table-text"
+                          class="flex-1 font-semibold text-sm sm:text-base text-table-text"
                         >
                           Operating Temperature
                         </div>
                         <div
-                          class="flex-1 font-semibold text-base text-table-text pl-4"
+                          class="flex-1 font-semibold text-sm sm:text-base text-table-text pl-3 sm:pl-4"
                         >
                           -10°C to +50°C
                         </div>
                       </div>
-                      <div class="flex items-center px-8 h-16">
+                      <div class="flex items-center px-4 sm:px-8 h-14 sm:h-16">
                         <div
-                          class="flex-1 font-semibold text-base text-table-text"
+                          class="flex-1 font-semibold text-sm sm:text-base text-table-text"
                         >
                           Buoyancy
                         </div>
                         <div
-                          class="flex-1 font-semibold text-base text-table-text pl-4"
+                          class="flex-1 font-semibold text-sm sm:text-base text-table-text pl-3 sm:pl-4"
                         >
                           Supports multiple people
                         </div>
                       </div>
-                      <div class="flex items-center px-8 h-16">
+                      <div class="flex items-center px-4 sm:px-8 h-14 sm:h-16">
                         <div
-                          class="flex-1 font-semibold text-base text-table-text"
+                          class="flex-1 font-semibold text-sm sm:text-base text-table-text"
                         >
                           Self-balancing
                         </div>
                         <div
-                          class="flex-1 font-semibold text-base text-table-text pl-4"
+                          class="flex-1 font-semibold text-sm sm:text-base text-table-text pl-3 sm:pl-4"
                         >
                           Automatic
                         </div>
                       </div>
-                      <div class="flex items-center px-8 h-16">
+                      <div class="flex items-center px-4 sm:px-8 h-14 sm:h-16">
                         <div
-                          class="flex-1 font-semibold text-base text-table-text"
+                          class="flex-1 font-semibold text-sm sm:text-base text-table-text"
                         >
                           Positioning
                         </div>
                         <div
-                          class="flex-1 font-semibold text-base text-table-text pl-4"
+                          class="flex-1 font-semibold text-sm sm:text-base text-table-text pl-3 sm:pl-4"
                         >
                           GPS + Compass
                         </div>
@@ -967,22 +1134,22 @@
       <!-- Applications Cards Section -->
       <section class="pb-12 lg:pb-18">
         <div class="container">
-          <div class="flex flex-col gap-12" data-aos="fade-up">
+          <div class="flex flex-col gap-8 md:gap-12" data-aos="fade-up">
             <!-- Section Header -->
-            <div class="flex flex-col gap-5 w-full">
+            <div class="flex flex-col gap-3 md:gap-5 w-full items-center md:items-start text-center md:text-left">
               <!-- Badge Tag (Top Row) -->
-              <div>
+              <div class="flex justify-center md:justify-start w-full">
                 <span class="badge-tag">APPLICATION:</span>
               </div>
               <!-- H2 Title and Prev/Next Buttons Row -->
               <div
-                class="flex flex-col md:flex-row md:items-center justify-between gap-6"
+                class="flex flex-col md:flex-row md:items-center justify-between gap-6 w-full"
               >
-                <h2 class="heading-h3 text-gray-900">
+                <h2 class="heading-h3 text-gray-900 text-center md:text-left">
                   Ideal for fast water rescue &amp; emergency operations
                 </h2>
-                <!-- Swiper Circular Buttons -->
-                <div class="flex items-center gap-4 shrink-0">
+                <!-- Desktop Swiper Circular Buttons -->
+                <div class="hidden md:flex items-center gap-4 shrink-0">
                   <button
                     type="button"
                     id="app-prev"
@@ -1024,80 +1191,116 @@
               <div class="swiper-wrapper">
                 <!-- App Card 1 -->
                 <div class="swiper-slide">
-                  <div class="flex flex-col gap-6 group">
-                    <div class="h-[358px] w-full overflow-hidden rounded-xs">
+                  <div class="flex flex-col gap-4 sm:gap-6 group">
+                    <div class="related-product-media">
                       <img
                         src="assets/images/usv-application.png"
                         alt="Beach rescue operations"
                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                       />
                     </div>
-                    <h3 class="font-semibold text-2xl leading-8 text-gray-900">
+                    <h3 class="font-semibold text-lg sm:text-2xl leading-7 sm:leading-8 text-gray-900">
                       Beach Rescue Operations
                     </h3>
                   </div>
                 </div>
                 <!-- App Card 2 -->
                 <div class="swiper-slide">
-                  <div class="flex flex-col gap-6 group">
-                    <div class="h-[358px] w-full overflow-hidden rounded-xs">
+                  <div class="flex flex-col gap-4 sm:gap-6 group">
+                    <div class="related-product-media">
                       <img
                         src="assets/images/usv-product-2.png"
                         alt="Emergency water rescue"
                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                       />
                     </div>
-                    <h3 class="font-semibold text-2xl leading-8 text-gray-900">
+                    <h3 class="font-semibold text-lg sm:text-2xl leading-7 sm:leading-8 text-gray-900">
                       Emergency Water Rescue
                     </h3>
                   </div>
                 </div>
                 <!-- App Card 3 -->
                 <div class="swiper-slide">
-                  <div class="flex flex-col gap-6 group">
-                    <div class="h-[358px] w-full overflow-hidden rounded-xs">
+                  <div class="flex flex-col gap-4 sm:gap-6 group">
+                    <div class="related-product-media">
                       <img
                         src="assets/images/usv-product-3.png"
                         alt="Fire department water rescue"
                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                       />
                     </div>
-                    <h3 class="font-semibold text-2xl leading-8 text-gray-900">
+                    <h3 class="font-semibold text-lg sm:text-2xl leading-7 sm:leading-8 text-gray-900">
                       Fire Department Water Rescue
                     </h3>
                   </div>
                 </div>
                 <!-- App Card 4 -->
                 <div class="swiper-slide">
-                  <div class="flex flex-col gap-6 group">
-                    <div class="h-[358px] w-full overflow-hidden rounded-xs">
+                  <div class="flex flex-col gap-4 sm:gap-6 group">
+                    <div class="related-product-media">
                       <img
                         src="assets/images/usv-product-main.png"
                         alt="Maritime surveillance"
                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                       />
                     </div>
-                    <h3 class="font-semibold text-2xl leading-8 text-gray-900">
+                    <h3 class="font-semibold text-lg sm:text-2xl leading-7 sm:leading-8 text-gray-900">
                       Maritime Surveillance
                     </h3>
                   </div>
                 </div>
                 <!-- App Card 5 -->
                 <div class="swiper-slide">
-                  <div class="flex flex-col gap-6 group">
-                    <div class="h-[358px] w-full overflow-hidden rounded-xs">
+                  <div class="flex flex-col gap-4 sm:gap-6 group">
+                    <div class="related-product-media">
                       <img
                         src="assets/images/usv-product-1.png"
                         alt="Hydrographic survey"
                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                       />
                     </div>
-                    <h3 class="font-semibold text-2xl leading-8 text-gray-900">
+                    <h3 class="font-semibold text-lg sm:text-2xl leading-7 sm:leading-8 text-gray-900">
                       Hydrographic Survey
                     </h3>
                   </div>
                 </div>
               </div>
+            </div>
+
+            <!-- Mobile Swiper Circular Buttons (Under Images) -->
+            <div class="flex md:hidden items-center justify-center gap-4">
+              <button
+                type="button"
+                id="app-prev-mobile"
+                class="swiper-btn-circle"
+                aria-label="Previous application"
+              >
+                <svg class="w-8 h-8" viewBox="0 0 32 32" fill="none">
+                  <path
+                    d="M20 24L12 16L20 8"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+              <button
+                type="button"
+                id="app-next-mobile"
+                class="swiper-btn-circle"
+                aria-label="Next application"
+              >
+                <svg class="w-8 h-8" viewBox="0 0 32 32" fill="none">
+                  <path
+                    d="M12 24L20 16L12 8"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
             </div>
           </div>
         </div>

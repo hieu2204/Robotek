@@ -119,20 +119,26 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // 6a. Certifications Swiper Carousel - Homepage (Frame 2147262621)
+  // 6a. Certifications Swiper Carousel - Homepage (Frame 2147262621 & Frame 2147264332)
   if (
     typeof Swiper !== "undefined" &&
     document.querySelector(".home-cert-swiper")
   ) {
     new Swiper(".home-cert-swiper", {
       slidesPerView: "auto",
-      spaceBetween: 24,
-      slidesOffsetAfter: 24,
+      spaceBetween: 12,
       loop: false,
       grabCursor: true,
       navigation: {
         nextEl: "#cert-next",
         prevEl: "#cert-prev",
+      },
+      breakpoints: {
+        640: {
+          slidesPerView: "auto",
+          spaceBetween: 24,
+          slidesOffsetAfter: 24,
+        },
       },
     });
   }
@@ -144,12 +150,20 @@ document.addEventListener("DOMContentLoaded", () => {
   ) {
     new Swiper(".detail-cert-swiper", {
       slidesPerView: "auto",
-      spaceBetween: 24,
+      spaceBetween: 12,
       loop: false,
+      watchOverflow: false,
       grabCursor: true,
       navigation: {
         nextEl: "#cert-next-btn",
         prevEl: "#cert-prev-btn",
+      },
+      breakpoints: {
+        640: {
+          slidesPerView: "auto",
+          spaceBetween: 24,
+          slidesOffsetAfter: 24,
+        },
       },
     });
   }
@@ -242,41 +256,56 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // 7c. Applications Swiper Carousel (Product Detail Pages)
-  if (
-    typeof Swiper !== "undefined" &&
-    document.querySelector(".app-swiper")
-  ) {
+  if (typeof Swiper !== "undefined" && document.querySelector(".app-swiper")) {
     new Swiper(".app-swiper", {
       slidesPerView: 1,
       spaceBetween: 24,
       loop: false,
       speed: 400,
       navigation: {
-        nextEl: "#app-next",
-        prevEl: "#app-prev",
+        nextEl: "#app-next, #app-next-mobile",
+        prevEl: "#app-prev, #app-prev-mobile",
       },
       breakpoints: {
         640: {
           slidesPerView: 2,
           spaceBetween: 24,
         },
-        768: {
+
+        1024: {
           slidesPerView: 3,
-          spaceBetween: 24,
-        },
-        1280: {
-          slidesPerView: 4,
           spaceBetween: 24,
         },
       },
     });
   }
 
-  // 8. Journey Swiper Carousel (About Us Page)
+  // 8. Journey Swiper Carousel & Timeline Sync (About Us Page)
   if (
     typeof Swiper !== "undefined" &&
     document.querySelector(".journey-swiper")
   ) {
+    let journeyNavSwiper = null;
+
+    if (document.querySelector(".journey-nav-swiper")) {
+      journeyNavSwiper = new Swiper(".journey-nav-swiper", {
+        slidesPerView: 2,
+        spaceBetween: 16,
+        allowTouchMove: true,
+        grabCursor: true,
+        breakpoints: {
+          640: {
+            slidesPerView: 3,
+            spaceBetween: 32,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 48,
+          },
+        },
+      });
+    }
+
     const journeySwiper = new Swiper(".journey-swiper", {
       slidesPerView: 1,
       spaceBetween: 32,
@@ -296,6 +325,9 @@ document.addEventListener("DOMContentLoaded", () => {
       journeyNavItems.forEach((item, index) => {
         item.classList.toggle("active", index === realIndex);
       });
+      if (journeyNavSwiper) {
+        journeyNavSwiper.slideTo(realIndex);
+      }
     };
 
     journeySwiper.on("slideChange", () => {
@@ -307,6 +339,9 @@ document.addEventListener("DOMContentLoaded", () => {
         const index = parseInt(navItem.getAttribute("data-index"), 10);
         if (!isNaN(index)) {
           journeySwiper.slideToLoop(index);
+          if (journeyNavSwiper) {
+            journeyNavSwiper.slideTo(index);
+          }
         }
       });
     });
@@ -421,85 +456,206 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // 10. Product Detail Gallery & Fancybox Modal Preview
-  const mainImg = document.getElementById("main-product-img");
+  // 10. Product Detail Media Gallery & Fancybox Modal Preview
   const mainImgLink = document.getElementById("main-product-link");
   const thumbnails = document.querySelectorAll(
     "#product-thumbnails .thumbnail-btn",
   );
 
-  if (thumbnails.length > 0) {
-    let currentIndex = 0;
+  if (mainImgLink && thumbnails.length > 0) {
+    const mainMediaClass =
+      mainImgLink.firstElementChild?.className || "gallery-viewport__img";
+    const mediaItems = Array.from(thumbnails).map((thumb, index) => {
+      const type =
+        thumb.getAttribute("data-type") === "video" ? "video" : "image";
+      const src =
+        thumb.getAttribute("data-src") || thumb.getAttribute("data-img") || "";
+      const poster = thumb.getAttribute("data-poster") || "";
+      const caption =
+        thumb.getAttribute("data-caption") || `Product media ${index + 1}`;
 
-    const galleryItems = Array.from(thumbnails).map((thumb, i) => ({
-      src: thumb.getAttribute("data-img"),
-      thumb: thumb.getAttribute("data-img"),
-      caption: thumb.getAttribute("data-caption") || `Product Image ${i + 1}`,
-      width: 800,
-      height: 800,
-    }));
+      return { type, src, poster, caption };
+    });
 
-    const updateGalleryImage = (index) => {
-      thumbnails.forEach((t, idx) => {
-        if (idx === index) {
-          t.classList.remove("thumbnail-btn--inactive");
-          t.classList.add("thumbnail-btn--active");
-        } else {
-          t.classList.remove("thumbnail-btn--active");
-          t.classList.add("thumbnail-btn--inactive");
-        }
+    let currentIndex = Math.max(
+      0,
+      Array.from(thumbnails).findIndex(
+        (thumb) =>
+          thumb.getAttribute("aria-current") === "true" ||
+          thumb.classList.contains("thumbnail-btn--active"),
+      ),
+    );
+
+    const stopAndReleaseMainVideo = () => {
+      const currentVideo = mainImgLink.querySelector("video");
+      if (!currentVideo) return;
+
+      currentVideo.pause();
+      currentVideo.removeAttribute("src");
+      currentVideo.querySelectorAll("source").forEach((source) => {
+        source.removeAttribute("src");
       });
-      const newSrc = thumbnails[index].getAttribute("data-img");
-      if (mainImg) mainImg.src = newSrc;
-      currentIndex = index;
+      currentVideo.load();
     };
 
-    thumbnails.forEach((thumb, idx) => {
-      thumb.addEventListener("click", () => updateGalleryImage(idx));
+    const renderMainMedia = (item) => {
+      let mediaImg = mainImgLink.querySelector("#main-product-img");
+      if (!mediaImg) {
+        mediaImg = document.createElement("img");
+        mediaImg.id = "main-product-img";
+        mediaImg.className = mainMediaClass;
+        mainImgLink.replaceChildren(mediaImg);
+      } else {
+        Array.from(mainImgLink.children).forEach((child) => {
+          if (child !== mediaImg && child.id !== "main-product-play-icon") {
+            child.remove();
+          }
+        });
+      }
+
+      let playIcon = mainImgLink.querySelector("#main-product-play-icon");
+
+      if (item.type === "video") {
+        mediaImg.src = item.poster || item.src;
+        mediaImg.alt = item.caption;
+
+        if (!playIcon) {
+          playIcon = document.createElement("span");
+          playIcon.id = "main-product-play-icon";
+          playIcon.className =
+            "absolute inset-0 flex items-center justify-center pointer-events-none z-10";
+          playIcon.setAttribute("aria-hidden", "true");
+          playIcon.innerHTML = `
+            <span class="flex size-16 sm:size-20 items-center justify-center rounded-full bg-primary text-white shadow-xl group-hover:scale-110 transition-transform">
+              <svg class="size-7 sm:size-9 translate-x-0.5" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M6 4.75v10.5L15 10 6 4.75Z" />
+              </svg>
+            </span>
+          `;
+          mainImgLink.appendChild(playIcon);
+        } else {
+          playIcon.classList.remove("hidden");
+        }
+      } else {
+        mediaImg.src = item.src;
+        mediaImg.alt = item.caption;
+
+        if (playIcon) {
+          playIcon.classList.add("hidden");
+        }
+      }
+
+      mainImgLink.href = item.src;
+      mainImgLink.dataset.caption = item.caption;
+      mainImgLink.setAttribute(
+        "aria-label",
+        `Open ${item.caption} in media gallery`,
+      );
+    };
+
+    const updateGalleryMedia = (index) => {
+      const normalizedIndex = (index + mediaItems.length) % mediaItems.length;
+
+      thumbnails.forEach((thumbnail, thumbnailIndex) => {
+        const isActive = thumbnailIndex === normalizedIndex;
+        thumbnail.setAttribute("aria-current", String(isActive));
+
+        if (isActive) {
+          thumbnail.classList.remove("thumbnail-btn--inactive");
+          thumbnail.classList.add("thumbnail-btn--active");
+        } else {
+          thumbnail.classList.remove("thumbnail-btn--active");
+          thumbnail.classList.add("thumbnail-btn--inactive");
+        }
+      });
+
+      renderMainMedia(mediaItems[normalizedIndex]);
+      currentIndex = normalizedIndex;
+    };
+
+    thumbnails.forEach((thumbnail, index) => {
+      thumbnail.addEventListener("click", () => updateGalleryMedia(index));
     });
 
     const prevImgBtn = document.getElementById("prev-img-btn");
     const nextImgBtn = document.getElementById("next-img-btn");
 
-    if (prevImgBtn) {
-      prevImgBtn.addEventListener("click", () => {
-        const newIndex =
-          (currentIndex - 1 + thumbnails.length) % thumbnails.length;
-        updateGalleryImage(newIndex);
-      });
-    }
+    prevImgBtn?.addEventListener("click", () => {
+      updateGalleryMedia(currentIndex - 1);
+    });
 
-    if (nextImgBtn) {
-      nextImgBtn.addEventListener("click", () => {
-        const newIndex = (currentIndex + 1) % thumbnails.length;
-        updateGalleryImage(newIndex);
-      });
-    }
+    nextImgBtn?.addEventListener("click", () => {
+      updateGalleryMedia(currentIndex + 1);
+    });
 
-    if (mainImgLink) {
-      mainImgLink.addEventListener("click", (e) => {
-        e.preventDefault();
-        if (typeof Fancybox !== "undefined") {
-          Fancybox.show(galleryItems, {
-            startIndex: currentIndex,
-            Images: {
-              fit: "contain",
-              zoom: false,
-            },
-            Toolbar: {
-              display: {
-                left: ["infobar"],
-                middle: [],
-                right: ["slideshow", "fullscreen", "thumbs", "close"],
-              },
-            },
-            Thumbs: {
-              autoStart: true,
-            },
-          });
-        }
-      });
-    }
+    const fancyboxItems = mediaItems.map((item) => {
+      if (item.type === "video") {
+        return {
+          src: item.src,
+          type: "html5video",
+          poster: item.poster,
+          thumbSrc: item.poster || item.src,
+          caption: item.caption,
+          html5videoFormat: "video/mp4",
+        };
+      }
+
+      return {
+        src: item.src,
+        type: "image",
+        thumbSrc: item.src,
+        caption: item.caption,
+      };
+    });
+
+    const pauseFancyboxVideos = (fancybox) => {
+      fancybox
+        ?.getContainer()
+        ?.querySelectorAll("video")
+        .forEach((video) => video.pause());
+    };
+
+    mainImgLink.addEventListener("click", (event) => {
+      event.preventDefault();
+
+      if (typeof Fancybox === "undefined" || Fancybox.getInstance()) {
+        return;
+      }
+
+      const options = {
+        startIndex: currentIndex,
+        dragToClose: false,
+        Images: {
+          fit: "cover",
+          zoom: false,
+          Panzoom: {
+            fit: "cover",
+          },
+        },
+        Video: {
+          autoplay: true,
+        },
+        Toolbar: {
+          display: {
+            left: ["counter"],
+            middle: [],
+            right: ["slideshow", "fullscreen", "thumbs", "close"],
+          },
+        },
+        Thumbs: {
+          autoStart: true,
+        },
+        on: {
+          "Carousel.change": (fancybox) => pauseFancyboxVideos(fancybox),
+          close: (fancybox) => pauseFancyboxVideos(fancybox),
+          destroy: (fancybox) => pauseFancyboxVideos(fancybox),
+        },
+      };
+
+      Fancybox.show(fancyboxItems, options);
+    });
+
+    updateGalleryMedia(currentIndex);
   }
 
   // 11b. Applications Page Swiper Carousels

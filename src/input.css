@@ -43,6 +43,15 @@
   --color-primary-30: #00a194;
   --color-body-dark: #1d1d1d;
   --color-section-heading: #2d3139;
+  --color-certification-card: #f7f7f7;
+  --color-dark-section: #171717;
+  --color-quality-card: #232323;
+  --color-product-badge: #434343;
+  --color-table-divider: #f4f5f6;
+  --color-vision-gradient: #450000;
+  --color-dark-panel: #161616;
+  --color-scrollbar-track: #d9d9d9;
+  --color-scrollbar-thumb: #396bcf;
 }
 
 /* Base Body Styles */
@@ -56,7 +65,7 @@ body {
 /* Custom Utilities */
 @utility container {
   margin-inline: auto;
-  padding-inline: 1rem;
+  padding-inline: 1.25rem;
 
   @media (width >= theme(--breakpoint-sm)) {
     padding-inline: 1.5rem;
@@ -105,15 +114,15 @@ html {
 
   /* Typography Headings */
   .heading-h1 {
-    @apply text-4xl sm:text-5xl lg:text-5xl font-semibold leading-tight lg:leading-[58px] tracking-[-0.48px];
+    @apply text-3xl sm:text-4xl lg:text-5xl font-semibold leading-tight lg:leading-[58px] tracking-[-0.48px];
   }
 
   .heading-h2 {
-    @apply text-3xl sm:text-4xl lg:text-[40px] font-semibold leading-tight lg:leading-[48px];
+    @apply text-3xl sm:text-4xl lg:text-[40px] font-semibold leading-tight lg:leading-12;
   }
 
   .heading-h3 {
-    @apply text-2xl sm:text-3xl lg:text-[32px] font-semibold leading-relaxed lg:leading-[40px];
+    @apply text-2xl sm:text-3xl lg:text-[32px] font-semibold leading-relaxed lg:leading-10;
   }
 
   /* Certifications Swiper Controls Active & Disabled States */
@@ -124,11 +133,16 @@ html {
     @apply text-primary transition-all duration-200 cursor-pointer w-10 h-10 flex items-center justify-center select-none;
   }
 
+  #cert-prev-btn.swiper-button-lock,
+  #cert-next-btn.swiper-button-lock {
+    display: flex !important;
+  }
+
   #cert-prev.swiper-button-disabled,
   #cert-next.swiper-button-disabled,
   #cert-prev-btn.swiper-button-disabled,
   #cert-next-btn.swiper-button-disabled {
-    @apply text-[#64748B] opacity-50 cursor-not-allowed pointer-events-none;
+    @apply text-gray-500 opacity-50 cursor-not-allowed pointer-events-none;
   }
 
   /* Tech Specs Table Custom Scrollbar matching Figma Frame 2147264289 specs */
@@ -138,34 +152,98 @@ html {
   }
 
   .custom-table-scrollbar::-webkit-scrollbar-track {
-    background: #d9d9d9;
+    background: var(--color-scrollbar-track);
     border-radius: 24px;
   }
 
   .custom-table-scrollbar::-webkit-scrollbar-thumb {
-    background: #396bcf;
+    background: var(--color-scrollbar-thumb);
     border-radius: 24px;
   }
 
   .custom-table-scrollbar {
     scrollbar-width: thin;
-    scrollbar-color: #396bcf #d9d9d9;
+    scrollbar-color: var(--color-scrollbar-thumb) var(--color-scrollbar-track);
   }
 
-  /* Fancybox Modal Unified Layout & Image Sizing */
-  .fancybox__container .f-panzoom__wrapper {
-    max-width: min(600px, 85vw) !important;
-    max-height: min(560px, 65vh) !important;
-    width: 100% !important;
-    height: 100% !important;
+  /* Fancybox Modal Fixed Frame & Centering for ALL Slides */
+  .fancybox__container {
+    --fancybox-bg: rgba(15, 23, 42, 0.92);
   }
 
+  .fancybox__slide {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 24px 16px !important;
+  }
+
+  /* Image Slide Modal Box (Transparent Background — Clean Floating Image) */
+  .fancybox__container .f-panzoom__wrapper,
   .fancybox__container .f-panzoom__viewport {
-    width: 100% !important;
-    height: 100% !important;
+    width: min(720px, 85vw) !important;
+    height: min(650px, 75vh) !important;
+    max-width: min(720px, 85vw) !important;
+    max-height: min(650px, 75vh) !important;
+    min-width: min(720px, 85vw) !important;
+    min-height: min(650px, 75vh) !important;
+    aspect-ratio: auto !important;
+    margin: 0 auto !important;
+    display: block !important;
+    background: transparent !important;
+    border-radius: 0 !important;
+    overflow: visible !important;
+    box-shadow: none !important;
+    position: relative !important;
+    transform: none !important;
   }
 
-  .fancybox__container .f-panzoom__content {
+  .fancybox__container .f-panzoom__content,
+  .fancybox__container img.f-panzoom__content,
+  .fancybox__container .f-panzoom__viewport img {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
+    min-width: 100% !important;
+    min-height: 100% !important;
+    object-fit: contain !important;
+    transform: none !important;
+    margin: auto !important;
+    display: block !important;
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+
+  /* HTML5 Video Slide Modal Box (Landscape: Width > Height) */
+  .fancybox__container .fancybox__slide > .fancybox__content:has(video),
+  .fancybox__container .fancybox__slide > .fancybox__content:has(iframe),
+  .fancybox__container .fancybox__html5video {
+    width: min(780px, 85vw) !important;
+    height: min(440px, 60vh) !important;
+    max-width: min(780px, 85vw) !important;
+    max-height: min(440px, 60vh) !important;
+    min-width: min(780px, 85vw) !important;
+    min-height: min(440px, 60vh) !important;
+    margin: 0 auto !important;
+    display: block !important;
+    background: #000000 !important;
+    border-radius: 12px !important;
+    overflow: hidden !important;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5) !important;
+    position: relative !important;
+  }
+
+  .fancybox__container .fancybox__content video,
+  .fancybox__container .fancybox__html5video video {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
     width: 100% !important;
     height: 100% !important;
     max-width: 100% !important;
@@ -173,9 +251,15 @@ html {
     object-fit: contain !important;
   }
 
+  /* Caption fixed below the modal box */
   .fancybox__container .f-caption {
-    padding-top: 12px !important;
+    padding-top: 16px !important;
     position: relative !important;
     z-index: 10 !important;
+    text-align: center !important;
+    font-size: 15px !important;
+    font-weight: 500 !important;
+    color: #ffffff !important;
+    width: 100% !important;
   }
 }

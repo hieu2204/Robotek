@@ -279,14 +279,20 @@
 
     <main>
       <!-- Back Link -->
-      <div class="pt-[100px] bg-white">
-        <div class="container py-6">
+      <div class="pt-25 bg-white">
+        <div class="container py-6"></div>
+      </div>
+
+      <!-- Product Details Section -->
+      <section class="bg-white pb-8 sm:pb-12 lg:pb-18">
+        <div class="container">
+          <!-- Desktop Back Button -->
           <a
-            href="power-supplies.html"
-            class="inline-flex items-center gap-2 text-gray-500 font-semibold text-base hover:text-primary transition-colors"
+            href="javascript:history.back()"
+            class="hidden 2xl:inline-flex items-center gap-2 text-base font-semibold text-gray-500 hover:text-primary transition-colors mb-6 w-fit"
           >
             <svg
-              class="w-5 h-5"
+              class="w-6 h-6 shrink-0"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -295,35 +301,95 @@
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 stroke-width="2"
-                d="M15 19l-7-7 7-7"
+                d="M10 19l-7-7m0 0l7-7m-7 7h18"
               />
             </svg>
-            Back
+            <span>Back</span>
           </a>
-        </div>
-      </div>
 
-      <!-- Product Details Section -->
-      <section class="bg-white pb-12 lg:pb-18">
-        <div class="container">
-          <div
-            class="grid grid-cols-1 2xl:grid-cols-[auto_1fr] gap-10 2xl:gap-[72px] items-start"
-          >
+          <!-- Mobile Navigation Helper -->
+          <div class="flex flex-col gap-3 mb-4 sm:mb-6 2xl:hidden">
+            <nav
+              class="flex flex-wrap items-center gap-2 text-xs sm:text-sm font-medium text-gray-500"
+              aria-label="Breadcrumb"
+            >
+              <a href="index.html" class="hover:text-primary transition-colors"
+                >Home</a
+              >
+              <svg
+                class="w-3.5 h-3.5 opacity-30 shrink-0"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+              <a
+                href="power-supplies.html"
+                class="hover:text-primary transition-colors"
+                >Products</a
+              >
+              <svg
+                class="w-3.5 h-3.5 opacity-30 shrink-0"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+              <span class="text-primary font-semibold truncate"
+                >Ultra-Slim Series: 36W ~ 750W</span
+              >
+            </nav>
+            <a
+              href="javascript:history.back()"
+              class="inline-flex items-center gap-1.5 text-base font-semibold text-gray-500 hover:text-primary transition-colors w-fit"
+            >
+              <svg
+                class="w-5 h-5 shrink-0"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M10 19l-7-7m0 0l7-7m-7 7h18"
+                />
+              </svg>
+              <span>Back</span>
+            </a>
+          </div>
+
+          <div class="product-detail-layout">
             <!-- Left: Thumbnail List + Main Image Gallery with Fancybox -->
             <div
-              class="flex flex-col-reverse sm:flex-row gap-4 2xl:gap-10 items-center sm:items-start justify-center 2xl:justify-start w-full 2xl:w-auto shrink-0"
+              class="flex flex-col-reverse md:flex-row gap-4 2xl:gap-10 items-center md:items-start justify-center 2xl:justify-start w-full 2xl:w-auto shrink-0"
             >
               <!-- Thumbnails Column -->
               <div
-                class="flex flex-row sm:flex-col gap-3 sm:gap-4 overflow-x-auto max-w-full sm:max-w-none shrink-0 py-1 sm:py-0"
+                class="flex flex-row md:flex-col gap-3 md:gap-4 overflow-x-auto max-w-full md:max-w-none shrink-0 py-1 md:py-0"
                 id="product-thumbnails"
               >
                 <button
                   type="button"
                   class="thumbnail-btn thumbnail-btn--active"
-                  data-img="assets/images/product-1.png"
+                  data-type="image"
+                  data-src="assets/images/product-1.png"
                   data-caption="Ultra-Slim Series Power Supply - Image 1"
                   aria-label="View thumbnail 1"
+                  aria-current="true"
                 >
                   <img
                     src="assets/images/product-1.png"
@@ -334,22 +400,27 @@
                 <button
                   type="button"
                   class="thumbnail-btn thumbnail-btn--inactive"
-                  data-img="assets/images/product-2.png"
-                  data-caption="Ultra-Slim Series Power Supply - Image 2"
-                  aria-label="View thumbnail 2"
+                  data-type="video"
+                  data-src="assets/video/sunset_cloud_mountain.mp4"
+                  data-poster="assets/images/product-2.png"
+                  data-caption="Ultra-Slim Series Power Supply product demonstration video"
+                  aria-label="View product demonstration video"
+                  aria-current="false"
                 >
                   <img
                     src="assets/images/product-2.png"
-                    alt="Power Supply thumbnail 2"
+                    alt="Power Supply video thumbnail"
                     class="thumbnail-btn__img"
                   />
                 </button>
                 <button
                   type="button"
                   class="thumbnail-btn thumbnail-btn--inactive"
-                  data-img="assets/images/product-3.png"
+                  data-type="image"
+                  data-src="assets/images/product-3.png"
                   data-caption="Ultra-Slim Series Power Supply - Image 3"
                   aria-label="View thumbnail 3"
+                  aria-current="false"
                 >
                   <img
                     src="assets/images/product-3.png"
@@ -360,9 +431,11 @@
                 <button
                   type="button"
                   class="thumbnail-btn thumbnail-btn--inactive"
-                  data-img="assets/images/product-4.png"
+                  data-type="image"
+                  data-src="assets/images/product-4.png"
                   data-caption="Ultra-Slim Series Power Supply - Image 4"
                   aria-label="View thumbnail 4"
+                  aria-current="false"
                 >
                   <img
                     src="assets/images/product-4.png"
@@ -373,9 +446,11 @@
                 <button
                   type="button"
                   class="thumbnail-btn thumbnail-btn--inactive"
-                  data-img="assets/images/product-5.png"
+                  data-type="image"
+                  data-src="assets/images/product-5.png"
                   data-caption="Ultra-Slim Series Power Supply - Image 5"
                   aria-label="View thumbnail 5"
+                  aria-current="false"
                 >
                   <img
                     src="assets/images/product-5.png"
@@ -402,13 +477,13 @@
 
                 <!-- Navigation Arrows -->
                 <div
-                  class="absolute inset-x-6 top-1/2 -translate-y-1/2 flex justify-between items-center pointer-events-none z-10"
+                  class="absolute inset-x-2 sm:inset-x-6 top-1/2 -translate-y-1/2 flex justify-between items-center pointer-events-none z-10"
                 >
                   <button
                     type="button"
                     id="prev-img-btn"
-                    class="bg-primary text-white p-3 rounded-full pointer-events-auto hover:bg-red-700 transition-colors shadow-md flex items-center justify-center"
-                    aria-label="Previous image"
+                    class="bg-primary text-white p-2.5 sm:p-3 rounded-full pointer-events-auto hover:bg-red-700 transition-colors shadow-md flex items-center justify-center"
+                    aria-label="Previous media"
                   >
                     <svg
                       class="w-5 h-5"
@@ -427,8 +502,8 @@
                   <button
                     type="button"
                     id="next-img-btn"
-                    class="bg-primary text-white p-3 rounded-full pointer-events-auto hover:bg-red-700 transition-colors shadow-md flex items-center justify-center"
-                    aria-label="Next image"
+                    class="bg-primary text-white p-2.5 sm:p-3 rounded-full pointer-events-auto hover:bg-red-700 transition-colors shadow-md flex items-center justify-center"
+                    aria-label="Next media"
                   >
                     <svg
                       class="w-5 h-5"
@@ -449,182 +524,178 @@
             </div>
 
             <!-- Right: Product Information Column -->
-            <div class="flex flex-col gap-10 w-full 2xl:max-w-[926px]">
+            <div class="flex flex-col gap-6 sm:gap-8 w-full 2xl:max-w-231.5">
               <!-- SKU Row -->
               <div class="flex flex-col gap-2 w-full">
                 <div class="border-t border-gray-900 w-full"></div>
-                <p
-                  class="font-orbitron font-normal text-sm text-gray-900 leading-[1.4]"
-                >
-                  PS - 1
-                </p>
+                <p class="product-sku">PS - 1</p>
               </div>
 
-              <!-- Product Details Content Block -->
-              <div class="flex flex-col gap-6 w-full">
-                <!-- Breadcrumb + Title + Subtitle -->
-                <div class="flex flex-col gap-6 w-full">
-                  <!-- Breadcrumb -->
-                  <nav
-                    class="flex items-center gap-2 text-base font-medium text-gray-500"
-                    aria-label="Breadcrumb"
+              <!-- Product Details Header Block -->
+              <div class="flex flex-col gap-4 sm:gap-6 w-full">
+                <!-- Breadcrumb (Desktop only) -->
+                <nav
+                  class="hidden 2xl:flex flex-wrap items-center gap-2 text-base font-medium text-gray-500"
+                  aria-label="Breadcrumb"
+                >
+                  <a
+                    href="index.html"
+                    class="hover:text-primary transition-colors"
+                    >Home</a
                   >
-                    <a
-                      href="index.html"
-                      class="hover:text-primary transition-colors"
-                      >Home</a
-                    >
-                    <svg
-                      class="w-4 h-4 opacity-30 shrink-0"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M9 5l7 7-7 7"
-                      />
-                    </svg>
-                    <a
-                      href="power-supplies.html"
-                      class="hover:text-primary transition-colors"
-                      >Products</a
-                    >
-                    <svg
-                      class="w-4 h-4 opacity-30 shrink-0"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M9 5l7 7-7 7"
-                      />
-                    </svg>
-                    <span class="text-green-90 font-medium"
-                      >Ultra-Slim Series: 36W ~ 750W</span
-                    >
-                  </nav>
-
-                  <!-- Product Title + Subtitle -->
-                  <div class="flex flex-col gap-3 w-full">
-                    <h1 class="heading-h1 text-green-90">
-                      Ultra-Slim Series: 36W ~ 750W
-                    </h1>
-                    <p class="text-base font-medium text-gray-500 leading-6">
-                      Compact - Reliable - Efficient
-                    </p>
-                  </div>
-                </div>
-
-                <!-- Divider 1 -->
-                <div class="border-t border-gray-200 w-full"></div>
-
-                <!-- Featured Bullet List -->
-                <div class="flex flex-col gap-2 w-full">
-                  <h2 class="font-semibold text-lg text-body-text leading-7">
-                    Overview:
-                  </h2>
-                  <ul
-                    class="list-disc pl-6 space-y-1 text-base font-medium text-gray-500 leading-6"
+                  <svg
+                    class="w-4 h-4 opacity-30 shrink-0"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
                   >
-                    <li>
-                      Ultra-Slim Design: 30mm profile height for most models
-                    </li>
-                    <li>
-                      CCC Standard Compliant: Meets 3C regulatory compliance
-                    </li>
-                    <li>EMC Tested: Passes conducted and radiated EMI tests</li>
-                    <li>
-                      High Anti-Interference: Robust immunity to electrical
-                      interference
-                    </li>
-                    <li>
-                      Full Power Output: Excellent stability under maximum
-                      continuous load
-                    </li>
-                    <li>
-                      Low Ripple &amp; High Efficiency: Minimal output noise and
-                      reduced energy loss
-                    </li>
-                  </ul>
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M9 5l7 7-7 7"
+                    />
+                  </svg>
+                  <a
+                    href="power-supplies.html"
+                    class="hover:text-primary transition-colors"
+                    >Products</a
+                  >
+                  <svg
+                    class="w-4 h-4 opacity-30 shrink-0"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M9 5l7 7-7 7"
+                    />
+                  </svg>
+                  <span class="text-primary 2xl:text-green-90 font-semibold"
+                    >Ultra-Slim Series: 36W ~ 750W</span
+                  >
+                </nav>
+
+                <!-- Product Title + Subtitle -->
+                <div class="flex flex-col gap-3 w-full">
+                  <h1 class="heading-h1 text-green-90">
+                    Ultra-Slim Series: 36W ~ 750W
+                  </h1>
+                  <p class="text-base font-medium text-gray-500 leading-6">
+                    Compact - Reliable - Efficient
+                  </p>
                 </div>
+              </div>
 
-                <!-- Divider 2 -->
-                <div class="border-t border-gray-200 w-full"></div>
+              <!-- Divider 1 -->
+              <div class="border-t border-gray-200 w-full"></div>
 
-                <!-- Protection Grid -->
-                <div class="flex flex-col gap-5 w-full">
-                  <h2 class="font-semibold text-lg text-body-text leading-7">
-                    Proctection:
-                  </h2>
+              <!-- Overview Bullet List -->
+              <div class="flex flex-col gap-3 w-full">
+                <h2 class="font-semibold text-lg text-body-text leading-7">
+                  Overview:
+                </h2>
+                <ul
+                  class="list-disc pl-5 flex flex-col gap-2 text-base font-medium text-gray-500 leading-6"
+                >
+                  <li>
+                    Ultra-Slim Design: 30mm profile height for most models
+                  </li>
+                  <li>
+                    CCC Standard Compliant: Meets 3C regulatory compliance
+                  </li>
+                  <li>EMC Tested: Passes conducted and radiated EMI tests</li>
+                  <li>
+                    High Anti-Interference: Robust immunity to electrical
+                    interference
+                  </li>
+                  <li>
+                    Full Power Output: Excellent stability under maximum
+                    continuous load
+                  </li>
+                  <li>
+                    Low Ripple &amp; High Efficiency: Minimal output noise and
+                    reduced energy loss
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Divider 2 -->
+              <div class="border-t border-gray-200 w-full"></div>
+
+              <!-- Protection Grid -->
+              <div class="flex flex-col gap-5 w-full">
+                <h2 class="font-semibold text-lg text-body-text leading-7">
+                  Proctection:
+                </h2>
+                <div
+                  class="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-0 divide-y sm:divide-y-0 sm:divide-x divide-gray-200 items-start"
+                >
+                  <!-- Protection 1 -->
                   <div
-                    class="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-0 divide-y sm:divide-y-0 sm:divide-x divide-gray-200 items-start"
+                    class="flex flex-col gap-5 items-start sm:pr-6 pt-4 sm:pt-0"
                   >
-                    <!-- Protection 1 -->
-                    <div
-                      class="flex flex-col gap-5 items-start sm:pr-6 pt-4 sm:pt-0"
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="26"
+                      viewBox="0 0 24 26"
+                      fill="none"
+                      class="shrink-0"
                     >
-                      <svg
-                        class="w-7 h-8 shrink-0"
-                        viewBox="0 0 28 32"
-                        fill="none"
-                      >
-                        <path
-                          d="M19.2973 31.0895L28 20.6843L27.8423 0L0 31.0895H19.2973Z"
-                          fill="var(--color-danger)"
-                        />
-                      </svg>
-                      <h3
-                        class="font-semibold text-2xl leading-8 text-green-90"
-                      >
-                        Input Under-Voltage Protection
-                      </h3>
-                    </div>
-                    <!-- Protection 2 -->
-                    <div
-                      class="flex flex-col gap-5 items-start sm:px-6 pt-4 sm:pt-0"
+                      <path
+                        d="M16.5405 26L24 17.2982L23.8649 0L0 26H16.5405Z"
+                        fill="#CE181E"
+                      />
+                    </svg>
+                    <h3 class="font-semibold text-2xl leading-8 text-green-90">
+                      Input Under-Voltage Protection
+                    </h3>
+                  </div>
+                  <!-- Protection 2 -->
+                  <div
+                    class="flex flex-col gap-5 items-start sm:px-6 pt-4 sm:pt-0"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="26"
+                      viewBox="0 0 24 26"
+                      fill="none"
+                      class="shrink-0"
                     >
-                      <svg
-                        class="w-7 h-8 shrink-0"
-                        viewBox="0 0 28 32"
-                        fill="none"
-                      >
-                        <path
-                          d="M19.2973 31.0895L28 20.6843L27.8423 0L0 31.0895H19.2973Z"
-                          fill="var(--color-danger)"
-                        />
-                      </svg>
-                      <h3
-                        class="font-semibold text-2xl leading-8 text-green-90"
-                      >
-                        Output Overcurrent Protection
-                      </h3>
-                    </div>
-                    <!-- Protection 3 -->
-                    <div
-                      class="flex flex-col gap-5 items-start sm:pl-6 pt-4 sm:pt-0"
+                      <path
+                        d="M16.5405 26L24 17.2982L23.8649 0L0 26H16.5405Z"
+                        fill="#CE181E"
+                      />
+                    </svg>
+                    <h3 class="font-semibold text-2xl leading-8 text-green-90">
+                      Output Overcurrent Protection
+                    </h3>
+                  </div>
+                  <!-- Protection 3 -->
+                  <div
+                    class="flex flex-col gap-5 items-start sm:pl-6 pt-4 sm:pt-0"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="26"
+                      viewBox="0 0 24 26"
+                      fill="none"
+                      class="shrink-0"
                     >
-                      <svg
-                        class="w-7 h-8 shrink-0"
-                        viewBox="0 0 28 32"
-                        fill="none"
-                      >
-                        <path
-                          d="M19.2973 31.0895L28 20.6843L27.8423 0L0 31.0895H19.2973Z"
-                          fill="var(--color-danger)"
-                        />
-                      </svg>
-                      <h3
-                        class="font-semibold text-2xl leading-8 text-green-90"
-                      >
-                        Output Short Circuit Protection
-                      </h3>
-                    </div>
+                      <path
+                        d="M16.5405 26L24 17.2982L23.8649 0L0 26H16.5405Z"
+                        fill="#CE181E"
+                      />
+                    </svg>
+                    <h3 class="font-semibold text-2xl leading-8 text-green-90">
+                      Output Short Circuit Protection
+                    </h3>
                   </div>
                 </div>
               </div>
@@ -636,23 +707,25 @@
       <!-- Applications Cards Section -->
       <section class="pb-12 lg:pb-18">
         <div class="container">
-          <div class="flex flex-col gap-12" data-aos="fade-up">
+          <div class="flex flex-col gap-8 md:gap-12" data-aos="fade-up">
             <!-- Section Header -->
-            <div class="flex flex-col gap-5 w-full">
+            <div
+              class="flex flex-col gap-3 md:gap-5 w-full items-center md:items-start text-center md:text-left"
+            >
               <!-- Badge Tag (Top Row) -->
-              <div>
+              <div class="flex justify-center md:justify-start w-full">
                 <span class="badge-tag">APPLICATION:</span>
               </div>
               <!-- H2 Title and Prev/Next Buttons Row -->
               <div
-                class="flex flex-col md:flex-row md:items-center justify-between gap-6"
+                class="flex flex-col md:flex-row md:items-center justify-between gap-6 w-full"
               >
-                <h2 class="heading-h3 text-gray-900">
+                <h2 class="heading-h3 text-gray-900 text-center md:text-left">
                   Ideal for LED lighting, CCTV, automation &amp; industrial
                   control systems
                 </h2>
-                <!-- Swiper Circular Buttons -->
-                <div class="flex items-center gap-4 shrink-0">
+                <!-- Desktop Swiper Circular Buttons -->
+                <div class="hidden md:flex items-center gap-4 shrink-0">
                   <button
                     type="button"
                     id="app-prev"
@@ -694,80 +767,126 @@
               <div class="swiper-wrapper">
                 <!-- App Card 1 -->
                 <div class="swiper-slide">
-                  <div class="flex flex-col gap-6 group">
-                    <div class="h-[358px] w-full overflow-hidden rounded-xs">
+                  <div class="flex flex-col gap-4 sm:gap-6 group">
+                    <div class="related-product-media">
                       <img
                         src="assets/images/product-ps2.png"
                         alt="Industrial Control Devices"
                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                       />
                     </div>
-                    <h3 class="font-semibold text-2xl leading-8 text-gray-900">
+                    <h3
+                      class="font-semibold text-lg sm:text-2xl leading-7 sm:leading-8 text-gray-900"
+                    >
                       Industrial Control Devices
                     </h3>
                   </div>
                 </div>
                 <!-- App Card 2 -->
                 <div class="swiper-slide">
-                  <div class="flex flex-col gap-6 group">
-                    <div class="h-[358px] w-full overflow-hidden rounded-xs">
+                  <div class="flex flex-col gap-4 sm:gap-6 group">
+                    <div class="related-product-media">
                       <img
                         src="assets/images/product-ps3.png"
                         alt="Automation Systems"
                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                       />
                     </div>
-                    <h3 class="font-semibold text-2xl leading-8 text-gray-900">
+                    <h3
+                      class="font-semibold text-lg sm:text-2xl leading-7 sm:leading-8 text-gray-900"
+                    >
                       Automation Systems
                     </h3>
                   </div>
                 </div>
                 <!-- App Card 3 -->
                 <div class="swiper-slide">
-                  <div class="flex flex-col gap-6 group">
-                    <div class="h-[358px] w-full overflow-hidden rounded-xs">
+                  <div class="flex flex-col gap-4 sm:gap-6 group">
+                    <div class="related-product-media">
                       <img
                         src="assets/images/product-ps4.png"
                         alt="Measuring Equipment"
                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                       />
                     </div>
-                    <h3 class="font-semibold text-2xl leading-8 text-gray-900">
+                    <h3
+                      class="font-semibold text-lg sm:text-2xl leading-7 sm:leading-8 text-gray-900"
+                    >
                       Measuring Equipment
                     </h3>
                   </div>
                 </div>
                 <!-- App Card 4 -->
                 <div class="swiper-slide">
-                  <div class="flex flex-col gap-6 group">
-                    <div class="h-[358px] w-full overflow-hidden rounded-xs">
+                  <div class="flex flex-col gap-4 sm:gap-6 group">
+                    <div class="related-product-media">
                       <img
                         src="assets/images/product-ps1.png"
                         alt="LED Lighting Systems"
                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                       />
                     </div>
-                    <h3 class="font-semibold text-2xl leading-8 text-gray-900">
+                    <h3
+                      class="font-semibold text-lg sm:text-2xl leading-7 sm:leading-8 text-gray-900"
+                    >
                       LED Lighting Systems
                     </h3>
                   </div>
                 </div>
                 <!-- App Card 5 -->
                 <div class="swiper-slide">
-                  <div class="flex flex-col gap-6 group">
-                    <div class="h-[358px] w-full overflow-hidden rounded-xs">
+                  <div class="flex flex-col gap-4 sm:gap-6 group">
+                    <div class="related-product-media">
                       <img
                         src="assets/images/product-ps2.png"
                         alt="CCTV &amp; Surveillance Systems"
                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                       />
                     </div>
-                    <h3 class="font-semibold text-2xl leading-8 text-gray-900">
+                    <h3
+                      class="font-semibold text-lg sm:text-2xl leading-7 sm:leading-8 text-gray-900"
+                    >
                       CCTV &amp; Surveillance Systems
                     </h3>
                   </div>
                 </div>
               </div>
+            </div>
+
+            <!-- Mobile Swiper Circular Buttons (Under Images) -->
+            <div class="flex md:hidden items-center justify-center gap-4">
+              <button
+                type="button"
+                id="app-prev-mobile"
+                class="swiper-btn-circle"
+                aria-label="Previous application"
+              >
+                <svg class="w-8 h-8" viewBox="0 0 32 32" fill="none">
+                  <path
+                    d="M20 24L12 16L20 8"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+              <button
+                type="button"
+                id="app-next-mobile"
+                class="swiper-btn-circle"
+                aria-label="Next application"
+              >
+                <svg class="w-8 h-8" viewBox="0 0 32 32" fill="none">
+                  <path
+                    d="M12 24L20 16L12 8"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
             </div>
           </div>
         </div>
@@ -776,11 +895,19 @@
       <!-- Technical Specifications Table Section -->
       <section class="pb-12 lg:pb-18 bg-white">
         <div class="container">
-          <div class="flex flex-col gap-12 items-center" data-aos="fade-up">
+          <div
+            class="flex flex-col gap-4 lg:gap-12 items-center"
+            data-aos="fade-up"
+          >
             <!-- Header -->
-            <div class="flex flex-col gap-5 items-center text-center">
+            <div class="flex flex-col gap-3 sm:gap-5 items-center text-center">
               <span class="badge-tag">PRODUCT</span>
               <h2 class="heading-h3 text-gray-900">Technical Specifications</h2>
+              <p
+                class="text-xs font-medium text-gray-500 text-center sm:hidden"
+              >
+                &larr; Scroll horizontally to view full parameters &rarr;
+              </p>
             </div>
 
             <!-- Tech Specs Table Container -->
@@ -792,7 +919,7 @@
               >
                 <!-- Horizontal Scroll Wrapper for Mobile Responsiveness -->
                 <div class="overflow-x-auto">
-                  <div class="min-w-[700px]">
+                  <div class="min-w-175">
                     <!-- Table Header (Fixed Row outside vertical scroll) -->
                     <table
                       class="w-full table-fixed border-collapse text-left bg-table-header"
@@ -822,13 +949,13 @@
 
                     <!-- Table Data Rows Container (Vertical Scroll Starts Below Header) -->
                     <div
-                      class="max-h-[640px] overflow-y-auto custom-table-scrollbar"
+                      class="max-h-160 overflow-y-auto custom-table-scrollbar"
                     >
                       <table
                         class="w-full table-fixed border-collapse text-left"
                       >
                         <tbody
-                          class="divide-y divide-[#f4f5f6] text-base text-table-text"
+                          class="divide-y divide-table-divider text-base text-table-text"
                         >
                           <tr
                             class="h-12 sm:h-14 lg:h-16 hover:bg-gray-50 transition-colors"
@@ -1237,12 +1364,31 @@
                 </div>
               </div>
             </div>
+            <a
+              href="#"
+              class="btn-explore inline-flex sm:hidden w-full justify-center text-center"
+            >
+              <span>DOWNLOAD FULL DATASHEET</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                class="w-4 h-4 shrink-0"
+              >
+                <path
+                  d="M8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16Z"
+                  fill="white"
+                />
+              </svg>
+            </a>
           </div>
         </div>
       </section>
 
       <!-- Certifications Swiper Section (Frame 2147264288) -->
-      <section class="relative py-16 lg:py-24 overflow-hidden">
+      <section class="relative py-10 lg:py-24 overflow-hidden">
         <!-- Background Image (people-bg.png) -->
         <div class="absolute inset-0 z-0 pointer-events-none">
           <img
@@ -1258,7 +1404,7 @@
           >
             <!-- Left Info Block -->
             <div
-              class="w-full lg:w-[420px] xl:w-[494px] shrink-0 flex flex-col gap-10"
+              class="w-full lg:w-105 xl:w-123.5 shrink-0 flex flex-col gap-10"
             >
               <div class="flex flex-col gap-5 items-start">
                 <span class="badge-tag--white">CERTIFICATIONS</span>
@@ -1266,7 +1412,7 @@
                   Certified to Global Standards for High-Precision Engineering
                 </h2>
               </div>
-              <a href="#" class="btn-explore self-start">
+              <a href="#" class="btn-explore hidden sm:inline-flex self-start">
                 <span>DOWNLOAD DATASHEET</span>
                 <svg class="w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="none">
                   <path
@@ -1281,12 +1427,10 @@
             </div>
 
             <!-- Right Swiper Carousel Block (Max-W 956px for exactly 5 cards) -->
-            <div
-              class="w-full max-w-[956px] flex flex-col gap-6 overflow-hidden"
-            >
+            <div class="w-full max-w-239 flex flex-col gap-6 overflow-hidden">
               <div class="swiper detail-cert-swiper w-full">
                 <div class="swiper-wrapper">
-                  <div class="swiper-slide !w-[172px] shrink-0">
+                  <div class="swiper-slide !w-25 sm:!w-43 shrink-0">
                     <div class="cert-card">
                       <img
                         src="assets/images/cert-1.png"
@@ -1295,7 +1439,7 @@
                       />
                     </div>
                   </div>
-                  <div class="swiper-slide !w-[172px] shrink-0">
+                  <div class="swiper-slide !w-25 sm:!w-43 shrink-0">
                     <div class="cert-card">
                       <img
                         src="assets/images/cert-2.png"
@@ -1304,7 +1448,7 @@
                       />
                     </div>
                   </div>
-                  <div class="swiper-slide !w-[172px] shrink-0">
+                  <div class="swiper-slide !w-25 sm:!w-43 shrink-0">
                     <div class="cert-card">
                       <img
                         src="assets/images/cert-3.png"
@@ -1313,7 +1457,7 @@
                       />
                     </div>
                   </div>
-                  <div class="swiper-slide !w-[172px] shrink-0">
+                  <div class="swiper-slide !w-25 sm:!w-43 shrink-0">
                     <div class="cert-card">
                       <img
                         src="assets/images/cert-4.png"
@@ -1322,7 +1466,7 @@
                       />
                     </div>
                   </div>
-                  <div class="swiper-slide !w-[172px] shrink-0">
+                  <div class="swiper-slide !w-25 sm:!w-43 shrink-0">
                     <div class="cert-card">
                       <img
                         src="assets/images/cert-5.png"
@@ -1335,7 +1479,9 @@
               </div>
 
               <!-- Cert Prev/Next Controls (Standalone arrows with gap 13px matching Figma Frame 2147264288) -->
-              <div class="flex items-center gap-[13px] justify-center mt-2">
+              <div
+                class="hidden md:flex items-center gap-3.25 justify-center mt-2"
+              >
                 <button
                   type="button"
                   id="cert-prev-btn"
